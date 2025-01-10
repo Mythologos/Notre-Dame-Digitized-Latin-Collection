@@ -1,13 +1,12 @@
 # Digitized Latin Collection
 
-**Creators**:
-- Stephen Bothwell, Kaitlin Stephan, Hildegund Müller, and David Chiang (University of Notre Dame)
+**Creators**: Stephen Bothwell, Kaitlin Stephan, Hildegund Müller, and David Chiang (University of Notre Dame)
 
 **Maintainer**: Stephen Bothwell
 
 ## Summary
 
-This repository contains a set of Latin texts which were digitized at the University of Notre Dame. 
+This repository, titled the Digitized Latin Collection (DLC), contains a set of Latin texts which were digitized at the University of Notre Dame. 
 These works span authors from the Classical, Late, and Medieval periods of Latin, 
 and they were digitized in pursuit of questions about prosody across the eras of Latin. 
 
@@ -33,22 +32,22 @@ This repository contains the following authors and texts (each ordered by URI):
   - *De Fide* (stoa002)
   - *De Mysteriis* (stoa003)
   - *De Paenitentia* (stoa005)
+  - *De Abraham* (stoa018)
+  - *De Bono Mortis* (stoa020)
   - *De Cain et Abel* (stoa021)
+  - *De Isaac vel Anima* (stoa033)
   - *De Iacob* (stoa034)
   - *De Ioseph* (stoa035)
   - *De Noe* (stoa039)
-  - *De Paradiso* (stoa042)
+  - *De Obitu Theodosii* (stoa040)
+  - *De Obitu Valentiani* (stoa041)
+  - *De Paradiso* (stoa042)  
+  - *De Sacramentis* (stoa043)
+  - *Explanatio Symboli* (stoa050)
   - *Exameron* (stoa054)
-  - *De Abraham* (???)
-  - *De Bono Mortis* (???)
-  - *De Isaac vel Anima* (???)
-  - *De Obitu Theodosii* (???)
-  - *De Obitu Valentiani* (???)
-  - *De Sacramentis* (???)
-  - *Explanatio Symboli* (???)
 - Apuleius Madaurensis (stoa0030):
   - *Asclepius* (stoa008)
-  - Περὶ ᾿Ερμνείας (???)
+  - *Peri Hermeneias* (???)
 - Tiberius Claudius **Donatus** (stoa0110a):
   - *Interpretationes Vergilianae* (stoa002)
 - Quintus Ennius (phi0043):
@@ -61,8 +60,8 @@ This repository contains the following authors and texts (each ordered by URI):
   - *Commentaria Senecae "De Clementia"* (???)
 - John of Salisbury (???):
   - *Epistolae* (???)
-- Other (???):
-  - *Codex Theodosianus* (???)
+- Theodosius II (stoa0279):
+  - *Codex Theodosianus* (stoa001)
 
 ## Contributing
 
