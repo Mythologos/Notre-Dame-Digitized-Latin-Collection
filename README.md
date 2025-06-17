@@ -25,6 +25,19 @@ Through this process, we created the documents presented in this repository.
 This repository is meant to be a public front-end for the outputs of our correction procedure. 
 Other stages of the correction process, as well as code for the various stages of our process above, are available in other repositories.
 
+### Use
+
+We sourced the PDFs to construct our digital editions from the [Austrian Academy of Sciences Press](https://www.oeaw.ac.at/en/forschung/verlag/austrian-academy-of-sciences-press) and [Hathitrust](https://www.hathitrust.org/). 
+We provide metadata in and accompanying each digital edition, following the CapiTainS implementation of the Canonical Text Services (CTS), to cite each source PDF.
+- The Austrian Academy of Sciences Press has kindly granted us permission to release data based on their PDFs.
+- All Hathitrust PDFs that we used are in the public domain in the United States. 
+In addition, Schmitt's edition of Palladius' *Opus Agriculturae* is in the public domain internationally. 
+All texts were digitized by Google, but this has no bearing on the release of texts here, as we do not redistribute the images or OCR from their PDFs.
+We also did not make use of their OCR in our digitization procedure.
+
+We release all our digital editions under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-nc-sa/4.0/). 
+Our repository contains the text of this license in its LICENSE file.
+
 ## Contents
 
 This repository contains the following authors and texts (each ordered by URI):
@@ -85,7 +98,7 @@ A citation for this work is pending.
 
 ### Textual Sources
 
-Please see each XML document for source information on its PDF and edition.
+Please see individual XML documents, as well as their accompanying `__cts__.xml` files, for source information on our source PDFs' editions.
 
 ### Software Sources
 
