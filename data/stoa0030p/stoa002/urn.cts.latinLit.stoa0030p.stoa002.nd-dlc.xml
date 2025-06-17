@@ -26,7 +26,7 @@
 					</tei:licence>
 				</tei:availability>
 				<tei:date>2025</tei:date>
-				<tei:date>University of Notre Dame</tei:date>
+				<tei:publisher>University of Notre Dame</tei:publisher>
 				<tei:pubPlace>Notre Dame, Indiana, United States of America</tei:pubPlace>
 			</tei:publicationStmt>
 			<tei:sourceDesc>
@@ -72,6 +72,7 @@
 			<tei:change when="2025-03-28" who="Stephen Bothwell">Filled in publicationStmt element.</tei:change>
 			<tei:change when="2025-04-07" who="Stephen Bothwell">Changed author to Pseudo-Apuleius.</tei:change>
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Finished adding licensing information. Altered project identifier in textparts to be ND-DLC.</tei:change>
+			<tei:change when="2025-06-17" who="Stephen Bothwell">Fixes publisher element mislabeled as date element.</tei:change>
 		</tei:revisionDesc>
 	</tei:teiHeader>
 	<tei:text>
