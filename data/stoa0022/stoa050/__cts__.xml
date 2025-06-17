@@ -1,0 +1,7 @@
+<ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:stoa0022" urn="urn:cts:latinLit:stoa0022.stoa050">
+  <ti:title xml:lang="lat">Explanatio Symboli</ti:title>
+  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0022.stoa050" urn="urn:cts:latinLit:stoa0022.stoa050.nd-dlc">
+    <ti:label xml:lang="lat">Explanatio Symboli (A Quodam Excepta)</ti:label>
+    <ti:description xml:lang="mul">Sancti Ambrosii Opera. Pars septima: Explanatio symboli. De sacramentis. De mysteriis. De paenitentia. De excessu fratris. De obitu Valentiniani. De obitu Theodosii., (Corpus scriptorum ecclesiasticorum Latinorum, Volume 73). Faller, Otto, editor. Vindobonae: Hoelder-Pichler-Tempsky, 1955.</ti:description>
+  </ti:edition>
+</ti:work>

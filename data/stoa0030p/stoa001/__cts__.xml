@@ -1,0 +1,7 @@
+<ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:stoa0030p" urn="urn:cts:latinLit:stoa0030p.stoa001">
+  <ti:title xml:lang="lat">Asclepius</ti:title>
+  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0030p.stoa001" urn="urn:cts:latinLit:stoa0030p.stoa001.nd-dlc">
+    <ti:label xml:lang="lat">Asclepius</ti:label>
+    <ti:description xml:lang="mul">Apulei Opera quae supersunt. Helm, Rudolf, editor. Leipzig: B. G. Teubner, 1908.</ti:description>
+  </ti:edition>
+</ti:work>

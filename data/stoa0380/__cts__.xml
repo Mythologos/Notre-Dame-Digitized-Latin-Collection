@@ -1,0 +1,6 @@
+<ti:textgroup xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:stoa0380">
+    <ti:groupname xml:lang="eng">John Calvin</ti:groupname>
+    <ti:groupname xml:lang="lat">Ioannis Calvinus</ti:groupname>
+    <ti:groupname xml:lang="fra">Jean Calvin</ti:groupname>
+    <ti:groupname xml:lang="frm">Jehan Cauvin</ti:groupname>
+</ti:textgroup>

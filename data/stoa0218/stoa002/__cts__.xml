@@ -1,0 +1,7 @@
+<ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:stoa0218" urn="urn:cts:latinLit:stoa0218.stoa002">
+  <ti:title xml:lang="lat">Opus Agriculturae</ti:title>
+  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0218.stoa002" urn="urn:cts:latinLit:stoa0218.stoa002.nd-dlc">
+    <ti:label xml:lang="lat">Opus Agriculturae</ti:label>
+    <ti:description xml:lang="mul">Palladii Rutilii Tauri Aemiliani viri inlustris Opus agriculturae. Schmitt, J. C., editor. Leipzig: B. G. Teubner, 1898.</ti:description>
+  </ti:edition>
+</ti:work>
