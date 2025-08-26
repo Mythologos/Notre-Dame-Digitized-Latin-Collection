@@ -1,27 +1,27 @@
 <ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:stoa0279" urn="urn:cts:latinLit:stoa0279.stoa001">
   <ti:title xml:lang="lat">Leges Novellae ad Theodosianum Pertinentes</ti:title>
   <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0279.stoa001" urn="urn:cts:latinLit:stoa0279.stoa001.nd-dlc-1">
-    <ti:label xml:lang="lat">Liber Legum Novellarum Divi Theodosii A</ti:label>
+    <ti:label xml:lang="lat">Liber Legum Novellarum Divi Theodosii A.</ti:label>
     <ti:description xml:lang="mul">Theodosiani libri XVI cum Constitutionibus Sirmondianis: et Leges novellae ad Theodosianum pertinentes / consilio et auctoritate Academiae litterarum regiae borussicae ediderunt Th. Mommsen et Paulus M. Mommsen, Theodor, and Meyer, Paul M., vol. II, editors. Berlin: Weidmann, 1905.</ti:description>
   </ti:edition>
   <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0279.stoa001" urn="urn:cts:latinLit:stoa0279.stoa001.nd-dlc-2">
-    <ti:label xml:lang="lat">Liber Legum Novellarum Divi Valentiniani A</ti:label>
+    <ti:label xml:lang="lat">Liber Legum Novellarum Divi Valentiniani A.</ti:label>
     <ti:description xml:lang="mul">Theodosiani libri XVI cum Constitutionibus Sirmondianis: et Leges novellae ad Theodosianum pertinentes / consilio et auctoritate Academiae litterarum regiae borussicae ediderunt Th. Mommsen et Paulus M. Mommsen, Theodor, and Meyer, Paul M., vol. II, editors. Berlin: Weidmann, 1905.</ti:description>
   </ti:edition>
   <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0279.stoa001" urn="urn:cts:latinLit:stoa0279.stoa001.nd-dlc-3">
-    <ti:label xml:lang="lat">Liber Legum Novellarum Divi Maioriani A</ti:label>
+    <ti:label xml:lang="lat">Liber Legum Novellarum Divi Maioriani A.</ti:label>
     <ti:description xml:lang="mul">Theodosiani libri XVI cum Constitutionibus Sirmondianis: et Leges novellae ad Theodosianum pertinentes / consilio et auctoritate Academiae litterarum regiae borussicae ediderunt Th. Mommsen et Paulus M. Mommsen, Theodor, and Meyer, Paul M., vol. II, editors. Berlin: Weidmann, 1905.</ti:description>
   </ti:edition>
   <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0279.stoa001" urn="urn:cts:latinLit:stoa0279.stoa001.nd-dlc-4">
-    <ti:label xml:lang="lat">Liber Legum Novellarum Divi Marciani A</ti:label>
+    <ti:label xml:lang="lat">Liber Legum Novellarum Divi Marciani A.</ti:label>
     <ti:description xml:lang="mul">Theodosiani libri XVI cum Constitutionibus Sirmondianis: et Leges novellae ad Theodosianum pertinentes / consilio et auctoritate Academiae litterarum regiae borussicae ediderunt Th. Mommsen et Paulus M. Mommsen, Theodor, and Meyer, Paul M., vol. II, editors. Berlin: Weidmann, 1905.</ti:description>
   </ti:edition>
   <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0279.stoa001" urn="urn:cts:latinLit:stoa0279.stoa001.nd-dlc-5">
-    <ti:label xml:lang="lat">Liber Legum Novellarum Divi Severi A</ti:label>
+    <ti:label xml:lang="lat">Liber Legum Novellarum Divi Severi A.</ti:label>
     <ti:description xml:lang="mul">Theodosiani libri XVI cum Constitutionibus Sirmondianis: et Leges novellae ad Theodosianum pertinentes / consilio et auctoritate Academiae litterarum regiae borussicae ediderunt Th. Mommsen et Paulus M. Mommsen, Theodor, and Meyer, Paul M., vol. II, editors. Berlin: Weidmann, 1905.</ti:description>
   </ti:edition>
   <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0279.stoa001" urn="urn:cts:latinLit:stoa0279.stoa001.nd-dlc-6">
-    <ti:label xml:lang="lat">Liber Legum Novellarum Divi Anthemii A</ti:label>
+    <ti:label xml:lang="lat">Liber Legum Novellarum Divi Anthemii A.</ti:label>
     <ti:description xml:lang="mul">Theodosiani libri XVI cum Constitutionibus Sirmondianis: et Leges novellae ad Theodosianum pertinentes / consilio et auctoritate Academiae litterarum regiae borussicae ediderunt Th. Mommsen et Paulus M. Mommsen, Theodor, and Meyer, Paul M., vol. II, editors. Berlin: Weidmann, 1905.</ti:description>
   </ti:edition>
 </ti:work>
