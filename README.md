@@ -96,7 +96,9 @@ In your issue, note the document(s) and section(s) where the information present
 
 ### Our Work
 
-A citation for this work is pending.
+[![DOI](https://zenodo.org/badge/914544414.svg)](https://doi.org/10.5281/zenodo.16995507)
+
+Alongside our Zenodo page, we will provide a citation for a whitepaper corresponding to this work once (hopefully) published.
 
 ### Textual Sources
 
