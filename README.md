@@ -116,7 +116,8 @@ We also provide BibTeX citations for these texts below:
   publisher = {Johnson Reprint Corporation; F. Tempsky, F. Tempsky, G. Freytag},
   address = {New York and London},
   isbn = {978-3-7001-9104-9 3-7001-9104-9},
-  langid = {latin}
+  langid = {latin},
+  url = {https://verlag.oeaw.ac.at/en/product/sancti-ambrosii-opera-pars-prima-qua-continentur-libri-exameron-de-paradiso-de-cain-et-abel-de-noe-de-abraham-de-isaac-de-bono-mortis/602271?name=sancti-ambrosii-opera-pars-prima-qua-continentur-libri-exameron-de-paradiso-de-cain-et-abel-de-noe-de-abraham-de-isaac-de-bono-mortis&product_form=5060}
 }
 
 @book{ambroseSanctiAmbrosiiOpera1962b,
@@ -126,10 +127,11 @@ We also provide BibTeX citations for these texts below:
   year = {1962},
   series = {{Corpus Scriptorum Ecclesiasticorum Latinorum}},
   volume = {32.2},
-  publisher = {Johnson Reprint Corporation; F. Tempsky, F. Tempsky, G. Freytag},
+  publisher = {Johnson Reprint Corporation; F. Tempsky, F. Tempsky, G. Freytag; Austrian Academy of Sciences Press},
   address = {New York and London},
   isbn = {978-3-7001-9105-6 3-7001-9105-7},
-  langid = {latin}
+  langid = {latin},
+  url = {https://verlag.oeaw.ac.at/en/product/sancti-ambrosii-opera-pars-altera-qua-continentur-libri-de-iacob-de-ioseph-de-patriarchis-de-fuga-saeculi-de-interpellatione-iob-et-david-de-apologia-david-apologia-david-altera-de-helia-et-ieiunio-de-nabuthae-de-tobia/600426?name=sancti-ambrosii-opera-pars-altera-qua-continentur-libri-de-iacob-de-ioseph-de-patriarchis-de-fuga-saeculi-de-interpellatione-iob-et-david-de-apologia-david-apologia-david-altera-de-helia-et-ieiunio-de-nabuthae-de-tobia&product_form=5106}
 }
 
 @book{ambroseSanctiAmbrosiiOpera1955,
@@ -144,11 +146,12 @@ We also provide BibTeX citations for these texts below:
   address = {Vindobonae},
   urldate = {2024-08-22},
   langid = {latin},
-  annotation = {OCLC: 458437729}
+  annotation = {OCLC: 458437729},
+  url = {https://verlag.oeaw.ac.at/en/product/sancti-ambrosii-opera-pars-septima-explanatio-symboli-de-sacramentis-de-mysteriis-de-paenitentia-de-excessu-fratris-de-obitu-valentiniani-de-obitu-theodosii/601285?name=sancti-ambrosii-opera-pars-septima-explanatio-symboli-de-sacramentis-de-mysteriis-de-paenitentia-de-excessu-fratris-de-obitu-valentiniani-de-obitu-theodosii&product_form=341}
 }
 
 @book{ambroseSanctiAmbrosiiOpera1962,
-  title = {{Sancti Ambrosii opera. Pars octava, De fide: ad Gratianum Augustum}},
+  title = {{Sancti Ambrosii Opera. Pars octava, De fide: ad Gratianum Augustum}},
   author = {{Ambrose}},
   editor = {Faller, Otto},
   year = {1962},
@@ -156,8 +159,8 @@ We also provide BibTeX citations for these texts below:
   volume = {78},
   publisher = {Hoelder-Pichler-Tempsky},
   address = {Vindobonae},
-  chapter = {60, 330 pages.},
-  langid = {latin}
+  langid = {latin},
+  url = {https://verlag.oeaw.ac.at/en/product/sancti-ambrosii-opera-pars-octava-de-fide-ad-gratianum-augustum/99200781?name=sancti-ambrosii-opera-pars-octava-de-fide-ad-gratianum-augustum&product_form=5082}
 }
 
 @book{apuleiusApuleiOperaQuae1908,
@@ -168,7 +171,8 @@ We also provide BibTeX citations for these texts below:
   series = {Works},
   publisher = {B. G. Teubner},
   address = {Leipzig},
-  urldate = {2025-04-07}
+  urldate = {2025-04-07},
+  url = {https://babel.hathitrust.org/cgi/pt?id=inu.30000134550247&seq=1}
 }
 
 @book{boccaccioOpereLatineMinori1928,
@@ -179,7 +183,8 @@ We also provide BibTeX citations for these texts below:
   series = {G. {{Boccaccio}}. {{Opere}}},
   volume = {9},
   publisher = {G. Laterza \& Figli},
-  address = {Bari}
+  address = {Bari},
+  url = {https://babel.hathitrust.org/cgi/pt?id=mdp.39015049187936&seq=9}
 }
 
 @book{calvinIoannisCalviniOpera1866,
@@ -191,18 +196,20 @@ We also provide BibTeX citations for these texts below:
   volume = {5},
   publisher = {{C. A. Schwetschke and Son}},
   address = {Braunschweig},
-  langid = {latin}
+  langid = {latin},
+  url = {https://babel.hathitrust.org/cgi/pt?id=hvd.32044014808612&seq=11}
 }
 
 @book{donatusTiberiClaudiDonati1905,
   title = {{Tiberi Claudi Donati ad Tiberium Claudium Maximum Donatianum filium suum interpretationes Vergilianae}},
   author = {Donatus, Tiberius Claudius},
   editor = {Georges, Heinrich},
-  year = {1905},
+  year = {1905/1906},
   series = {{Bibliotheca scriptorum Graecorum et Romanorum Teubneriana}},
   publisher = {B. G. Teubner},
   address = {Leipzig},
-  langid = {latin}
+  langid = {latin},
+  url = {https://babel.hathitrust.org/cgi/pt?id=coo.31924006305613&seq=3}
 }
 
 @book{enniusEnnianaePoesisReliquiae1903,
@@ -213,7 +220,8 @@ We also provide BibTeX citations for these texts below:
   publisher = {B. G. Teubner},
   address = {Leipzig},
   urldate = {2025-04-07},
-  langid = {latin}
+  langid = {latin},
+  url = {https://babel.hathitrust.org/cgi/pt?id=mdp.39015005168292&seq=5}
 }
 
 @book{johnofsalisburyOperaOmnia1848,
@@ -224,7 +232,8 @@ We also provide BibTeX citations for these texts below:
   volume = {1},
   publisher = {J. H. Parker},
   address = {Oxford},
-  langid = {latin}
+  langid = {latin},
+  url = {https://babel.hathitrust.org/cgi/pt?id=hvd.32044004805446&seq=7}
 }
 
 @book{palladiusPalladiiRutiliiTauri1898,
@@ -237,6 +246,7 @@ We also provide BibTeX citations for these texts below:
   publisher = {B. G. Teubner},
   address = {Leipzig},
   langid = {latin},
+  url = {https://babel.hathitrust.org/cgi/pt?id=uc1.b3105450&seq=5}
 }
 
 @book{theodosiusiiTheodosianiLibriXVI1905,
@@ -250,6 +260,7 @@ We also provide BibTeX citations for these texts below:
   address = {Berlin},
   urldate = {2025-04-07},
   langid = {latin},
+  url = {https://babel.hathitrust.org/cgi/pt?id=coo.31924022080968&seq=6}
 }
 ```
 
