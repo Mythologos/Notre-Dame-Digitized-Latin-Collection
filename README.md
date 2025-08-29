@@ -15,10 +15,10 @@ We created these digitized texts through the following process:
 and we ensured that we had the rights to use and release data from the given textual editions.
 2. We split each PDF into PNGs using `pdf2image` library (available [here](https://github.com/Belval/pdf2image)).
 3. We employed the [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) tool with training data (tessdata) for Latin and Ancient Greek via the `pytesseract` library (available [here](https://github.com/madmaze/pytesseract)).
-4. We outputted results to hOCR files, and we uploaded these to a locally-hosted version of the 
+4. We uploaded the resulting hOCR files to a locally-hosted version of the 
 *Lace* post-correction tool (available [here](https://github.com/brobertson/Lace2)).
 5. We post-corrected the OCR results in Lace for the *main text* (and not notes or critical apparati), and we obtained EpiDoc-styled XML documents from Lace with our corrections.
-6. We ran an additional Latin spellchecker and performed a few manual checks to root out extraneous text such as marginal numbers and catch any missed errors.
+6. We ran an additional Latin spellchecker and performed a few manual checks to root out extraneous text such as marginal numbers, to correct badly-ordered text, or to address other errors.
 7. We applied the [Hook](https://github.com/Capitains/HookTest) testing suite via its [Docker container](https://github.com/Capitains/docker-hooktest) to ensure our documents were EpiDoc- and CTS-compliant, and we altered our documents until all tests passed.
 
 Through this process, we created the documents presented in this repository. 
@@ -84,9 +84,11 @@ This repository contains the following authors and texts (each ordered by URI):
     - Severus (stoa001; 5)
     - Anthemus (stoa001; 6)
 
+While most texts are completely digitized, the *Interpretationes Vergilianae* is only completed up through the first book (that is, of the *Aeneid*).
+
 ## Contributing
 
-If errors persist in the metadata or body of text within this data, we would be glad to know and correct it!
+If errors persist in our digital editions, we would be glad to correct them!
 Please open an issue to start a conversation on the subject. 
 In your issue, note the document(s) and section(s) where the information presented is inaccurate.
 
@@ -99,6 +101,155 @@ A citation for this work is pending.
 ### Textual Sources
 
 Please see individual XML documents, as well as their accompanying `__cts__.xml` files, for source information on our source PDFs' editions.
+We also provide BibTeX citations for these texts below:
+
+```
+@book{ambroseSanctiAmbrosiiOpera1962a,
+  title = {{Sancti Ambrosii Opera. Pars prima, Qua continentur libri: Exameron; De Paradiso; De Cain et Abel; De Noe; De Abraham; De Isaac; De bono mortis}},
+  author = {{Ambrose}},
+  editor = {Schenkl, Karl},
+  year = {1962},
+  series = {{Corpus Scriptorum Ecclesiasticorum Latinorum}},
+  volume = {32.1},
+  publisher = {Johnson Reprint Corporation; F. Tempsky, F. Tempsky, G. Freytag},
+  address = {New York and London},
+  isbn = {978-3-7001-9104-9 3-7001-9104-9},
+  langid = {latin}
+}
+
+@book{ambroseSanctiAmbrosiiOpera1962b,
+  title = {{Sancti Ambrosii Opera. Pars altera, Qua continentur libri: De Iacob; De Ioseph; De patriarchis; De fuga saeculi; De interpellatione Iob et David; De apologia David; Apologia David altera; De Helia et ieiunio; De Nabuthae; De Tobia}},
+  author = {{Ambrose}},
+  editor = {Schenkl, Karl},
+  year = {1962},
+  series = {{Corpus Scriptorum Ecclesiasticorum Latinorum}},
+  volume = {32.2},
+  publisher = {Johnson Reprint Corporation; F. Tempsky, F. Tempsky, G. Freytag},
+  address = {New York and London},
+  isbn = {978-3-7001-9105-6 3-7001-9105-7},
+  langid = {latin}
+}
+
+@book{ambroseSanctiAmbrosiiOpera1955,
+  title = {{Sancti Ambrosii Opera. Pars septima: Explanatio symboli. De sacramentis. De mysteriis. De paenitentia. De excessu fratris. De obitu Valentiniani. De obitu Theodosii.}},
+  shorttitle = {{Sancti Ambrosii Opera. Pars septima}},
+  author = {{Ambrose}},
+  editor = {Faller, Otto},
+  year = {1955},
+  series = {{Corpus Scriptorum Ecclesiasticorum Latinorum}},
+  volume = {73},
+  publisher = {Hoelder-Pichler-Tempsky},
+  address = {Vindobonae},
+  urldate = {2024-08-22},
+  langid = {latin},
+  annotation = {OCLC: 458437729}
+}
+
+@book{ambroseSanctiAmbrosiiOpera1962,
+  title = {{Sancti Ambrosii opera. Pars octava, De fide: ad Gratianum Augustum}},
+  author = {{Ambrose}},
+  editor = {Faller, Otto},
+  year = {1962},
+  series = {{Corpus Scriptorum Ecclesiasticorum Latinorum}},
+  volume = {78},
+  publisher = {Hoelder-Pichler-Tempsky},
+  address = {Vindobonae},
+  chapter = {60, 330 pages.},
+  langid = {latin}
+}
+
+@book{apuleiusApuleiOperaQuae1908,
+  title = {Apulei {{Opera}} Quae Supersunt.},
+  author = {{Apuleius}},
+  editor = {Thomas, Paul},
+  year = {1908},
+  series = {Works},
+  publisher = {B. G. Teubner},
+  address = {Leipzig},
+  urldate = {2025-04-07}
+}
+
+@book{boccaccioOpereLatineMinori1928,
+  title = {Opere Latine Minori ({{Buccolicum}} Carmen, Carminum et Epistolarum Quae Supersunt, Scripta Breviora)},
+  author = {Boccaccio, Giovanni},
+  editor = {Mass{\`e}ra, Aldo Francesco.},
+  year = {1928},
+  series = {G. {{Boccaccio}}. {{Opere}}},
+  volume = {9},
+  publisher = {G. Laterza \& Figli},
+  address = {Bari}
+}
+
+@book{calvinIoannisCalviniOpera1866,
+  title = {{Ioannis Calvini opera quae supersunt omnia}},
+  author = {Calvin, Jean},
+  editor = {Baum, Johann Wilhelm and Cunitz, Ed and Reuss, Eduard},
+  year = {1866},
+  series = {{Corpus reformatorum}},
+  volume = {5},
+  publisher = {{C. A. Schwetschke and Son}},
+  address = {Braunschweig},
+  langid = {latin}
+}
+
+@book{donatusTiberiClaudiDonati1905,
+  title = {{Tiberi Claudi Donati ad Tiberium Claudium Maximum Donatianum filium suum interpretationes Vergilianae}},
+  author = {Donatus, Tiberius Claudius},
+  editor = {Georges, Heinrich},
+  year = {1905},
+  series = {{Bibliotheca scriptorum Graecorum et Romanorum Teubneriana}},
+  publisher = {B. G. Teubner},
+  address = {Leipzig},
+  langid = {latin}
+}
+
+@book{enniusEnnianaePoesisReliquiae1903,
+  title = {{Ennianae poesis reliquiae iteratis curis recensuit Iohannes Vahlen.}},
+  author = {Ennius, Quintus},
+  editor = {Vahlen, Johannes},
+  year = {1903},
+  publisher = {B. G. Teubner},
+  address = {Leipzig},
+  urldate = {2025-04-07},
+  langid = {latin}
+}
+
+@book{johnofsalisburyOperaOmnia1848,
+  title = {{Opera omnia}},
+  author = {{John of Salisbury} and Giles, J. A.},
+  year = {1848},
+  series = {{Patres Ecclesiae Anglicanae}},
+  volume = {1},
+  publisher = {J. H. Parker},
+  address = {Oxford},
+  langid = {latin}
+}
+
+@book{palladiusPalladiiRutiliiTauri1898,
+  title = {{Palladii Rutilii Tauri Aemiliani viri inlustris Opus agriculturae}},
+  author = {Palladius, Rutilius Taurus Aemilianus.},
+  editor = {Schmitt, J. C.},
+  year = {1898},
+  series = {{De re rustica}},
+  number = {xiii, 269 p.},
+  publisher = {B. G. Teubner},
+  address = {Leipzig},
+  langid = {latin},
+}
+
+@book{theodosiusiiTheodosianiLibriXVI1905,
+  title = {{Theodosiani libri XVI cum Constitutionibus Sirmondianis: et Leges novellae ad Theodosianum pertinentes}},
+  shorttitle = {{Theodosiani libri XVI cum Constitutionibus Sirmondianis}},
+  author = {{Theodosius II}},
+  editor = {Meyer, Paul M. and Mommsen, Theodor},
+  year = {1905},
+  volume = {2},
+  publisher = {Weidmann},
+  address = {Berlin},
+  urldate = {2025-04-07},
+  langid = {latin},
+}
+```
 
 ### Software Sources
 
@@ -175,4 +326,4 @@ Please consult the following sources for information on the software used:
 
 We would like to thank the [Navari Family Center for Digital Scholarship (NFCDS)](https://cds.library.nd.edu/)
 at the University of Notre Dame for supporting our work on 
-digitization and making scholarly materials publicly-accessible.
+digitization and creating openly-accessible materials.
