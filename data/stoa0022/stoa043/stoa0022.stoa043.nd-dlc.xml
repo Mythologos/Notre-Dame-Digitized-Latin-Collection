@@ -9,12 +9,17 @@
 				<tei:respStmt>
 					<tei:persName>Kaitlin Stephan</tei:persName>
 					<tei:orgName>University of Notre Dame</tei:orgName>
-					<tei:resp>Post-corrected and sectioned text</tei:resp>
+					<tei:resp>Post-corrected OCR and sectioned text.</tei:resp>
 				</tei:respStmt>
 				<tei:respStmt>
 					<tei:persName>Stephen Bothwell</tei:persName>
 					<tei:orgName>University of Notre Dame</tei:orgName>
-					<tei:resp>OCR-ed and preprocessed text for Lace post-correction; checked text post-XML conversion</tei:resp>
+					<tei:resp>OCR-ed and preprocessed text for Lace post-correction; checked text post-XML conversion.</tei:resp>
+				</tei:respStmt>
+                <tei:respStmt>
+					<tei:persName>Hildegund Müller</tei:persName>
+					<tei:orgName>University of Notre Dame</tei:orgName>
+					<tei:resp>Provided supervision and initial financial support for digital edition creation initiative.</tei:resp>
 				</tei:respStmt>
 			</tei:titleStmt>
 			<tei:publicationStmt>
@@ -54,9 +59,21 @@
 				</tei:correction>
 			</tei:editorialDecl>
 			<tei:p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE Architecture</tei:p>
-			<tei:refsDecl n="CTS">
-				<tei:cRefPattern matchPattern="(\w+)" n="lines" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])" />
-			</tei:refsDecl>
+            <tei:refsDecl n="CTS">
+                <tei:cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+                    <tei:p>This pointer pattern extracts books.</tei:p>
+                </tei:cRefPattern>
+            </tei:refsDecl>
+            <tei:refsDecl n="CTS">
+                <tei:cRefPattern n="section" matchPattern="(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+                    <tei:p>This pointer pattern extracts sections.</tei:p>
+                </tei:cRefPattern>
+            </tei:refsDecl>
+            <tei:refsDecl n="CTS">
+                <tei:cRefPattern n="subsection" matchPattern="(\w+)(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']//tei:div[@n='$3'])">
+                    <tei:p>This pointer pattern extracts subsections.</tei:p>
+                </tei:cRefPattern>
+            </tei:refsDecl>
 		</tei:encodingDesc>
 		<tei:profileDesc>
 			<tei:langUsage>
@@ -75,528 +92,529 @@
 			<tei:change when="2025-03-28" who="Stephen Bothwell">Filled in publicationStmt element.</tei:change>
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Finished adding licensing information. Altered project identifier in textparts to be ND-DLC.</tei:change>
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Fixes publisher element mislabeled as date element.</tei:change>
+            <tei:change when="2025-11-24" who="Stephen Bothwell">Tentatively revises textual divisions. Amends descriptions for attributions and adds attribution for Hildegund Müller.</tei:change>
 		</tei:revisionDesc>
 	</tei:teiHeader>
 	<tei:text>
 		<tei:body>
 			<tei:div type="edition" xml:lang="lat" n="urn:cts:latinLit:stoa0022.stoa043.nd-dlc">
-				<tei:div type="textpart" subtype="1" n="1">
-					<tei:div type="textpart" subtype="2" n="1.1">
-						<tei:div type="textpart" subtype="3" n="1.1.1">
+				<tei:div type="textpart" subtype="book" n="1">
+					<tei:div type="textpart" subtype="section" n="1.1">
+						<tei:div type="textpart" subtype="subsection" n="1.1.1">
 							<tei:p><tei:pb facs="csel-73_0158" />De sacramentis, quae accepistis, sermonem adorior, cuius rationem non oportuit ante praemitti. In Christiano enim viro prima est fides. Ideo et Romae fideles dicuntur, qui baptizati sunt, et pater noster Abraham ex fide iustificatus est, non ex operibus. Ergo accepistis baptismum, credidistis. Nefas est namque me aliud aestimare; neque enim vocatus esses ad gratiam, nisi dignum te Christus sua gratia iudicasset.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.1.2">
+						<tei:div type="textpart" subtype="subsection" n="1.1.2">
 							<tei:p>Ergo quid egimus sabbato? Nempe apertionem. Quae mysteria celebrata sunt apertionis, quando tibi aures tetigit sacerdos et nares. Quid significat? In evangelio dominus noster Iesus Christus, cum ei oblatus esset surdus et mutus,<tei:pb facs="csel-73_0159" />tetigit aures eius et os eius, aures, quia surdus erat, os, quia mutus. Et ait: effetha. Hebraicum verbum est, quod Latine dicitur adaperire. Ideo ergo tibi sacerdos aures tetigit, ut aperirentur aures tuae ad sermonem et ad alloquium sacerdotis.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.1.3">
+						<tei:div type="textpart" subtype="subsection" n="1.1.3">
 							<tei:p>Sed dicis mihi: 'Quare nares?' Ibi quia mutus erat, os tetigit, ut, quia loqui non poterat sacramenta caelestia, vocem acciperet a Christo; et ibi, quia vir! Hic quia mulieres baptizantur, et non eadem puritas servi quanta et domini — cum enim ille peccata concedat, huic peccata donentur, quae potest esse conparatio! —, ideo propter gratiam operis et muneris non os tangit episcopus, sed nares. Quare nares? Ut bonum odorem accipias pietatis aeternae, ut dicas: Christi bonus odor sumus deo, quemadmodum dixit<tei:pb facs="csel-73_0160" />apostolus sanctus, et sit in te fidei devotionisque plena fraglantia.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.2">
-						<tei:div type="textpart" subtype="3" n="1.2.4">
+					<tei:div type="textpart" subtype="section" n="1.2">
+						<tei:div type="textpart" subtype="subsection" n="1.2.4">
 							<tei:p>Venimus ad fontem, ingressus es, unctus es. Considera, quos videris, quid locutus sis, considera, repete diligenter! Occurrit tibi levita, occurrit presbyter, unctus es quasi athleta Christi, quasi luctam huius saeculi luctaturus. Professus es luctaminis tui certamina. Qui luctatur, habet, quod speret; ubi certamen, ibi corona. Luctaris in saeculo, sed coronaris a Christo. Et pro certaminibus saeculi coronaris; nam etsi in caelo praemium, hic tamen meritum praemii conlocatur.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.2.5">
+						<tei:div type="textpart" subtype="subsection" n="1.2.5">
 							<tei:p>Quando te interrogavit: 'Abrenuntias diabolo et operibus eius?' quid respondisti? 'Abrenuntio.' 'Abrenuntias saeculo et voluptatibus eius?' quid respondisti? 'Abrenuntio.' — Memor esto sermonis tui, et numquam tibi excidat tuae series cautionis. Si chirographum homini dederis, teneris obnoxius, ut pecuniam eius accipias; teneris adstrictus, et<tei:pb facs="csel-73_0161" />reluctantem te fenerator adstringit. Si recusas, vadis ad iudicem atque illic tua cautione convinceris.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.2.6">
+						<tei:div type="textpart" subtype="subsection" n="1.2.6">
 							<tei:p>Ubi promiseris, considera, vel quibus promiseris. Levitam vidisti, sed minister est Christi. Vidisti illum ante altaria ministrare. Ergo chirographum tuum tenetur non in terra, sed in caelo. Considera, ubi capias sacramenta caelestia. Si hic corpus est Christi, hic et angeli constituti sunt. Ubi corpus, ibi et aquilae, legisti in evangelio. Ubi corpus Christi, ibi et aquilae, quae volare consuerunt, ut terrena fugiant, caelestia petant. Quare hoc dico? Quia et homines angeli, quicumque adnuntiant Christum et in angelorum adscisci videntur locum.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.2.7">
+						<tei:div type="textpart" subtype="subsection" n="1.2.7">
 							<tei:p>Quomodo? Accipe: Baptista erat Iohannes natus ex viro et muliere. Attamen audi, quia angelus est et ipse: Ecce mitto angelum meum ante faciem tuam et parabit viam tuam ante te. Et accipe aliud. Malachiel ait propheta: Quia labia sacerdotis custodiunt scientiam et legem exquirunt ex ore ipsius, angelus est enim dei<tei:pb facs="csel-73_0162" />omnipotentis. Haec ideo dicuntur, ut sacerdotii gloriam praedicemus, non ut aliquid personalibus meritis adrogetur.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.2.8">
+						<tei:div type="textpart" subtype="subsection" n="1.2.8">
 							<tei:p>Ergo abrenuntiasti mundo, abrenuntiasti saeculo; esto sollicitus! Qui pecuniam debet, semper cautionem suam considerat. Et tu, qui fidem debes Christo, fidem serva, quae multo pretiosior quam pecunia est; fides enim aeternum patrimonium est, pecunia temporale. Et tu ergo semper recordare, quid promiseris: eris cautior. Si teneas promissionem tuam, tenebis et cautionem.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.3">
-						<tei:div type="textpart" subtype="3" n="1.3.9">
+					<tei:div type="textpart" subtype="section" n="1.3">
+						<tei:div type="textpart" subtype="subsection" n="1.3.9">
 							<tei:p>Deinde accessisti propius, vidisti fontem, vidisti et sacerdotem supra fontem. Nec hoc possum dubitare, quod in animum vestrum non potuerit cadere, quod cecidit in illum Syrum Neman, quia, etsi mundatus est, tamen ante dubitavit. Quare? Dicam, accipe:</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.3.10">
+						<tei:div type="textpart" subtype="subsection" n="1.3.10">
 							<tei:p>Ingressus es, vidisti aquam, vidisti sacerdotem, vidisti levitam. Ne forte aliqui dixerit: 'Hoc est totum?' Immo hoc est totum, vere totum, ubi tota innocentia, ubi tota pietas, tota gratia, tota sanctificatio. Vidisti, quae videre potuisti oculis tui corporis et humanis<tei:pb facs="csel-73_0163" />conspectibus, non vidisti illa, quae operantur, sed quae videntur. Illa multo maiora sunt, quae non videntur quam quae videntur, quoniam quae videntur, temporalia sunt, quae autem non videntur, aeterna.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.4">
-						<tei:div type="textpart" subtype="3" n="1.4.11">
+					<tei:div type="textpart" subtype="section" n="1.4">
+						<tei:div type="textpart" subtype="subsection" n="1.4.11">
 							<tei:p>Ergo dicamus primum — tene cautionem vocis meae et exige —: Miramur mysteria Iudaeorum, quae patribus nostris data sunt, primum vetustatem sacramentorum, deinde sanctitatem praestantium. Illud promitto, quod diviniora et priora sacramenta sunt Christianorum quam Iudaeorum.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.4.12">
+						<tei:div type="textpart" subtype="subsection" n="1.4.12">
 							<tei:p>Quid praecipuum quam quod per mare transivit Iudaeorum populus, ut de baptismo interim loquamur? Attamen qui transierunt Iudaei, mortui sunt omnes in deserto. Ceterum qui per hunc fontem transit, hoc est a terrenis ad caelestia, — hic est enim transitus, ideo pascha, hoc est 'transitus eius', transitus a peccato ad vitam, a culpa ad gratiam, ab inquinamento ad sanctificationem —, qui per hunc fontem transit, non moritur, sed resurgit.<tei:pb facs="csel-73_0164" /></tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.5">
-						<tei:div type="textpart" subtype="3" n="1.5.13">
+					<tei:div type="textpart" subtype="section" n="1.5">
+						<tei:div type="textpart" subtype="subsection" n="1.5.13">
 							<tei:p>Neman ergo leprosus erat. Ait puella quaedam uxori illius: Dominus meus si vult mundari, vadat in terram Israhel, et ibi inveniet eum, qui possit ei lepram tollere. Dixit illa dominae suae, uxor marito, Neman regi Syriae; qui eum quasi acceptissimum sibi misit ad regem Israhel. Audivit rex Israhel, quod missus esset ad eum, cui lepram mundaret, et scidit vestem suam. Tunc Helisaeus propheta mandat ei: Quid est, quod scidisti vestem, quasi non sit deus potens, qui mundet leprosum? Mitte illum ad me. Misit illum. Cui advenienti ait propheta: Vade, descende in Iordanem, merge et sanus eris.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.5.14">
+						<tei:div type="textpart" subtype="subsection" n="1.5.14">
 							<tei:p>Ille coepit cogitare secum et dicere: Hoc est totum? Veni de Syria in terram Iudaeam et dicitur mihi: Vade in Iordanem et merge et sanus eris, quasi flumina meliora non sint in patria mea. Dixerunt ei servi: Domine, quare non facis verbum prophetae? Magis fac et experire. Tunc ille ivit in Iordanem, mersit et surrexit sanus. —<tei:pb facs="csel-73_0165" /></tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.5.15">
+						<tei:div type="textpart" subtype="subsection" n="1.5.15">
 							<tei:p>Quid ergo significat? Vidisti aquam; sed non aqua omnis sanat, sed aqua sanat, quae habet gratiam Christi. Aliud est elementum, aliud consecratio: aliud opus, aliud operatio. Aquae opus est, operatio spiritus sancti est. Non sanat aqua, nisi spiritus sanctus descenderit et aquam illam consecraverit, sicut legisti, quod, cum dominus noster Iesus Christus formam baptismatis daret, venit ad Iohannem, et ait illi Iohannes: Ego a te debeo baptizari, et tu venis ad me? Respondit illi Christus: Sine modo; sic enim decet nos inplere omnem iustitiam. Vide, quia omnis iustitia in baptismate constituta est.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.5.16">
+						<tei:div type="textpart" subtype="subsection" n="1.5.16">
 							<tei:p>Ergo quare Christus descendit, nisi ut caro ista mundaretur, caro, quam suscepit de nostra condicione? Non enim ablutio peccatorum suorum Christo necessaria erat, qui peccatum non fecit, sed nobis erat necessaria, qui peccato manemus obnoxii. Ergo si propter nos baptismum, nobis forma est constituta, fidei nostrae forma proposita est.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.5.17">
+						<tei:div type="textpart" subtype="subsection" n="1.5.17">
 							<tei:p>Descendit Christus, Iohannes adstabat, qui baptizabat, et ecce quasi columba spiritus sanctus descendit. Non<tei:pb facs="csel-73_0166" />columba descendit, sed 'quasi columba'. Memento, quid dixerim: Christus carnem suscepit: non 'sicut carnem', sed carnis istius veritatem, vere carnem Christus suscepit. Spiritus autem sanctus in specie columbae, non in veritate columbae, sed in specie columbae descendit e caelo. Ergo vidit Iohannes et credidit.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.5.18">
+						<tei:div type="textpart" subtype="subsection" n="1.5.18">
 							<tei:p>Descendit Christus, descendit et spiritus sanctus. Quare prior Christus descendit, postea spiritus sanctus, cum forma baptismatis et usus hoc habeat, ut ante fons consecretur, tunc descendat, qui baptizandus est? — Nam ubi primum ingreditur sacerdos, exorcismum facit secundum creaturam aquae, invocationem postea et precem defert, ut sanctificetur fons et adsit praesentia trinitatis aeternae. — Christus autem ante descendit, secutus est spiritus. Qua ratione? Ut non quasi ipse egere dominus Iesus sanctificationis mysterio videretur, sed sanctificaret ipse, sanctificaret et spiritus.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.5.19">
+						<tei:div type="textpart" subtype="subsection" n="1.5.19">
 							<tei:p>Ergo descendit in aquam Christus, et spiritus sanctus sicut columba descendit, pater quoque deus locutus e caelo est: Habes praesentiam trinitatis.<tei:pb facs="csel-73_0167" />
 							</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.6">
-						<tei:div type="textpart" subtype="3" n="1.6.20">
+					<tei:div type="textpart" subtype="section" n="1.6">
+						<tei:div type="textpart" subtype="subsection" n="1.6.20">
 							<tei:p>In mari autem rubro figuram istius baptismatis extitisse ait apostolus dicens: Quia patres nostri omnes baptizati sunt in nube et in mari, et subdidit: Haec autem omnia in figura facta sunt illis; illis in figura, sed nobis in veritate. Tunc Moyses virgam tenebat. Conclusus erat populus Iudaeorum. Instabat Aegyptius cum armatis. Ex una parte mari claudebantur Hebraei. Neque maria transire poterant neque in hostem recurrere. Murmurare coeperunt. —</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.6.21">
+						<tei:div type="textpart" subtype="subsection" n="1.6.21">
 							<tei:p>Vide non te provocet, quia exauditi sunt: etsi exaudivit dominus, tamen culpa non carent, qui murmuraverunt. Tuum est, ubi constringeris, credere, quod evadas, non murmurare, invocare, rogare, non querelam expromere. —</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.6.22">
+						<tei:div type="textpart" subtype="subsection" n="1.6.22">
 							<tei:p>Tenebat virgam Moyses et ducebat populum Hebraeorum in nocte in columna lucis, in die in columna nubis. Lux quid est nisi veritas, quia apertum et planum lumen effundit? Columna lucis quis est nisi Christus dominus, qui tenebras infidelitatis depulit, lucem veritatis et gratiae adfectibus infudit humanis? At vero columna nubis est spiritus sanctus. In mari erat populus et praeibat columna lucis, deinde sequebatur columna nubis quasi obumbratio spiritus sancti. Vides, quod per spiritum sanctum et per aquam typum baptismatis demonstraverit.<tei:pb facs="csel-73_0168" />
 							</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.6.23">
+						<tei:div type="textpart" subtype="subsection" n="1.6.23">
 							<tei:p>In diluvio quoque, fuit iam tunc figura baptismatis, et adhuc utique non erant mysteria Iudaeorum. Si ergo huius baptismatis forma praecessit, vides superiora mysteria Christianorum quam fuerint Iudaeorum.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="1.6.24">
+						<tei:div type="textpart" subtype="subsection" n="1.6.24">
 							<tei:p>Sed interim secundum fragilitatem vocis nostrae et secundum temporis rationem satis sit hodie etiam de sacro fonte libasse mysteria. Crastina die, si dominus dederit loquendi potestatem vel copiam, plenius intimabo. Opus est, ut sanctitas vestra aures paratas habeat, promptiorem animum, ut ea, quae nos colligere possumus de serie scripturarum et vobis intimaverimus, tenere possitis, ut habeatis gratiam patris et filii et spiritus sancti, cui trinitati perpetuum regnum est a saeculis et nunc et semper et in omnia saecula saeculorum. Amen.</tei:p>
 						</tei:div>
 					</tei:div>
 				</tei:div>
-				<tei:div type="textpart" subtype="1" n="2">
-					<tei:div type="textpart" subtype="2" n="2.1">
-						<tei:div type="textpart" subtype="3" n="2.1.1">
+				<tei:div type="textpart" subtype="book" n="2">
+					<tei:div type="textpart" subtype="section" n="2.1">
+						<tei:div type="textpart" subtype="subsection" n="2.1.1">
 							<tei:p>In diluvio quoque figuram baptismatis praecessisse hesterno coepimus disputare. Quid est diluvium nisi in quo iustus ad seminarium iustitiae reservatur, peccatum moritur?<tei:pb facs="csel-73_0169" />Ideo dominus videns hominum pullulare delicta iustum solum cum sua progenie reservavit, aquam autem supra montes quoque exire praecepit. Et ideo in illo diluvio omnis corruptela carnis interiit, sola iusti prosapia et forma permansit. Nonne hoc est diluvium, quod est baptisma, quo peccata omnia diluuntur, sola iusti mens et gratia resuscitatur!</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.1.2">
+						<tei:div type="textpart" subtype="subsection" n="2.1.2">
 							<tei:p>Multa genera baptismatum, sed unum baptisma, clamat apostolus. Quare? Sunt baptismata gentium, sed non sunt baptismata. Lavacra sunt, baptismata esse non possunt. Caro lavatur, non culpa diluitur, immo in illo lavacro culpa contrahitur. Erant baptismata Iudaeorum, alia superflua, alia in figura. Et figura ipsa nobis profecit, quia veritatis est nuntia.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="2.2">
-						<tei:div type="textpart" subtype="3" n="2.2.3">
+					<tei:div type="textpart" subtype="section" n="2.2">
+						<tei:div type="textpart" subtype="subsection" n="2.2.3">
 							<tei:p>Quid lectum est heri? Angelus, inquit, secundum tempus descendebat in piscinam, et quotienscumque descendisset angelus, movebatur aqua, et qui prior descendisset, sanabatur ab omni languore, quocumque tenebatur. Quod significat figuram venturi domini nostri Iesu Christi.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.2.4">
+						<tei:div type="textpart" subtype="subsection" n="2.2.4">
 							<tei:p>Quare 'angelus'; ipse est enim magni consili angelus; 'secundum<tei:pb facs="csel-73_0170" />tempus', quod ad horam novissimam servabatur, ut in occasu ipso diem depraehenderet et differret occasum. Quotienscumque ergo descendisset angelus, 'movebatur aqua'. Dicis forte: 'Quare modo non movetur?' Audi, quare: Signa incredulis, fides credentibus. —</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.2.5">
+						<tei:div type="textpart" subtype="subsection" n="2.2.5">
 							<tei:p>'Qui prior descendisset, sanabatur ab omni infirmitate': Quid est 'prior'? tempore an honore? Utrumque intellege! Si tempore 'prior qui descendisset', sanabatur ante, hoc est, de populo Iudaeorum magis quam de populo nationum. Si honore 'qui prior descendisset', hoc est, qui haberet dei metum, studium iustitiae, gratiae, caritatis, castitatis adfectum, ipse magis sanabatur. Tamen tunc temporis unus salvabatur, tunc, inquam, temporis in figura 'qui prior descendisset', solus curabatur. Quanto maior est gratia ecclesiae, in qua omnes salvantur, quicumque descendunt. —</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.2.6">
+						<tei:div type="textpart" subtype="subsection" n="2.2.6">
 							<tei:p>Sed videte mysterium: Venit dominus noster Iesus Christus ad piscinam. Multi aegri iacebant. Et facile ibi multi aegri iacebant, ubi unus tantummodo curabatur. Deinde ait ad illum paralyticum: 'Descende.' Ait ille: Hominem non habeo. Vide, ubi baptizaris, unde sit baptisma<tei:pb facs="csel-73_0171" />nisi de cruce Christi, de morte Christi. Ibi est omne mysterium, quia pro te passus est. In ipso redimeris, in ipso salvaris.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.2.7">
+						<tei:div type="textpart" subtype="subsection" n="2.2.7">
 							<tei:p>'Hominem, inquit, non habeo.' Hoc est: quia per hominem mors et per hominem resurrectio, non poterat descendere, non poterat salvari, qui non credebat, quod dominus noster Iesus Christus carnem suscepisset ex virgine. Hic autem qui opperiebatur mediatorem dei et hominum, hominem Iesum, expectans eum, de quo dictum est: et mittet dominus hominem, qui salvos faciet eos, dicebat: 'Hominem non habeo', et ideo ad sanitatem meruit pervenire, quia credebat in advenientem. Melior tamen et perfectior fuisset, si credidisset iam venisse, quem sperabat esse venturum.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="2.3">
-						<tei:div type="textpart" subtype="3" n="2.3.8">
+					<tei:div type="textpart" subtype="section" n="2.3">
+						<tei:div type="textpart" subtype="subsection" n="2.3.8">
 							<tei:p>Nunc vide singula: Diximus figuram praecessisse in Iordane, quando Neman leprosus ille mundatus est. Puella illa ex captivis quae est nisi quae speciem habebat ecclesiae et figuram repraesentabat? Captivus enim erat populus nationum, captivus erat: non dico captivitatem sub hoste aliquo populo constitutam, sed eam captivitatem dico, quae maior<tei:pb facs="csel-73_0172" />est, quando diabolus cum suis saevo dominatur imperio et captiva sibi colla subicit peccatorum.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.3.9">
+						<tei:div type="textpart" subtype="subsection" n="2.3.9">
 							<tei:p>Ergo habes unum baptisma, aliud in diluvio, habes tertium genus, quando in mari rubro baptizati sunt patres, habes quartum genus in piscina, quando movebatur aqua. Nunc te consulo, utrum credere debeas, quia habes praesentiam trinitatis in hoc baptismate, quo baptizat Christus in ecclesia.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="2.4">
-						<tei:div type="textpart" subtype="3" n="2.4.10">
+					<tei:div type="textpart" subtype="section" n="2.4">
+						<tei:div type="textpart" subtype="subsection" n="2.4.10">
 							<tei:p>Idem itaque dominus Iesus in evangelio suo dicit ad apostolos: Ite, baptizate gentes in nomine patris et filii et spiritus sancti. Sermo hic salvatoris est.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.4.11">
+						<tei:div type="textpart" subtype="subsection" n="2.4.11">
 							<tei:p>Dic mihi, o homo: Invocavit Helias de caelo ignem, et descendit ignis. Invocavit Helisaeus domini nomen, et de aqua ferrum securis ascendit, quod demersum fuerat. Ecce aliud genus baptismatis. Quare? Quia omnis homo ante baptismum quasi ferrum premitur atque demergitur; ubi baptizatus fuerit, non<tei:pb facs="csel-73_0173" />tamquam ferrum, sed tamquam iam levior fructuosi ligni species elevatur. Ergo et hic figura altera. Securis erat, qua caedebantur ligna. Cecidit manubrium de securi, hoc est: ferrum demersum est. Filius prophetae nescivit, quid faceret, sed hoc solum scivit, ut rogaret Helisaeum prophetam et remedium postularet. Tunc ille lignum misit, et ferrum levatum est. Vides ergo, quod in cruce Christi omnium hominum levatur infirmitas?</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.4.12">
+						<tei:div type="textpart" subtype="subsection" n="2.4.12">
 							<tei:p>Aliud — etsi non ordinem tenemus; quis enim possit omnia gesta conpraehendere Christi, sicut apostoli dixerunt? —: Moyses cum venisset in desertum et sitiret populus et venisset populus ad Merram fontem et bibere vellet, quia, ubi primum hausit, amaritudinem sensit et coepit bibere non posse, ideo Moyses misit lignum in fontem, et coepit aqua, quae erat ante amara, dulcescere.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.4.13">
+						<tei:div type="textpart" subtype="subsection" n="2.4.13">
 							<tei:p>Quid significat nisi quia omnis creatura corruptelae obnoxia, aqua amara est omnibus? Etsi ad tempus suavis, etsi ad tempus iucunda, amara est, quae non potest auferre peccatum. Ubi<tei:pb facs="csel-73_0174" />biberis, sities; ubi potus ceperis suavitatem, iterum amaritudinem sentis. Amara ergo aqua, sed ubi crucem Christi, ubi acceperit caeleste sacramentum, incipit esse dulcis et suavis; et merito dulcis, in qua culpa revocatur. Ergo si in figura tantum valuerunt baptismata, quanto amplius valet baptisma in veritate?</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="2.5">
-						<tei:div type="textpart" subtype="3" n="2.5.14">
+					<tei:div type="textpart" subtype="section" n="2.5">
+						<tei:div type="textpart" subtype="subsection" n="2.5.14">
 							<tei:p>Nunc ergo consideremus. Venit sacerdos, praecem dicit ad fontem, invocat patris nomen, praesentiam filii et spiritus sancti, utitur verbis caelestibus. Caelestia verba, quia Christi sunt, quod baptizemus in nomine patris et filii et spiritus sancti. Si ergo ad hominum sermonem, ad invocationem sancti aderat praesentia trinitatis, quanto magis ibi adest, ubi sermo operatur aeternus? Vultis scire, quia descendit spiritus? Audisti, quia quasi columba descendit. Quare quasi columba? Ut increduli vocarentur ad fidem. In principio signum debuit esse, in posterioribus debet esse perfectio. —</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.5.15">
+						<tei:div type="textpart" subtype="subsection" n="2.5.15">
 							<tei:p>Accipe aliud: Post mortem domini nostri Iesu Christi apostoli erant<tei:pb facs="csel-73_0175" />in uno loco et orabant in die pentecostes, et subito factus est magnus sonus, quasi cum vi magna spiritus ferretur, et visae sunt linguae dispersae sicut ignis. Quid hoc significat nisi descensum spiritus sancti? Qui se voluit incredulis etiam corporaliter demonstrare, hoc est corporaliter per signum, spiritaliter per sacramentum. Ergo manifestum testimonium eius adventus, nobis autem iam fidei praerogativa defertur, quia in principio signa incredulis fiebant, nobis iam in plenitudine ecclesiae non signo, sed fide veritas colligenda est.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="2.6">
-						<tei:div type="textpart" subtype="3" n="2.6.16">
+					<tei:div type="textpart" subtype="section" n="2.6">
+						<tei:div type="textpart" subtype="subsection" n="2.6.16">
 							<tei:p>Nunc disputemus, quid sit, quod dicitur baptisma! Venisti ad fontem, descendisti in eum, adtendisti summum sacerdotem; levitas, presbyterum in fonte vidisti. Quid est baptismum?</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.6.17">
+						<tei:div type="textpart" subtype="subsection" n="2.6.17">
 							<tei:p>In principio dominus deus noster hominem fecit, ut, si peccatum non gustaret, morte non moreretur. Peccatum contraxit, factus est obnoxius morti, eiectus est de paradiso. Sed dominus, qui sua vellet beneficia permanere et insidias omnes abolere serpentis, rescindere quoque omne, quod nocuit, primo quidem sententiam tulit in hominem: Terra es et in terram ibis, et morti hominem fecit obnoxium.<tei:pb facs="csel-73_0176" />Erat divina sententia, solvi humana condicione non poterat. Remedium datum est, ut homo moreretur et resurgeret. Quare? Ut et illud, quod ante damnationis loco cesserat, loco cederet beneficii. Quid illud est nisi mors? Quaeris quomodo? Quia mors interveniens finem facit peccati. Quando enim morimur, utique peccare desistimus. Satisfactum ergo sententiae videbatur, quia homo, qui factus fuerat, ut viveret, si tamen non peccaret, incipiebat mori. Sed ut dei perpetua gratia perseveraret, mortuus est homo, sed Christus invenit resurrectionem, id est: ut redintegraret caeleste beneficium, quod fraude fuerat serpentis amissum. Utrumque ergo pro nobis, quia et mors finis est peccatorum et resurrectio naturae est reformatio.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.6.18">
+						<tei:div type="textpart" subtype="subsection" n="2.6.18">
 							<tei:p>Verumtamen ne in hoc saeculo diaboli fraus vel insidiae praevalerent, inventum est baptisma. De quo baptismate audi, quid dicat scriptura, immo filius dei: quia Pharisaei, qui noluerunt baptizari baptismo Iohannis, consilium dei spreverunt. Ergo baptismum consilium dei est. Quanta est gratia, ubi est consilium dei!</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.6.19">
+						<tei:div type="textpart" subtype="subsection" n="2.6.19">
 							<tei:p>Audi ergo: Nam ut in hoc quoque saeculo nexus diaboli solveretur, inventum est, quomodo homo vivus moreretur et vivus resurgeret. Quid<tei:pb facs="csel-73_0177" />est vivus? Hoc est: vita corporis vivens, cum veniret ad fontem et mergeretur in fontem. Quid est aqua nisi de terra? Satisfit ergo sententiae caelesti sine mortis stupore. Quod mergis, solvitur sententia illa: terra es et in terram ibis. Inpleta sententia locus est beneficio remedioque caelesti. Ergo aqua de terra, possibilitas autem vitae nostrae non admittebat, ut terra operiremur et de terra resurgeremus. Deinde non terra lavat, sed aqua lavat. Ideo fons quasi sepultura est.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="2.7">
-						<tei:div type="textpart" subtype="3" n="2.7.20">
+					<tei:div type="textpart" subtype="section" n="2.7">
+						<tei:div type="textpart" subtype="subsection" n="2.7.20">
 							<tei:p>Interrogatus es: 'Credis in deum patrem omnipotentem?' Dixisti: 'Credo', et mersisti, hoc est: sepultus es. Iterum interrogatus es: 'Credis in dominum nostrum Iesum Christum et in crucem eius?' Dixisti: 'Credo' et mersisti. Ideo et Christo es consepultus. Qui enim Christo consepelitur, cum Christo resurgit. Tertio interrogatus es: 'Credis et in spiritum sanctum?' Dixisti: 'Credo', tertio mersisti, ut multiplicem lapsum superioris aetatis absolveret trina confessio.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.7.21">
+						<tei:div type="textpart" subtype="subsection" n="2.7.21">
 							<tei:p>Denique, ut vobis adferamus exemplum, sanctus apostolus Petrus, posteaquam in passione domini lapsus videretur infirmitate condicionis humanae, qui ante negaverat, postea, ut illum<tei:pb facs="csel-73_0178" />lapsum aboleret et solveret, tertio interrogatur a Christo, si Christum amaret. Tum ille dicit: Tu nosti, domine, quia amo te. Tertio dixit, ut tertio absolveretur.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.7.22">
+						<tei:div type="textpart" subtype="subsection" n="2.7.22">
 							<tei:p>Sic ergo peccatum dimittit pater, sic dimittit filius, sic et spiritus sanctus. In uno autem nomine baptizari nos, hoc est; in nomine patris et filii et spiritus sancti, noli mirari, quia dixit unum nomen, ubi est una substantia, una divinitas, una maiestas. Hoc est nomen, de quo dictum est: in quo oportet omnes salvos fieri. In hoc nomine omnes salvati estis, redditi estis ad gratiam vitae.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.7.23">
+						<tei:div type="textpart" subtype="subsection" n="2.7.23">
 							<tei:p>Clamat ergo apostolus, sicut audistis in lectione praesenti, quoniam, quicumque baptizatur, in morte Iesu baptizatur. Quid est 'in morte'? Ut, quomodo Christus mortuus est, sic et tu mortem degustes, quomodo Christus mortuus est peccato et deo vivit, ita et tu superioribus inlecebris peccatorum mortuus sis per baptismatis sacramentum, et resurrexeris per gratiam Christi. Mors ergo est, sed non in mortis corporalis veritate, sed in similitudine. Cum enim mergis, mortis suscipis et sepulturae similitudinem, crucis illius accipis sacramentum, quod in cruce Christus pependit et clavis confixum<tei:pb facs="csel-73_0179" />est corpus. Tu ergo concrucifigeris, Christo adhaeres, clavis domini nostri Iesu Christi adhaeres, ne te diabolus inde possit abstrahere. Teneat te clavus Christi, quem revocat humanae condicionis infirmitas.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="2.7.24">
+						<tei:div type="textpart" subtype="subsection" n="2.7.24">
 							<tei:p>Ergo mersisti, venisti ad sacerdotem. Quid tibi dixit? Deus, inquit, pater omnipotens, qui te regeneravit ex aqua et spiritu concessitque tibi peccata tua, ipse te unguet in vitam aeternam. Vide, ubi unctus es: 'in vitam' inquit 'aeternam'. Noli hanc vitam illi vitae anteferre. Verbi gratia si exurgat inimicus aliqui, si velit tibi fidem tuam auferre, si minatur mortem, ut praevaricetur quisquam, vide, quid eligas. Noli eligere illud, in quo non es unctus, sed illud elige, in quo unctus es, ut vitam aeternam vitae praeferas temporali.<tei:pb facs="csel-73_0180" /></tei:p>
 						</tei:div>
 					</tei:div>
 				</tei:div>
-				<tei:div type="textpart" subtype="1" n="3">
-					<tei:div type="textpart" subtype="2" n="3.1">
-						<tei:div type="textpart" subtype="3" n="3.1.1">
+				<tei:div type="textpart" subtype="book" n="3">
+					<tei:div type="textpart" subtype="section" n="3.1">
+						<tei:div type="textpart" subtype="subsection" n="3.1.1">
 							<tei:p>Hesterno de fonte disputavimus, cuius species veluti quaedam sepulchri forma est, in quem, credentes in patrem et filium et spiritum sanctum, recipimur et demergimur et resurgimus, hoc est resuscitamur. Accipis autem myrum, hoc est unguentum, supra caput. Quare supra caput? Quia sensus sapientis in capite eius, Salomon ait. Friget enim sapientia sine gratia, sed ubi gratiam acceperit sapientia, tunc opus eius incipit esse perfectum. Haec regeneratio dicitur.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="3.1.2">
+						<tei:div type="textpart" subtype="subsection" n="3.1.2">
 							<tei:p>Quid est regeneratio? Habes in actibus apostolorum, quod ille versiculus, qui dictus est in psalmo secundo: Filius meus es tu, ego hodie genui? te, ad resurrectionem spectare videatur. Namque sanctus apostolus Petrus in actibus apostolorum sic interpretatus est, quod tunc, quando resurrexit<tei:pb facs="csel-73_0181" />filius a morte, patris vox resultaverit: Filius meus es tu, ego hodie genui te. Unde et primogenitus a mortuis dicitur. Ergo resurrectio quid est, nisi quando de morte ad vitam resurgimus? Sic ergo et in baptismate, quoniam similitudo mortis est, sine dubio, dum mergis et resurgis, similitudo fit resurrectionis. Itaque secundum interpretationem apostoli, sicut illa resurrectio regeneratio fuit, ita et ista resurrectio de fonte regeneratio est. —</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="3.1.3">
+						<tei:div type="textpart" subtype="subsection" n="3.1.3">
 							<tei:p>Sed quid dicis, quia in aqua mergis? Ideo peregrinaris, ideo te dubitatio tenet? Legimus quidem: producat terra ex se fructum, et produxit terra fructum germinantem. Similiter et de aquis legisti: producant aquae animantia, et nata sunt animantia; illa quidem in principio creaturae, sed tibi reservatum est, ut aqua te regeneraret ad gratiam, sicut alia generavit ad vitam. Imitare illum piscem, qui minorem quidem adeptus est gratiam, tamen debet tibi esse miraculo. In mari est et super undas est, in mari est et super fluctus natat. In mari tempestas furit, stridunt procellae, sed piscis<tei:pb facs="csel-73_0182" />natat, non demergitur, quia natare consuevit. Ergo et tibi saeculum hoc mare est. Habet diversos fluctus, undas graves, saevas tempestates. Et tu esto piscis, ut saeculi te unda non mergat. Pulchre autem pater dicit ad filium: Ego hodie genui te. Hoc est: Quando redemisti populum, quando ad caeli regnum vocasti, quando inplesti voluntatem meam, probasti meum esse te filium.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="3.1.4">
+						<tei:div type="textpart" subtype="subsection" n="3.1.4">
 							<tei:p>Ascendisti de fonte. Quid secutum est? Audisti lectionem. Succinctus sacerdos — licet enim et presbyteri fecerint, tamen exordium ministerii a summo est sacerdote — succinctus, inquam, summus sacerdos pedes tibi lavit. Quod est istud mysterium? Audisti utique, quia dominus, cum lavisset discipulis aliis pedes, venit ad Petrum et ait illi Petrus: Tu mihi lavas pedes? Hoc est: Tu dominus servo lavas pedes, tu inmaculatus mihi lavas pedes, tu auctor caelorum mihi lavas pedes? Habes hoc et alibi: Venit ad Iohannem et ait illi Iohannes: Ego a te debeo baptizari, et tu venis ad me? Ego sum peccator, et tu venisti ad peccatorem, ut tua quasi peccata<tei:pb facs="csel-73_0183" />deponas, qui peccatum non feceris? Vide omnem, iustitiam, vide humilitatem, vide gratiam, vide sanctificationem. Nisi lavero, inquit, tibi pedes, non habebis mecum partem.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="3.1.5">
+						<tei:div type="textpart" subtype="subsection" n="3.1.5">
 							<tei:p>Non ignoramus, quod ecclesia Romana hanc consuetudinem non habeat, cuius typum in omnibus sequimur et formam. Hanc tamen consuetudinem non habet, ut pedes lavet. Vide ergo: forte propter multitudinem declinavit. Sunt tamen, qui dicant et excusare conentur, quia hoc non in mysterio faciendum est, non in baptismate, non in regeneratione, sed quasi hospiti pedes lavandi sint. Sed aliud est humilitatis, aliud sanctificationis. Denique audi, quia mysterium est et sanctificatio: Nisi lavero tibi pedes, non habebis mecum partem. Hoc ideo dico, non quo ego alios repraehendam, sed mea officia ipse commendem. In omnibus cupio sequi ecclesiam Romanam, sed tamen et nos hominis sensum habemus; ideo quod alibi rectius servatur, et nos rectius custodimus.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="3.1.6">
+						<tei:div type="textpart" subtype="subsection" n="3.1.6">
 							<tei:p>Ipsum sequimur<tei:pb facs="csel-73_0184" />apostolum Petrum, ipsius inhaeremus devotioni. Ad hoc ecclesia Romana quid respondet? Utique ipse auctor est nobis huius adsertionis Petrus apostolus, qui sacerdos fuit ecclesiae Romanae, ipse Petrus, ubi ait: Domine, non solum pedes, sed etiam manus et caput. Vide fidem: Quod ante excusavit, humilitatis fuit, quod postea se obtulit, devotionis et fidei.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="3.1.7">
+						<tei:div type="textpart" subtype="subsection" n="3.1.7">
 							<tei:p>Respondit illi dominus, quia dixerat 'manus et caput': Qui lavit, non necesse habet iterum lavare, nisi ut solos pedes lavet. Quare hoc? Quia in baptismate omnis culpa diluitur. Recedit ergo culpa. Sed quia Adam supplantatus a diabolo est et venenum ei suffusum est supra pedes, ideo lavas pedes, ut in ea parte, in qua insidiatus est serpens, maius subsidium sanctificationis accedat, quo postea te supplantare non possit. Lavas ergo pedes, ut laves venena serpentis. Ad humilitatem quoque proficit, ut in mysterio non erubescamus, quod dedignamur in obsequio.<tei:pb facs="csel-73_0185" />
 							</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="3.2">
-						<tei:div type="textpart" subtype="3" n="3.2.8">
+					<tei:div type="textpart" subtype="section" n="3.2">
+						<tei:div type="textpart" subtype="subsection" n="3.2.8">
 							<tei:p>Sequitur spiritale signaculum, quod audistis hodie legi, quia post fontem superest, ut perfectio fiat, quando ad invocationem sacerdotis spiritus sanctus infunditur, spiritus sapientiae et intellectus, spiritus consilii atque virtutis, spiritus cognitionis atque pietatis, spiritus sancti timoris, septem quasi virtutes spiritus.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="3.2.9">
+						<tei:div type="textpart" subtype="subsection" n="3.2.9">
 							<tei:p>Et omnes quidem virtutes ad spiritum pertinent, sed istae quasi cardinales sunt, quasi principales. Quid enim tam principale quam pietas? Quid tam principale quam cognitio dei? Quid tam principale quam virtus? Quid tam principale quam consilium dei? Quid tam principale quam timor dei? Sicut timor saeculi infirmitas, ita timor dei magna est fortitudo.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="3.2.10">
+						<tei:div type="textpart" subtype="subsection" n="3.2.10">
 							<tei:p>Istae sunt septem virtutes, quando consignaris. Nam, ut ait apostolus sanctus, quia multiformis est, inquit, sapientia domini nostri et multiformis sapientia dei, ita multiformis est spiritus sanctus, qui habeat diversas variasque virtutes. Unde deus virtutum dicitur, quod aptari potest patri<tei:pb facs="csel-73_0186" />et filio et spiritui sancto. Sed hoc alterius disputationis, alterius est temporis. temporis.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="3.2.11">
+						<tei:div type="textpart" subtype="subsection" n="3.2.11">
 							<tei:p>Post hoc quid sequitur? 'Venire habes ad altare. Quoniam venisti, videre habes, quod antea non videbas. Hoc est mysterium, quod legisti in evangelio, si tamen legisti — certe audisti —: Caecus obtulit se salvatori, ut curaretur, et ille, qui alios verbo tantum et sermone curabat et refundebat imperio lumen oculorum, tamen in libro evangelii, qui scribitur secundum Iohannem, qui vere prae ceteris vidit magna mysteria et designavit et declaravit, mysterium hoc in illo voluit praefigurare. Omnes quidem sancti evangelistae, omnes apostoli — praeter proditorem omnes sancti. Tamen sanctus Iohannes, qui ultimus scripsit evangelium, quasi necessarius requisitus et electus a Christo, maiore quadam tuba fudit aeterna mysteria. Quidquid locutus est, mysterium est. Alius dixit caecum curatum, dixit Matthaeus, dixit Lucas, dixit Marcus. Solus Iohannes quid ait? Tulit lutum et linuit super<tei:pb facs="csel-73_0187" />oculos eius et dixit illi: Vade in Siloam. Et surgens ivit et lavit et venit videns.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="3.2.12">
+						<tei:div type="textpart" subtype="subsection" n="3.2.12">
 							<tei:p>Considera et tu oculos cordis tui. Videbas quae corporalia sunt, corporalibus oculis, sed quae sacramentorum sunt, cordis oculis adhuc videre non poteras. Ergo quando dedisti nomen tuum, tulit lutum et linuit super oculos tuos. Quid significat? Ut peccatum tuum fatereris, ut conscientiam recognosceres, ut paenitentiam gereres delictorum, hoc est sortem humanae generationis agnosceres. Nam etiamsi non confiteatur peccatum, qui venit ad baptismum, tamen hoc ipso inplet confessionem omnium peccatorum, quod baptizari petit, ut iustificetur, hoc est, ut a culpa ad gratiam transeat.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="3.2.13">
+						<tei:div type="textpart" subtype="subsection" n="3.2.13">
 							<tei:p>Nolite otiosum putare. Sunt quidam — scio certe aliquem fuisse, qui diceret — cum illi diceremus: 'In hac aetate magis baptizari debes', dicebat ille: 'Quare baptizor? Non habeo peccatum, numquid peccatum contraxi?' Hic lutum non habuit, quod ei Christus non linuerat, hoc est<tei:pb facs="csel-73_0188" />non illi aperuerat oculos; nullus enim homo sine peccato.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="3.2.14">
+						<tei:div type="textpart" subtype="subsection" n="3.2.14">
 							<tei:p>Ergo agnoscit se hominem, qui confugit ad baptismum Christi. Itaque et tibi inposuit lutum, hoc est verecundiam, prudentiam, considerationem fragilitatis tuae, et dixit tibi: Vade in Siloam. Quid est Siloam? Quod interpretatur, inquit, missus. Hoc est: Vade ad illum fontem, in quo crux Christi domini praedicatur, vade ad illum fontem, in quo omnium Christus redimit errores. —</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="3.2.15">
+						<tei:div type="textpart" subtype="subsection" n="3.2.15">
 							<tei:p>Isti, lavisti, venisti ad altare, videre coepisti, quae ante non videras. Hoc est: per fontem domini et praedicationem dominicae passionis tunc aperti sunt oculi tui. Qui ante corde videbaris esse caecatus, coepisti lumen sacramentorum videre. Ergo, fratres dilectissimi, venimus usque ad altare, ad tractatum uberiorem. Et ideo, quia id temporis est, disputationem integram non possumus incipere, quia prolixior tractatus est. Satis sit, quod dictum est hodie. Crastina die, si domino placet, de sacramentis ipsis tractabimus.<tei:pb facs="csel-73_0189" /></tei:p>
 						</tei:div>
 					</tei:div>
 				</tei:div>
-				<tei:div type="textpart" subtype="1" n="4">
-					<tei:div type="textpart" subtype="2" n="4.1">
-						<tei:div type="textpart" subtype="3" n="4.1.1">
+				<tei:div type="textpart" subtype="book" n="4">
+					<tei:div type="textpart" subtype="section" n="4.1">
+						<tei:div type="textpart" subtype="subsection" n="4.1.1">
 							<tei:p>In veteri testamento sacerdotes frequenter in primum tabernaculum introire consueverant, in secundum tabernaculum semel in anno summus intrabat sacerdos. Quod evidenter ad Hebraeos recolens veteris seriem testamenti explanat apostolus Paulus. Erat autem in secundo tabernaculo manna, erat etiam virga Aaron, quae aruit et postea refloruit, et thymiaterium.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.1.2">
+						<tei:div type="textpart" subtype="subsection" n="4.1.2">
 							<tei:p>Quo spectat hoc? Ut intellegatis, quod sit secundum tabernaculum, in quo vos introduxit sacerdos, in quo semel in anno summus sacerdos intrare consuevit, hoc est ad baptisterium, ubi virga Aaron floruit. Antea arida erat, postea refloruit: Et tu aridus eras et coepisti 'fontis inriguo' reflorescere. Arueras peccatis, arueras erroribus atque delictis, sed fructum iam adferre coepisti plantatus secus decursus<tei:pb facs="csel-73_0190" />aquarum.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.1.3">
+						<tei:div type="textpart" subtype="subsection" n="4.1.3">
 							<tei:p>Sed forte dicas: 'Quid hoc ad populum, si virga sacerdotalis aruerat et refloruit?' Populus ipse quid est nisi sacerdotalis!? Quibus dictum est: Vos autem genus electum, regale sacerdotium, gens sancta, ut ait apostolus Petrus? Unusquisque unguitur in sacerdotium, unguitur in regnum, sed spiritale regnum est et sacerdotium spiritale.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.1.4">
+						<tei:div type="textpart" subtype="subsection" n="4.1.4">
 							<tei:p>In secundo quoque tabernaculo est thymiaterium. Thymiaterium est, quod bonum odorem fraglare consuevit: Ita et vos iam bonus odor Christi estis, iam nulla in vobis sors delictorum, nullus odor gravioris erroris.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="4.2">
-						<tei:div type="textpart" subtype="3" n="4.2.5">
+					<tei:div type="textpart" subtype="section" n="4.2">
+						<tei:div type="textpart" subtype="subsection" n="4.2.5">
 							<tei:p>Sequitur, ut veniatis ad altare. Coepistis venire, spectarunt angeli, viderunt vos advenientes, et humanam condicionem illam, quae ante peccatorum tenebroso squalore sordebat, aspexerunt subito refulgere, ideoque dixerunt: Quae est haec, quae ascendit a deserto dealbata? Mirantur ergo et angeli. Vis scire, quam mirentur? Audi apostolum Petrum<tei:pb facs="csel-73_0191" />dicentem ea nobis esse conlata, quae concupiscunt et angeli videre. Audi iterum: Quod oculus, inquit, non vidit nec auris audivit, quae praeparavit deus diligentibus se.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.2.6">
+						<tei:div type="textpart" subtype="subsection" n="4.2.6">
 							<tei:p>Deinde quid acceperis, recognosce. Sanctus propheta David hanc gratiam in figura vidit et concupivit. Vis scire, quam concupiverit? Iterum audi dicentem: Asparges me hysopo et mundabor, lavabis me et super nivem dealbabor. Quare? Quia nix, quamvis sit candida, cito aliqua sorde nigrescit atque corrumpitur; ista gratia, quam accepisti, si teneas, quod accepisti, erit diuturna atque perpetua.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.2.7">
+						<tei:div type="textpart" subtype="subsection" n="4.2.7">
 							<tei:p>Veniebas ergo desiderans, utpote qui tantam gratiam videras, veniebas desiderans ad altare, quod acciperes sacramentum. Dicit anima tua: Et introibo ad altare dei mei, ad deum, qui laetificat iuventutem meam. Deposuisti peccatorum senectutem, sumpsisti gratiae iuventutem: hoc praestiterunt tibi sacramenta caelestia. Denique iterum audi dicentem David: Renovabitur sicut aquilae iuventus tua. Bona aquila<tei:pb facs="csel-73_0192" />esse coepisti, quae caelum petis, terrena fastidis. Bonae aquilae circa altare; ubi enim corpus, ibi et aquilae. Forma corporis altare est et corpus Christi est in altari; aquilae vos estis renovatae ablutione delicti.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="4.3">
-						<tei:div type="textpart" subtype="3" n="4.3.8">
+					<tei:div type="textpart" subtype="section" n="4.3">
+						<tei:div type="textpart" subtype="subsection" n="4.3.8">
 							<tei:p>Venisti ad altare, adtendisti sacramenta posita super altare, et ipsam quidem miratus es creaturam. Tamen creatura sollemnis et nota.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.3.9">
+						<tei:div type="textpart" subtype="subsection" n="4.3.9">
 							<tei:p>Forte aliqui dixerit: 'Iudaeis deus tantam gratiam praestitit, manna illis pluit e caelo; quid plus dedit fidelibus suis, quid plus tribuit his, quibus plus promisit?' —</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.3.10">
+						<tei:div type="textpart" subtype="subsection" n="4.3.10">
 							<tei:p>Accipe, quae dico: et anteriora esse mysteria Christianorum quam Iudaeorum et diviniora esse sacramenta Christianorum quam Iudaeorum. Quomodo? — Accipe. Iudaei quando esse coeperunt? Ex Iuda utique, pronepote Abrahae, aut, si vis et sic intellegere, ex lege, id est, quando 'ius dei' accipere meruerunt. Ergo ex pronepote Abrahae Iudaei dicti sunt tempore sancti Moysi. Tunc deus manna Iudaeis murmurantibus pluit e caelo. Tibi autem sacramen-<tei:pb facs="csel-73_0193" />torum horum figura praecessit, quando Abraham erat, quando vernaculos CCCXVIII collegit, et ivit, persecutus est adversarios, de captivitate eruit nepotem suum. Tunc victor venit, occurrit illi Melchisedech sacerdos et obtulit panem et vinum. Quis habuit panem et vinum? Abraham non habuit. Sed quis habuit? Melchisedech. Ipse ergo auctor sacramentorum. Quis est 'Melchisedech', qui significatur rex iustitiae, rex pacis? Quis est iste rex iustitiae? Numquid homo quisquam potest rex esse iustitiae? Quis ergo rex iustitiae nisi 'iustitia dei'? Quis est dei pax, dei sapientia? Qui potuit dicere: Pacem meam do vobis, pacem meam relinquo vobis.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.3.11">
+						<tei:div type="textpart" subtype="subsection" n="4.3.11">
 							<tei:p>Ergo primum intellege sacramenta haec, quae accipis, anteriora esse quam sunt sacramenta, quaecumque Iudaei habere se dicunt, et prius coepisse populum Christianum quam coepisse populum Iudaeorum, sed nos in praedestinatione, illum in nomine.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.3.12">
+						<tei:div type="textpart" subtype="subsection" n="4.3.12">
 							<tei:p>Obtulit ergo Melchisedech panem et vinum. Quis est Melchisedech? Sine patre, inquit, sine matre, sine gene-<tei:pb facs="csel-73_0194" />rationis ordine, neque initium dierum neque finem vitae habens. Hoc habet ad Hebraeos epistola. 'Sine patre', inquit, et 'sine matre': Habes: 'similis filio dei'. 'Sine matre' natus est dei filius generatione caelesti, quia ex solo deo patre natus est, et iterum 'sine patre' natus est, quando natus ex virgine est. Non enim ex virili semine generatus est, sed natus de spiritu sancto et virgine Maria, utero editus virginali. 'Similis' per omnia 'filio dei' sacerdos quoque erat Melchisedech, quia et Christus sacerdos, cui dicitur: Tu es sacerdos in aeternum secundum. ordinem. Melchisedech.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="4.4">
-						<tei:div type="textpart" subtype="3" n="4.4.13">
+					<tei:div type="textpart" subtype="section" n="4.4">
+						<tei:div type="textpart" subtype="subsection" n="4.4.13">
 							<tei:p>Ergo auctor sacramentorum quis est nisi dominus Iesus? De caelo ista sacramenta venerunt; consilium enim omne de caelo est. Vere autem magnum et divinum miraculum, quod populo pluit deus manna de caelo, et non laborabat populus et manducabat.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.4.14">
+						<tei:div type="textpart" subtype="subsection" n="4.4.14">
 							<tei:p>Tu forte dicis: 'Meus panis est usitatus.' Sed panis iste panis est ante verba sacramentorum; ubi accesserit<tei:pb facs="csel-73_0195" />consecratio, de pane fit caro Christi. Hoc igitur adstruamus, quomodo potest, qui panis est, corpus esse Christi. Consecratio igitur quibus verbis est et cuius sermonibus? Domini Iesu. Nam reliqua omnia, quae dicuntur in superioribus, a sacerdote dicuntur: laus deo, defertur oratio, petitur pro populo, pro regibus, pro ceteris. Ubi venitur, ut conficiatur venerabile sacramentum, iam non suis sermonibus utitur sacerdos, sed utitur sermonibus Christi. Ergo sermo Christi hoc conficit sacramentum.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.4.15">
+						<tei:div type="textpart" subtype="subsection" n="4.4.15">
 							<tei:p>Quis est sermo Christi? Nempe is, quo facta sunt omnia. Iussit dominus, factum est caelum; iussit dominus, facta est terra; iussit dominus, facta sunt maria; iussit dominus, omnis creatura generata est. Vides ergo, quam operatorius sermo sit Christi. Si ergo tanta vis est in sermone domini Iesu, ut inciperent esse, quae non erant, quanto magis operatorius est, ut sint, quae erant, et in aliud commutentur. Caelum non erat, mare non erat, terra non erat, sed audi dicentem David: Ipse dixit et facta sunt, ipse<tei:pb facs="csel-73_0196" />mandavit et creata sunt.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.4.16">
+						<tei:div type="textpart" subtype="subsection" n="4.4.16">
 							<tei:p>Ergo tibi ut respondeam, non erat corpus Christi ante consecrationem, sed post consecrationem dico tibi, quia iam corpus est Christi. Ipse dixit et factum est, ipse mandavit et creatum est. Tu ipse eras, sed eras vetus creatura; posteaquam consecratus es, nova creatura esse coepisti. Vis scire, quam nova creatura? Omnis, inquit, in Christo nova creatura.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.4.17">
+						<tei:div type="textpart" subtype="subsection" n="4.4.17">
 							<tei:p>Accipe ergo, quemadmodum sermo Christi creaturam omnem mutare consueverit et mutet, quando vult, instituta naturae. Quomodo, requiris? Accipe: Et primum omnium de generatione eius sumamus exemplum. Consuetudo est, ut non generetur homo nisi ex viro et muliere et consuetudine coniugali. Sed quia voluit dominus, quia hoc elegit sacramentum, de spiritu sancto et virgine natus est Christus, hoc est mediator dei et hominum, homo Iesus Christus. Vides ergo, quia contra instituta et ordinem natus est homo, natus ex virgine.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.4.18">
+						<tei:div type="textpart" subtype="subsection" n="4.4.18">
 							<tei:p>Accipe aliud: Urguebatur populus Iudaeorum ab Aegyptiis, interclusus erat mari. Divino imperio virga Moyses tetigit aquas et se unda divisit, non utique secundum suae naturae consuetudinem, sed secundum gratiam caelestis<tei:pb facs="csel-73_0197" />imperii. Accipe aliud: Sitiebat populus, venit ad fontem. Amarus erat fons; misit lignum sanctus Moyses in fontem, et factus est dulcis fons, qui amarus erat, hoc est mutavit consuetudinem naturae suae, accepit dulcedinem gratiae. Accipe et quartum exemplum: Ceciderat ferrum securis in aquas, quasi ferrum sua consuetudine demersum est; misit lignum Helisaeus, statim ferrum levatum est et aquis supernatavit, utique contra consuetudinem ferri; est enim materies gravior quam aquarum est elementum.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.4.19">
+						<tei:div type="textpart" subtype="subsection" n="4.4.19">
 							<tei:p>Ex his igitur omnibus non intellegis, quantum operetur sermo caelestis? Si operatus est in fonte terreno, si operatus est sermo caelestis in aliis rebus, non operatur in caelestibus sacramentis? Ergo didicisti, quod ex pane corpus fiat Christi. Et quid vinum, aqua? In calicem mittitur, sed fit sanguis consecratione caelesti.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.4.20">
+						<tei:div type="textpart" subtype="subsection" n="4.4.20">
 							<tei:p>Sed forte dicis: 'Speciem sanguinis non video.' Sed habet similitudinem. Sicut enim mortis similitudinem sumpsisti, ita etiam similitudinem pretiosi sanguinis bibis, ut nullus horror cruoris sit et pretium tamen operetur redemptionis. Didicisti ergo, quia, quod accipis, corpus est Christi.<tei:pb facs="csel-73_0198" />
 							</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="4.5">
-						<tei:div type="textpart" subtype="3" n="4.5.21">
+					<tei:div type="textpart" subtype="section" n="4.5">
+						<tei:div type="textpart" subtype="subsection" n="4.5.21">
 							<tei:p>Vis scire, quam verbis caelestibus consecretur? Accipe, quae sunt verba. Dicit sacerdos: Fac nobis, inquit, hanc oblationem scriptam, rationabilem, acceptabilem, quod est figura, corporis et sanguinis domini nostri Iesu Christi. Qui pridie quam pateretur, in sanctis manibus suis accepit panem, respexit ad caelum, ad te, sancte pater omnipotens aeterne deus, gratias agens benedixit, fregit, fractumque apostolis et discipulis suis tradidit dicens: accipite et edite ex hoc omnes; hoc est enim corpus meum, quod pro multis confringetur. — Adverte! —</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.5.22">
+						<tei:div type="textpart" subtype="subsection" n="4.5.22">
 							<tei:p>Similiter etiam calicem, postquam cenatum est, pridie quam pateretur, accepit, respexit ad caelum, ad te, sancte pater omnipotens aeterne deus, gratias agens benedixit, apostolis et discipulis suis tradidit dicens: accipite et bibite ex hoc omnes; hic est enim sanguis meus. Vide: illa omnia verba evangelistae sunt usque ad 'accipite', sive corpus sive sanguinem. Inde verba sunt Christi: 'accipite et bibite ex hoc omnes;<tei:pb facs="csel-73_0199" />hic est enim sanguis meus'.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.5.23">
+						<tei:div type="textpart" subtype="subsection" n="4.5.23">
 							<tei:p>Et vide singula: 'Qui pridie', inquit, 'quam pateretur, in sanctis manibus suis accepit panem.' Antequam consecretur, panis est; ubi autem verba Christi accesserint, corpus est Christi. Denique audi dicentem : 'Accipite et edite ex hoc omnes: hoc est enim corpus meum.' Et ante verba Christi calix est vini et aquae plenus; ubi verba Christi operata fuerint, ibi sanguis efficitur, qui plebem redemit. Ergo videte, quantis generibus potens est sermo Christi universa convertere. Deinde ipse dominus Iesus testificatus est nobis, quod corpus suum accipiamus et sanguinem. Numquid debemus de eius fide et testificatione dubitare?</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.5.24">
+						<tei:div type="textpart" subtype="subsection" n="4.5.24">
 							<tei:p>Iam redi mecum ad propositionem meam. Magnum quidem et venerabile, quod manna Iudaeis pluit e caelo. Sed intellege: Quid est amplius, manna de caelo an corpus Christi? Corpus Christi utique, qui auctor est caeli. Deinde manna qui manducavit, mortuus est, qui manducaverit hoc corpus, fiet ei remissio peccatorum et non morietur in aeternum.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.5.25">
+						<tei:div type="textpart" subtype="subsection" n="4.5.25">
 							<tei:p>Ergo non otiose dicis tu amen, iam in spiritu confitens, quod accipias corpus Christi. Cum ergo tu petieris, dicit tibi<tei:pb facs="csel-73_0200" />sacerdos: corpus Christi, et tu dicis: amen, hoc est: 'verum'. Quod confitetur lingua, teneat adfectus. Ut scias autem: Hoc est sacramentum, cuius figura ante praecessit.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="4.6">
-						<tei:div type="textpart" subtype="3" n="4.6.26">
+					<tei:div type="textpart" subtype="section" n="4.6">
+						<tei:div type="textpart" subtype="subsection" n="4.6.26">
 							<tei:p>Deinde quantum sit sacramentum, cognosce. Vide, quid dicat: Quotienscumque hoc feceritis, totiens commemorationem mei facietis, donec iterum adveniam.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.6.27">
+						<tei:div type="textpart" subtype="subsection" n="4.6.27">
 							<tei:p>Et sacerdos dicit: Ergo memores gloriosissimae eius passionis et ab inferis resurrectionis et in caelum ascensionis offerimus tibi hanc inmaculatam hostiam, rationabilem hostiam, incruentam hostiam, hunc panem sanctum et calicem vitae aeternae. Et petimus et precamur, uti hanc oblationem suscipias in sublime altare tuum per manus angelorum tuorum, sicut suscipere dignatus es munera pueri tui iusti Abel et sacrificium patriarchae nostri Abrahae et quod tibi obtulit summus sacerdos Melchisedech.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.6.28">
+						<tei:div type="textpart" subtype="subsection" n="4.6.28">
 							<tei:p>Ergo quotienscumque accipis, quid tibi dixit apostolus? Quotienscumque accipimus, mortem domini adnuntiamus. Si mortem, adnuntiamus remissionem pecca-<tei:pb facs="csel-73_0201" />torum. Si, quotienscumque effunditur sanguis, in remissionem peccatorum funditur, debeo illum semper accipere, ut semper mihi peccata dimittat. Qui semper pecco, semper debeo habere medicinam.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="4.6.29">
+						<tei:div type="textpart" subtype="subsection" n="4.6.29">
 							<tei:p>Interim et hodie, quantum potuimus, explanavimus. Sed crastina die sabbato et dominica de orationis ordine dicemus, quemadmodum possumus. Dominus deus noster conservet vobis gratiam, quam dedit, et oculos, quos vobis aperuit, plenius inluminare dignetur per unigenitum filium suum, regem ac salvatorem, dominum deum nostrum, per quem sibi est, cum quo sibi est laus, honor, gloria, magnificentia, potestas, cum spiritu sancto, a saeculis et nunc et semper, et in omnia saecula saeculorum. Amen.</tei:p>
 						</tei:div>
 					</tei:div>
 				</tei:div>
-				<tei:div type="textpart" subtype="1" n="5">
-					<tei:div type="textpart" subtype="2" n="5.1">
-						<tei:div type="textpart" subtype="3" n="5.1.1">
+				<tei:div type="textpart" subtype="book" n="5">
+					<tei:div type="textpart" subtype="section" n="5.1">
+						<tei:div type="textpart" subtype="subsection" n="5.1.1">
 							<tei:p>Hesterno sermo noster atque tractatus usque ad sancti altaris sacramenta deductus est. Et cognovimus sacra-<tei:pb facs="csel-73_0202" />mentorum istorum figuram Abrahae temporibus praecessisse, quando obtulit sacrificium sanctus Melchisedech, neque initium dierum neque finem habens. Audi, o homo, quid dicat apostolus Paulus ad Hebraeos! Ubi sunt, qui filium dei dicunt esse de tempore? Melchisedech, dictum est, quia neque initium dierum neque finem habet. Si Melchisedech non habet initium dierum, num Christus habere potuit? Sed non est plus figura quam veritas. Vides ergo, quia ipse est primus et novissimus, primus, quia auctor est omnium, novissimus, non quod finem inveniat, sed quod universa concludat.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.1.2">
+						<tei:div type="textpart" subtype="subsection" n="5.1.2">
 							<tei:p>Diximus ergo, quod in altari constituatur calix et panis. In calicem quid mittitur? Vinum: Et quid aliud? Aqua. Sed tu mihi dicis: 'Quomodo ergo Melchisedech vinum et panem obtulit? Quid sibi vult admixtio aquae?' Rationem accipe!</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.1.3">
+						<tei:div type="textpart" subtype="subsection" n="5.1.3">
 							<tei:p>Primum omnium figura, quae ante praecessit tempore<tei:pb facs="csel-73_0203" />Moysi, quid habet? Quia, cum sitiret populus Iudaeorum et murmuraret, quod aquam invenire non posset, iussit deus Moysi, ut tangeret petram de virga. Tetigit petram, et petra undam maximam fudit, sicut apostolus dicit: Bibebant autem de consequenti petra, petra autem erat Christus. Non inmobilis petra, quae populum sequebatur. Et tu bibe, ut te Christus sequatur. Vide mysterium: 'Moyses', hoc est propheta, 'virga', hoc est verbo dei: Sacerdos verbo dei tangit petram, et fluit aqua et bibit populus dei. Tangit ergo sacerdos calicem, redundat aqua in calice, salit in vitam aeternam et bibit populus dei, qui dei gratiam consecutus est.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.1.4">
+						<tei:div type="textpart" subtype="subsection" n="5.1.4">
 							<tei:p>Didicisti ergo hoc? Accipe et aliud: In tempore dominicae passionis cum sabbatum magnum instaret, quia vivebat dominus noster Iesus Christus vel latrones, missi sunt, qui percuterent eos. Venientes invenerunt defunctum dominum nostrum Iesum Christum. Tunc unus de militibus lancea tetigit latus eius, et de latere eius aqua fluxit et sanguis. Quare aqua, quare sanguis? Aqua, ut mundaret, sanguis, ut redimeret. Quare de latere? Quia unde culpa, inde et gratia: Culpa per feminam, gratia per dominum nostrum Iesum Christum.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="5.2">
-						<tei:div type="textpart" subtype="3" n="5.2.5">
+					<tei:div type="textpart" subtype="section" n="5.2">
+						<tei:div type="textpart" subtype="subsection" n="5.2.5">
 							<tei:p>Venisti ad altare, vocat te dominus Iesus — vel animam tuam vel ecclesiam — et ait: Osculetur me ab osculis oris sui. Vis ad Christum aptare? Nihil gratius. Vis ad animam tuam? Nihil iucundius.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.2.6">
+						<tei:div type="textpart" subtype="subsection" n="5.2.6">
 							<tei:p>'Osculetur me': Videt te mundum esse ab omni peccato, quia delicta detersa sunt. Ideo te sacramentis caelestibus dignum iudicat et ideo invitat ad caeleste convivium: 'Osculetur me ab osculis oris sui.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.2.7">
+						<tei:div type="textpart" subtype="subsection" n="5.2.7">
 							<tei:p>Tamen propter sequentia anima tua — vel humana condicio vel ecclesia — videt se ab omnibus mundatam esse peccatis, dignam, quae ad altare Christi possit accedere — quid est enim altare Christi nisi forma corporis Christi? videt sacramenta mirabilia et ait: 'Osculetur me ab osculis oris<tei:pb facs="csel-73_0204" />sui', hoc est: osculum mihi Christus infigat.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.2.8">
+						<tei:div type="textpart" subtype="subsection" n="5.2.8">
 							<tei:p>Quare? Quia meliora ubera tua super vinum, hoc est: meliores sensus, meliora sacramenta tua super vinum, super illud vinum, quod, etsi suavitatem habet, laetitiam habet, gratiam habet, tamen in illo laetitia saecularis, in te autem iucunditas est spiritalis. Iam tunc ergo Salomon inducit nuptias vel Christi et ecclesiae vel spiritus et carnis vel spiritus et animae.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.2.9">
+						<tei:div type="textpart" subtype="subsection" n="5.2.9">
 							<tei:p>Et addidit: Unguentum exinanitum est nomen tuum, propterea adolescentulae dilexerunt te. Quae sunt istae adolescentulae nisi animae singulorum, quae deposuerunt istius corporis senectutem, renovatae per spiritum sanctum?</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.2.10">
+						<tei:div type="textpart" subtype="subsection" n="5.2.10">
 							<tei:p>Adtrahe nos, post odorem unguentorum tuorum curramus. Vide, quid dicat: Non potes sequi Christum, nisi ipse te adtrahat. Denique ut scias: Cum exaltatus, inquit, fuero, omnia traham ad me ipsum.<tei:pb facs="csel-73_0205" /></tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.2.11">
+						<tei:div type="textpart" subtype="subsection" n="5.2.11">
 							<tei:p>Induxit me rex in cubiculum suum — Graecus in promptuarium suum vel in cellarium suum habet —, ubi bona libamina, ubi boni odores, mella suavia, fructus diversi, ubi epulae variae, ut plurimis epulis tuum prandium condiatur.<tei:pb facs="csel-73_0206" /></tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="5.3">
-						<tei:div type="textpart" subtype="3" n="5.3.12">
+					<tei:div type="textpart" subtype="section" n="5.3">
+						<tei:div type="textpart" subtype="subsection" n="5.3.12">
 							<tei:p>Ergo venisti ad altare, accepisti corpus Christi. Audi iterum, quae sacramenta es consecutus, audi dicentem sanctum David. Et ille in spiritu haec mysteria praevidebat et laetabatur et nihil sibi abesse dicebat. Quare? Quia, qui acceperit corpus Christi, non esuriet in aeternum.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.3.13">
+						<tei:div type="textpart" subtype="subsection" n="5.3.13">
 							<tei:p>Quotiens audisti XXII psalmum et non intellexisti! Vide, quemadmodum aptus sit caelestibus sacramentis: Dominus pascit me et nihil mihi deerit, in loco pascuae ibi me conlocavit; super aquam refectionis educavit me, animam meam convertit. Deduxit me super semitas iustitiae propter nomen suum. Nam etsi ambulem in medio umbrae mortis, non timebo mala, quoniam tu mecum es. Virga tua et baculus tuus ipsa me consolata sunt. Virga imperium, baculus passio, hoc est aeterna divinitas Christi, sed etiam passio corporalis: illa creavit, haec redemit. Parasti in conspectu meo mensam adversus eos, qui tribulant me. Inpinguasti in oleo caput meum, et poculum tuum inebrians quam praeclarum est!</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.3.14">
+						<tei:div type="textpart" subtype="subsection" n="5.3.14">
 							<tei:p>Venistis ergo ad altare, accepistis gratiam Christi, sacramenta estis caelestia consecuti. Gaudet ecclesia redemptione multorum et adstare sibi familiam candidatam spiritali<tei:pb facs="csel-73_0207" />exultatione laetatur. Habes hoc in Canticis canticorum. Laetata invocat Christum, paratum habens convivium, quod dignum caelesti epulatione videatur. Ideoque ait: Descendat fraternus meus in hortum suum et capiat fructum pomiferarum suarum. Quae sunt istae pomiferae? Lignum aridum factus eras in Adam, sed nunc per gratiam Christi pomiferae arbores pullulatis.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.3.15">
+						<tei:div type="textpart" subtype="subsection" n="5.3.15">
 							<tei:p>Libenter accepit dominus Iesus et dignatione caelesti respondit ecclesiae suae: Descendi, inquit, in hortum meum, vindemiavi myrram cum unguentis meis. Manducavi panem meum cum melle meo, bibi vinum meum cum lacte meo. Edite, inquit, fratres mei, et inebriamini. —</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.3.16">
+						<tei:div type="textpart" subtype="subsection" n="5.3.16">
 							<tei:p>'Vindemiavi myrram cum unguentis meis': Quae est ista vindemia? Cognoscite vineam et agnoscetis vindemiam. Vineam, inquit, ex Aegypto transtulisti, hoc est populum dei. Vos estis vinea, vos estis vindemia, quasi vinea plantati, quasi vindemia, qui<tei:pb facs="csel-73_0208" />fructum dedistis. 'Vindemiavi myrram cum unguentis meis', hoc est in odorem, quem accepistis.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.3.17">
+						<tei:div type="textpart" subtype="subsection" n="5.3.17">
 							<tei:p>Manducavi panem meum cum melle meo': Vides, quod in hoc pane nulla sit amaritudo, sed omnis suavitas sit. 'Bibi vinum meum cum lacte meo': Vides huiusmodi esse laetitiam, quae nullius peccati sordibus polluatur. Quotienscumque enim bibis, remissionem accipis peccatorum et inebriaris in spiritu. Unde et apostolus ait: Nolite inebriari vino, sed inplemini spiritu. Vino enim qui inebriatur, vacillat et titubat, spiritu qui inebriatur, radicatus in Christo est. Et ideo praeclara ebrietas, quae sobrietatem mentis operatur. Haec sunt, quae de sacramentis breviter percucurrimus.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="5.4">
-						<tei:div type="textpart" subtype="3" n="5.4.18">
+					<tei:div type="textpart" subtype="section" n="5.4">
+						<tei:div type="textpart" subtype="subsection" n="5.4.18">
 							<tei:p>Num quid superest nisi oratio? Et nolite putare mediocris esse virtutis scire, quemadmodum oretis. Apostoli sancti dicebant ad dominum Iesum: Domine, doce nos orare, quemadmodum Iohannes docuit discipulos suos. Tunc ait dominus orationem: Pater noster, qui es in caelis, sanctificetur nomen tuum, veniat regnum tuum, fiat voluntas tua sicut in caelo<tei:pb facs="csel-73_0209" />et in terra. Panem nostrum cottidianum da nobis hodie, et dimitte nobis debita nostra, sicut et nos dimittimus debitoribus nostris, et ne nos patiaris induci in temptationem, sed libera nos a malo. Vides, quam brevis oratio et omnium plena virtutum. Primus sermo quantae gratiae!</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.4.19">
+						<tei:div type="textpart" subtype="subsection" n="5.4.19">
 							<tei:p>O homo, faciem tuam non audebas ad caelum adtollere, oculos tuos in terram dirigebas, et subito accepisti gratiam Christi, omnia tibi peccata dimissa sunt. Ex malo servo factus es bonus filius. Ideo praesume non de operatione tua, sed de Christi gratia! Gratia, inquit, salvati estis, apostolus ait. Non ergo hic adrogantia est, sed fides. Praedicare, quod acceperis, non est superbia, sed devotio. Ergo adtolle oculos ad patrem, qui te per lavacrum genuit, ad patrem, qui per filium te redemit, et dic 'pater noster!' Bona praesumptio, sed moderata. Patrem dicis quasi filius; sed noli tibi aliquid specialiter vindicare. Solius Christi specialis est pater, nobis omnibus in commune est pater, quia illum solum genuit, nos creavit. Dic ergo et tu per gratiam 'pater noster', ut filius esse merearis. Ecclesiae contuitu et consideratione te ipse commenda!<tei:pb facs="csel-73_0210" /></tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.4.20">
+						<tei:div type="textpart" subtype="subsection" n="5.4.20">
 							<tei:p>'Pater noster, qui es in caelis': Quid est 'in caelis'? Audi scripturam dicentem: Excelsus super omnes caelos dominus. Et ubique habes, quod super caelos caelorum dominus sit. Quasi non in caelis et angeli, quasi non in caelis et dominationes! Sed in illis caelis, de quibus dictum est: Caeli enarrant gloriam dei. Caelum est ibi, ubi culpa cessavit, caelum est ibi, ubi flagitia feriantur, caelum est ibi, ubi nullum mortis est vulnus.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.4.21">
+						<tei:div type="textpart" subtype="subsection" n="5.4.21">
 							<tei:p>'Pater noster, qui es in caelis, sanctificetur nomen tuum': Quid est 'sanctificetur'? Quasi optemus, ut sanctificetur ille, qui ait: Estote sancti, quia ego sanctus sum, quasi aliquid ei ex nostra praedicatione sanctificationis accedat! Non, sed sanctificetur in nobis, ut ad nos possit eius sanctificatio pervenire.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.4.22">
+						<tei:div type="textpart" subtype="subsection" n="5.4.22">
 							<tei:p>'Pater noster, qui in caelis es, sanctificetur nomen tuum, veniat regnum tuum': Quasi non aeternum sit dei regnum! Ipse Iesus dicit: Ego in hoc natus sum; et tu dicis patri: 'Veniat regnum tuum', quasi non venerit! Sed tunc<tei:pb facs="csel-73_0211" />venit regnum dei, quando eius estis gratiam consecuti. Ipse enim ait: Regnum dei intra vos est.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.4.23">
+						<tei:div type="textpart" subtype="subsection" n="5.4.23">
 							<tei:p>'Veniat regnum tuum, fiat voluntas tua sicut in caelo et in terra; panem nostrum cottidianum da nobis hodie': Sanguine Christi pacificata sunt omnia vel in caelo vel in terra, sanctificatum est caelum, deiectus est diabolus. Ibi versatur, ubi et homo, quem ille decepit. 'Fiat voluntas tua', hoc est: sit pax in terra quemadmodum in caelo.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.4.24">
+						<tei:div type="textpart" subtype="subsection" n="5.4.24">
 							<tei:p>'Panem nostrum cottidianum da nobis hodie': Memini sermonis mei, cum de sacramentis tractarem. Dixi vobis, quod ante verba Christi quod offertur, panis dicatur, ubi Christi verba deprompta fuerint, iam non panis dicitur, sed corpus appellatur. Quare ergo in oratione dominica, quae postea sequitur, ait 'panem nostrum'! Panem quidem dixit, sed ἐπιούσιον dixit, hoc est substantialem. Non iste panis est, qui vadit in corpus, sed ille panis vitae aeternae, qui animae nostrae substantiam fulcit. Ideo ergo Graece ἐπιούσιος dicitur. Latinus autem hunc<tei:pb facs="csel-73_0212" />panem 'cottidianum' dixit, quia Graeci dicunt τὴν ἐπιοῦσαν ἡμέραν advenientem diem. Ergo quod Latinus dixit et quod Graecus, utrumque utile videtur; Graecus utrumque uno sermone significavit, Latinus cottidianum dixit.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.4.25">
+						<tei:div type="textpart" subtype="subsection" n="5.4.25">
 							<tei:p>Si cottidianus est panis, cur post annum illum sumas, quemadmodum Graeci in oriente facere consuerunt? Accipe cottidie, quod cottidie tibi prosit! Sic vive, ut cottidie merearis accipere! Qui non meretur cottidie accipere, non meretur post annum accipere. Quo modo Iob sanctus pro filiis suis sacrificium offerebat cottidie, ne forte aliquid vel in corde vel in sermone peccassent. Ergo tu audis, quod, quotienscumque offertur sacrificium, mors domini, resurrectio domini, elevatio domini significetur et remissio peccatorum, et panem istum vitae non cottidianus adsumis? Qui vulnus habet, medicinam requirit. Vulnus est, quia sub peccato sumus, medicina est caeleste et<tei:pb facs="csel-73_0213" />venerabile sacramentum.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.4.26">
+						<tei:div type="textpart" subtype="subsection" n="5.4.26">
 							<tei:p>'Panem nostrum cottidianum da nobis hodie': Cottidie si accipis, cottidie tibi hodie est. Si tibi hodie est Christus, tibi cottidie resurgit. Quomodo? Filius meus es tu, ego hodie genui te. Hodie ergo est, quando Christus resurgit. Heri et hodie ipse est, apostolus Paulus ait. Sed alibi ait: Nox praecessit, dies autem adpropinquavit: nox hesterna praecessit, dies hodiernus adpropinquavit.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.4.27">
+						<tei:div type="textpart" subtype="subsection" n="5.4.27">
 							<tei:p>Sequitur: Et dimitte nobis debita nostra, sicut et nos dimittimus debitoribus nostris. Debitum quid est nisi peccatum? Ergo si non accepisses alieni fenoris pecuniam, non egeres, et ideo peccatum tibi inputatur. Habuisti pecuniam, cum qua dives nascereris. Dives eras ad imaginem et similitudinem dei factus. Perdidisti, quod habebas, hoc est humilitatem, dum adrogantiam desideras vindicare, perdidisti pecuniam; sicut Adam nudus es factus. Accepisti a diabolo debitum, quod non erat necessarium. Et ideo qui eras liber in Christo, debitor factus es diaboli. Cautionem tuam tenebat inimicus, sed eam dominus crucifixit et suo cruore delevit. Abstulit debitum<tei:pb facs="csel-73_0214" />tuum, reddidit libertatem.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.4.28">
+						<tei:div type="textpart" subtype="subsection" n="5.4.28">
 							<tei:p>Bene ergo ait: 'et dimitte nobis debita nostra, sicut et nos dimittimus debitoribus nostris'. Vide, quid dicas: 'Quomodo ego dimitto, sic et tu dimitte mihi.' Si dimiseris, bene convenis, ut dimittatur tibi. Si non dimittis, quomodo eum convenis?</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.4.29">
+						<tei:div type="textpart" subtype="subsection" n="5.4.29">
 							<tei:p>Et ne patiaris induci nos in temptationem, sed libera nos a malo. Vide, quid dicat: 'Et ne patiaris induci nos in temptationem', quam ferre non possumus. Non dicit 'non inducas in temptationem', sed quasi athleta talem vult temptationem, quam ferre possit humana condicio et unusquisque, ut 'a malo', hoc est ab inimico, a peccato liberetur.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="5.4.30">
+						<tei:div type="textpart" subtype="subsection" n="5.4.30">
 							<tei:p>Potens est autem dominus, qui abstulit peccatum vestrum et delicta vestra donavit, tueri et custodire vos adversum diaboli adversantis insidias, ut non vobis obrepat inimicus, qui culpam generare consuevit. Sed qui deo se committit, diabolum non timet. Si enim deus pro nobis, quis contra nos? Ipsi ergo laus et gloria a saeculis et nunc et semper et in omnia saecula saeculorum. Amen.</tei:p>
 						</tei:div>
 					</tei:div>
 				</tei:div>
-				<tei:div type="textpart" subtype="1" n="6">
-					<tei:div type="textpart" subtype="2" n="6.1">
-						<tei:div type="textpart" subtype="3" n="6.1.1">
+				<tei:div type="textpart" subtype="book" n="6">
+					<tei:div type="textpart" subtype="section" n="6.1">
+						<tei:div type="textpart" subtype="subsection" n="6.1.1">
 							<tei:p>Sicut verus est dei filius dominus noster Iesus Christus, non quemadmodum homines per gratiam, sed quasi filius dei ex substantia patris, ita vera caro, sicut ipse dixit, quam accipimus, et verus eius est potus.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.1.2">
+						<tei:div type="textpart" subtype="subsection" n="6.1.2">
 							<tei:p>Sed forte dicas — quod dixerunt tunc temporis etiam discipuli Christi audientes dicentem: 'nisi qui manducaverit carnem meam et biberit sanguinem meum, non manebit in me nec habebit vitam aeternam' — forte dicas: 'Quomodo vera? Atqui similitudinem video, non video sanguinis veritatem.'</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.1.3">
+						<tei:div type="textpart" subtype="subsection" n="6.1.3">
 							<tei:p>Primo omnium dixi<tei:pb facs="csel-73_0215" />tibi de sermone Christi, qui operatur, ut possit mutare et<tei:pb facs="csel-73_0216" />convertere genera instituta naturae. Deinde: ubi non tulerunt sermonem Christi discipuli eius, sed audientes, quod carnem suam daret manducare et sanguinem suum daret bibendum, recedebant et solus tamen Petrus dixit: 'Verba vitae aeternae habes et ego a te quo recedam?' — ne igitur plures hoc dicerent, ire se, veluti quidam esset horror cruoris, sed maneret gratia redemptionis, ideo in similitudinem quidem accipis sacramenta, sed verae naturae gratiam virtutemque consequeris.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.1.4">
+						<tei:div type="textpart" subtype="subsection" n="6.1.4">
 							<tei:p>Ego sum, inquit, panis vivus, qui de caelo descendi. Sed caro non descendit e caelo, hoc est carnem in terris adsumpsit ex virgine. Quomodo ergo descendit panis e caelo et panis vivus? Quia idem dominus noster Iesus Christus consors est et divinitatis et corporis, et tu, qui accipis carnem, divinae eius substantiae in illo participaris alimento.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="6.2">
-						<tei:div type="textpart" subtype="3" n="6.2.5">
+					<tei:div type="textpart" subtype="section" n="6.2">
+						<tei:div type="textpart" subtype="subsection" n="6.2.5">
 							<tei:p>Ergo accepisti de sacramentis, plenissime cognovisti omnia. Quod baptizatus es in nomine trinitatis, in omnibus, quae egimus, servatum est mysterium trinitatis. Ubique pater, filius et spiritus sanctus, una operatio, una sanctificatio, etsi quaedam veluti specialia esse videantur.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.2.6">
+						<tei:div type="textpart" subtype="subsection" n="6.2.6">
 							<tei:p>Quomodo? Deus, qui te uncxit, et signavit te dominus, et posuit spiritum sanctum in corde tuo. Accepisti ergo spiritum sanctum in corde tuo. Accipe aliud, quia quemadmodum sanctus spiritus in corde, ita etiam Christus in corde. Quomodo? Habes hoc in Canticis canticorum, Christum dicentem ad ecclesiam: Pone me sicut signaculum in corde tuo, sicut signaculum in brachiis tuis.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.2.7">
+						<tei:div type="textpart" subtype="subsection" n="6.2.7">
 							<tei:p>Ergo uncxit te deus, signavit te Christus. Quomodo? Quia ad crucis ipsius signatus es formam, ad ilius passionem. Accepisti signaculum ad illius similitudinem, ut ad ipsius formam resurgas, ad ipsius vivas figuram, qui peccato crucifixus est et deo vivit. Et tuus homo vetus in fonte demersus, peccato crucifixus est, sed deo resurrexit.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.2.8">
+						<tei:div type="textpart" subtype="subsection" n="6.2.8">
 							<tei:p>Deinde habes alibi speciale, quod te vocaverit deus, in baptismate autem quasi specialiter concrucifigeris Christo, deinde quasi speciale, quando accipis spiritale signaculum. Vides distinctionem personarum esse, sed conexum omne mysterium trinitatis.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.2.9">
+						<tei:div type="textpart" subtype="subsection" n="6.2.9">
 							<tei:p>Deinde quid apostolus tibi dixit, ut<tei:pb facs="csel-73_0217" />lectum est nudius tertius? Divisiones autem sunt gratiarum,<tei:pb facs="csel-73_0218" />idem autem spiritus, divisiones ministeriorum, idem autem dominus, divisiones operationum sunt, idem autem deus, qui operatur omnia in omnibus. Omnia, inquit, operatur deus. Sed et de spiritu dei lectum est: Unus atque idem spiritus dividens singulis, prout vult. Audi scripturam dicentem, quia dividit spiritus pro voluntate sua, non pro obsequio. Ergo divisit vobis spiritus gratiam 'prout vult', non prout iubetur, et maxime quia spiritus dei, spiritus Christi est. Et illud tenete ipsum esse spiritum sanctum, ipsum spiritum dei, ipsum spiritum Christi, ipsum spiritum paraclitum.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.2.10">
+						<tei:div type="textpart" subtype="subsection" n="6.2.10">
 							<tei:p>Arriani putant se derogare sancto spiritui, si dicant illum spiritum paraclitum. Quid est paraclitus nisi consolator? Quasi non et de patre lectum sit, quia ipse est deus consolationis! Vides ergo, quia in eo derogandum putant spiritui sancto, in quo patris aeterni potestas pio praedicatur adfectu.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="6.3">
-						<tei:div type="textpart" subtype="3" n="6.3.11">
+					<tei:div type="textpart" subtype="section" n="6.3">
+						<tei:div type="textpart" subtype="subsection" n="6.3.11">
 							<tei:p>Nunc, quomodo orare debeamus, accipite. Multae virtutes orationis sunt. Ubi orare debeas, non est mediocre<tei:pb facs="csel-73_0219" />nec mediocris quaestio. Ait apostolus: Volo autem viros orare in omni loco levantes puras manus sine ira et disceptatione. Et dominus dicit in evangelio: Tu autem cum oras, intra in cubiculum tuum et clauso ostio ora patrem tuum. Non tibi videtur esse contrarium, ut dicat apostolus: 'in omni loco ora', et dominus dicat: 'intra cubiculum tuum ora'? Sed non est contrarium. Hoc ergo absolvamus, deinde quomodo debeas incipere orationem et quo ordine distinguere, quid subtexere, quid allegare, quemadmodum claudere orationem, deinde pro quo orare debeas, haec omnia discamus.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.3.12">
+						<tei:div type="textpart" subtype="subsection" n="6.3.12">
 							<tei:p>Primo ubi orare debeas. Aliud Paulus videtur dicere, aliud dominus. Numquid potuit Paulus contra Christi docere praecepta? Non utique. Qua ratione? Quia non contrarius, sed interpres est Christi. Imitatores, inquit, mei estote, sicut et ego Christi. Quid ergo? Potes ubique orare et in cubiculo tuo semper orare; habes ubique cubiculum tuum. Etsi inter gentes, inter Iudaeos positus sis, habes tamen tuum ubique secretum. Cubiculum tuum mens tua est. In populo licet positus, tamen in interiore homine arcanum tuum secretumque conservas.<tei:pb facs="csel-73_0220" /></tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.3.13">
+						<tei:div type="textpart" subtype="subsection" n="6.3.13">
 							<tei:p>'Tu autem, cum oras, intra in cubiculum tuum.' Bene ait 'intra', ne sic ores, quomodo Iudaeus, cui dicitur: Populus hic labiis me honorat, cor autem eorum longe est a me. Non ergo de labiis tantummodo tua procedat oratio, animo totus intende, intra in recessum pectoris tui, totus ingredere. Non te perfunctorium videat ille, cui placere desideras. Videat, quia ex corde oras, ut te ex corde orantem dignetur audire:</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.3.14">
+						<tei:div type="textpart" subtype="subsection" n="6.3.14">
 							<tei:p>'Tu autem, cum oras, intra in cubiculum tuum.' Habes hoc et alibi: Ambula, populus meus, et intra in recessus tuos, abscondere pusillum, donec transeat ira domini. Hoc locutus est dominus per prophetam; in evangelio autem dicit: 'Tu autem, cum oras, intra in cubiculum tuum et clauso ostio ora patrem tuum.'</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.3.15">
+						<tei:div type="textpart" subtype="subsection" n="6.3.15">
 							<tei:p>Quid est 'clauso ostio'? Quod habemus ostium? Audi, quod ostium habeas, quod debeas claudere, quando oras. — Utinam mulieres audirent! — Audisti iam; sanctus David te docuit dicens: Pone, domine, custodiam ori meo et ostium circuitus labiis meis. Est alibi ostium, quod ait apostolus Paulus dicens: Ut aperiatur, inquit, mihi ostium verbi ad<tei:pb facs="csel-73_0221" />loquendum mysterium Christi. Hoc est: quando oras, noli sermone clamare nec diffundere orationem tuam nec iactare per populos. In secreto tuo ora, securus, quod te in secreto possit audire, qui omnia videt atque audit universa. Et ora patrem tuum in abscondito; qui enim videt in abscondito, audit te deprecantem.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="6.4">
-						<tei:div type="textpart" subtype="3" n="6.4.16">
+					<tei:div type="textpart" subtype="section" n="6.4">
+						<tei:div type="textpart" subtype="subsection" n="6.4.16">
 							<tei:p>Quid prosit autem, interrogemus, qua ratione secreto magis orare debeamus quam cum vociferatione. Audi, de consuetudine hominum sumamus exemplum. Si aliquem rogas, qui cito audit, non opus putas esse clamore; sensim rogas, voce moderata. Si surdum aliquem roges, nonne incipis vociferari, ut te ille possit audire? Qui ergo clamat, putat, quod aliter deus non possit nisi clamantem audire, et dum rogat eum, eius derogat potestati. Qui autem in silentio orat, fidem defert et confitetur, quod deus scrutator cordis et renis sit, et orationem tuam ante ille audiat quam tuo ore fundatur.<tei:pb facs="csel-73_0222" /></tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.4.17">
+						<tei:div type="textpart" subtype="subsection" n="6.4.17">
 							<tei:p>Ergo videamus! Volo autem viros orare in omni loco: Qua ratione viros dixit? Utique communis oratio est et mulieribus et viris. Quod non invenio, nisi forte sanctus apostolus ideo viros dixit, ne mulieres usurparent et male intellegerent 'in omni loco' et inciperent ubique clamare, quas in ecclesia sustinere non possumus.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.4.18">
+						<tei:div type="textpart" subtype="subsection" n="6.4.18">
 							<tei:p>'Volo autem viros', hoc est, qui possunt servare praeceptum, 'orare in omni loco levantes puras manus'. Quid est 'levantes puras manus'? Numquid debes in oratione tua crucem domini gentibus demonstrare? Illud quidem signum virtuti est, non pudori. Est tamen, quomodo possis orare nec figuram demonstres, sed actus tuos leves: Si vis operari operationem tuam, levas puras manus per innocentiam. Levas eas non cottidie; semel levasti, non opus est, ut iterum leves.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.4.19">
+						<tei:div type="textpart" subtype="subsection" n="6.4.19">
 							<tei:p>Volo autem in omni loco viros orare levantes puras manus sine ira et disceptatione. Nil<tei:pb facs="csel-73_0223" />verius. Ira, inquit, perdit etiam sapientes. Ideo cum omni tempore, quantum fieri potest, Christianus vir iracundiam debeat temperare, maxime quando ad orationem accedit. Ne perturbet animum tuum indignatio, ne irae quidam furor inpediat orationem tuam, magis placido accede pectore. Quid enim irasceris? Servus peccavit? Tu accedis ad orationem, ut tibi tua delicta donentur, et alii indignaris? Hoc est ergo 'sine ira.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="6.5">
-						<tei:div type="textpart" subtype="3" n="6.5.20">
+					<tei:div type="textpart" subtype="section" n="6.5">
+						<tei:div type="textpart" subtype="subsection" n="6.5.20">
 							<tei:p>Nunc de 'disceptatione' videamus: Plerumque negotiator venit ad orationem, aut avarus de pecunia cogitat, alter de lucro, alter de honore, alter de cupiditate, et putat, quod eum deus possit audire. Et ideo quando oras, divina humanis praeferre te convenit.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.5.21">
+						<tei:div type="textpart" subtype="subsection" n="6.5.21">
 							<tei:p>Similiter et mulieres, inquit, volo orare non iactantes se in ornamentis neque in margaritis, ait apostolus Paulus. Sed et apostolus Petrus: Mulieris, inquit, gratia plurimum valet, ut viri eius convertatur adfectus per uxoris suae bonam conversationem et incredulus se flectat ad gratiam Christi. Hoc valet mulieris gravitas et pudicitia et eius bona conversatio, ut virum suum vocet ad<tei:pb facs="csel-73_0224" />fidem et devotionem, quod prudentis viri sermo frequenter operatur. Ergo mulier, inquit, non in ornatu capillorum, non in tortis crinibus ornamentum suum habeat, sed oratione ex corde puro, ubi est absconditus cordis homo, qui semper est apud deum locuples. Habes ergo, in quo sis dives: In Christo divitiae tuae pudicitia est et castitas, infulae fides, devotio, misericordia. Hi sunt thesauri iustitiae, sicut propheta memoravit.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.5.22">
+						<tei:div type="textpart" subtype="subsection" n="6.5.22">
 							<tei:p>Deinde unde debeas incipere, audi: Dic mihi, si velis hominem rogare et sic incipias: 'Da mihi ecce illud, quod te peto' nonne arrogans videtur oratio? Et ideo inchoari oratio debet a dei laude, ut roges omnipotentem deum, cui possibilia sunt omnia, qui voluntatem praestandi habet. Sequitur obsecratio, sicut apostolus docuit dicens: Obsecro ergo primum, fieri orationes, obsecrationes, postulationes, gratiarum<tei:pb facs="csel-73_0225" />actiones. Prima ergo oratio laudem habere debet dei, secunda supplicationem, tertia postulationem, quarta gratiarum actionem. Non debes quasi famelicus ad cibum de cibo incipere, sed ante a laudibus dei.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.5.23">
+						<tei:div type="textpart" subtype="subsection" n="6.5.23">
 							<tei:p>Unde et oratores isti sapientes hanc habent disciplinam: Ut iudicem fautorem sibi praestent, incipiunt a laudibus eius, ut benivolum sibi faciant cognitorem. Deinde paulatim incipit rogare iudicem, ut patienter dignetur audire, tertio postulationem suam depromere, quid petat, exprimere, quarto .... quomodo coepit a laudibus dei, sic debet in dei laude et in gratiarum actione unusquisque nostrum desinere.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.5.24">
+						<tei:div type="textpart" subtype="subsection" n="6.5.24">
 							<tei:p>Habes hoc in oratione dominica: Pater noster, qui es in caelis: Laus dei, quod pater praedicatur: in eo pietatis gloria; laus dei, quia in caelis habitat, non in terris: Pater noster, qui es in caelis. Sanctificetur nomen tuum, id est, ut sanctificet servos suos; nomen enim illius sanctificatur in nobis, quando prae-<tei:pb facs="csel-73_0226" />dicantur homines Christiani. Ergo optantis est 'sanctificetur nomen tuum'. Veniat regnum tuum: postulatio, ut in omnibus sit regnum Christi. Si deus in nobis regnat, locum habere adversarius non potest, culpa non regnat, peccatum non regnat, sed regnat virtus, regnat pudicitia, regnat devotio. Deinde: Fiat voluntas tua sicut in caelo et in terra. Panem nostrum cotidianum da nobis hodie. Haec postulatio maxima est eorum, quae postulantur. Et dimitte, inquit, nobis debita nostra, sicut et nos dimittimus debita debitoribus nostris: Ideo cottidie accipe, ut cottidie debito tuo indulgentiam petas. Et ne patiaris nos induci in temptationem, sed libera nos a malo. Quid sequitur? Audi, quid dicat sacerdos: Per dominum nostrum Iesum Christum, in quo tibi est, cum quo tibi est honor, laus, gloria, magnificentia, potestas, cum spiritu sancto a saeculis et nunc et semper et in omnia saecula saeculorum. Amen.<tei:pb facs="csel-73_0227" />
 							</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.5.25">
+						<tei:div type="textpart" subtype="subsection" n="6.5.25">
 							<tei:p>Aliud: Psalmorum David licet unus libellus sit habens eas virtutes orationis, quas supra diximus, tamen plerumque et in uno psalmo omnes istae orationis partes inveniuntur, quomodo in octavo psalmo invenimus. Denique sic coepit: Domine, dominus noster, quam admirabile est nomen tuum in universa terra. Oratio ergo prima. Deinde obsecratio: Quoniam videbo caelos, opera digitorum tuorum; hoc est 'caelos videbo': lunam et stellas, quas tu fundasti. Utique non 'caelum' dicit 'videbo', sed 'videbo caelos', in quibus incipit albescere gratia splendore caelesti. Hos sibi caelos tunc promittebat propheta dari, qui caelestem gratiam a domino mererentur: lunam et stellas, quas tu fundasti, 'lunam' ecclesiam, 'stellas' caelestis gratiae resurgentes. Deinde vide postulationem eius: Quid est homo, quod meministi eius, aut filius hominis, quoniam visitas eum? Minorasti eum paulo minus ab angelis, gloria et honore. coronasti eum, et constituisti eum super opera manuum tuarum. Et alia: gratiarum actio: Omnia subiecisti sub pedibus<tei:pb facs="csel-73_0228" />eius, oves et boves universas, insuper et pecora campi et cetera.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="3" n="6.5.26">
+						<tei:div type="textpart" subtype="subsection" n="6.5.26">
 							<tei:p>Docuimus pro captu nostro, forsitan quod non didicimus; ut potuimus, expressimus. Sanctitas vestra institutis sacerdotalibus informata elaboret tenere, quod accepit, ut sit oratio vestra accepta deo, et sit oblatio sicut hostia pura, et in vobis semper suum signaculum recognoscat, ut et ipsi ad gratiam et ad praemia virtutum pervenire possitis, per dominum nostrum Iesum Christum, cui est honor et gloria, laus, perpetuitas a saeculis et nunc et semper et in omnia saecula saeculorum. Amen.</tei:p>
 						</tei:div>
 					</tei:div>

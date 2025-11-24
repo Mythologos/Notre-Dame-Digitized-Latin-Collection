@@ -11,6 +11,11 @@
 					<tei:orgName>University of Notre Dame</tei:orgName>
 					<tei:resp>OCR-ed and preprocessed text for Lace post-correction; post-corrected and sectioned text; checked text post-XML conversion</tei:resp>
 				</tei:respStmt>
+				<tei:respStmt>
+                    <tei:persName>Hildegund Müller</tei:persName>
+                    <tei:orgName>University of Notre Dame</tei:orgName>
+					<tei:resp>Provided supervision and initial financial support for digital edition creation initiative.</tei:resp>
+				</tei:respStmt>
 			</tei:titleStmt>
 			<tei:publicationStmt>
 				<tei:authority>University of Notre Dame</tei:authority>
@@ -52,10 +57,17 @@
 				</tei:correction>
 			</tei:editorialDecl>
 			<tei:p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE Architecture</tei:p>
-			<tei:refsDecl n="CTS">
-				<tei:cRefPattern matchPattern="(\w+)" n="lines" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])" />
-			</tei:refsDecl>
-		</tei:encodingDesc>
+            <tei:refsDecl n="CTS">
+                <tei:cRefPattern n="law" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+                    <tei:p>This pointer pattern extracts laws.</tei:p>
+                </tei:cRefPattern>
+            </tei:refsDecl>
+            <tei:refsDecl n="CTS">
+                <tei:cRefPattern n="section" matchPattern="(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+                    <tei:p>This pointer pattern extracts sections of laws.</tei:p>
+                </tei:cRefPattern>
+            </tei:refsDecl>
+        </tei:encodingDesc>
 		<tei:profileDesc>
 			<tei:langUsage>
 				<tei:language ident="lat">Latin</tei:language>
@@ -68,29 +80,30 @@
 			<tei:change when="2025-03-28" who="Stephen Bothwell">Filled in publicationStmt element.</tei:change>
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Finished adding licensing information. Altered project identifier in textparts to be ND-DLC.</tei:change>
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Fixes publisher element mislabeled as date element.</tei:change>
+            <tei:change when="2025-11-24" who="Stephen Bothwell">Tentatively revises textual divisions. Amends descriptions for attributions and adds attribution for Hildegund Müller.</tei:change>
 		</tei:revisionDesc>
 	</tei:teiHeader>
 	<tei:text>
 		<tei:body>
 			<tei:div type="edition" xml:lang="lat" n="urn:cts:latinLit:stoa0279.stoa001.nd-dlc-5">
-				<tei:div type="textpart" subtype="1" n="1">
+				<tei:div type="textpart" subtype="law" n="1">
                     <tei:head>NOVELLA SEVERI I.</tei:head>
-					<tei:div type="textpart" subtype="2" n="1.0">
+					<tei:div type="textpart" subtype="section" n="1.0">
 						<tei:p><tei:pb facs="leges-novellae_0316" />IMPP. LEO ET SEVERVS AA. BABILIO P(RAEFECTO) P(RAETORI)O ET PATRICIO. CAPITIBVS INIVSTIS LEGIS DIVI MAJORIANI A. AD LOCVM. ABROGATIS Illud tantum ex eadem lege retinentes, quod veterum legum commendat auctoritas, scilicet, ut post viri obitum sponsalia in usumfructum tantum mater habeat et a filiis alienare non possit, sive in alias nuptias venerit sive non venerit, et ut omnibus ex eodem matrimonio filiis ex aequo communia in unum aut alterum matri conferre non liceat. Nam quid est aliud a filiis alie-<tei:pb facs="leges-novellae_0317" />nare, si hoc non est, cum proles numerosa contigerit, praetermissis ceteris uni vel alii prava velle intentione largiri? Sint sane matres, si ita libuerit, pro inpensis obsequiis in filiorum electione liberales, usumfructum suum cui voluerint largiantur: proprietatis commoda cunctis pariter filiis deputata non minuant.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.1">
+					<tei:div type="textpart" subtype="section" n="1.1">
 						<tei:p>In illa tamen parte matribus salva filiorum utilitate consulemus, ne eas necessitas dandae fideiussionis adstringat, quia et factu difficile est et super hoc filiis abunde vel prioribus constitutis vel praesenti lege prospicitur, quibus et alienatorum vindicatio conpetit et ex maternis bonis perditarum redintegratio facultatum, Basili p(arens) k(arissime) a(tque) a(mantissime).</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.2">
+					<tei:div type="textpart" subtype="section" n="1.2">
 						<tei:p>Quare inlustris et praecelsa magnificentia tua huius constitutionis oraculum edictorum faciet sollemnitate proponi, ut legis asperitas, quae ad amplitudinem tuam primae praefecturae administratione data est, per te correcta atque emendata vulgetur. DAT. X KAL. MART. ROM(AE) BASILIO VC. CONS.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.INT">
+					<tei:div type="textpart" subtype="section" n="1.INT">
 						<tei:p>INTERPRETATIO. Haec lex imperatorum Leonis et Severi ea, quae Maioriani lex de diversis rebus, quas ipsa testatur, observanda esse praeceperat, specialiter vacuavit et id tantum, quod rationabile et pristinis legibus congruum fuit, credidit reservandum. Quod ipse sua constitutione confirmat dicens ‘illud tantum ex eadem lege retinentes, quod veterum legum confirmat auctoritas’: itaque ut post viri obitum relicta uxor usumfructum tantum sponsaliciae donationis habeat et nihil exinde alienare praesumat, sive ad alias nuptias venerit sive certe non venerit, nec aliis nisi tantum omnibus filiis suis ex eodem patre genitis, cuius donatio est, haec ipsa sponsalicia largitas aequaliter dimittatur nec liceat matri cui voluerit de filiis aliquid exinde amplius pro sua voluntate donare. Sane de usufructu suo quod ei lege concessum est<tei:pb facs="leges-novellae_0318" />donandi cui voluerit habeat liberam potestatem. Nam ea, quae omnibus tantum filiis aequaliter iussa est reservare, neo minuat nec inter filios pro suo arbitrio dividere ulla ratione praesumat. Hoc tamen matribus hac lege praestatur, ut salva filiorum utilitate fideiussores pro retinenda hac ipsa sponsalicia donatione dare non debeant, quia talis petitio gravis est et sufficit filiis, quod vel hac lege vel prioribus statutis constat esse prospectum, ut, etiamsi matres eorum secundo nubserint, eorum maritorum facultates loco pignoris obligentur et, si quid ipsae matres exinde praesumpserint, de facultatibus earum inlata sibi filii damna resarciant.</tei:p>
 					</tei:div>
 				</tei:div>
-				<tei:div type="textpart" subtype="1" n="2">
+				<tei:div type="textpart" subtype="law" n="2">
                     <tei:head>NOVELLA SEVERI II.</tei:head>
-					<tei:div type="textpart" subtype="2" n="2.0">
+					<tei:div type="textpart" subtype="section" n="2.0">
 						<tei:p>IMPP. LEO ET SEVERVS AA. BASILIO P(RAEFECTO) P(RAETORI)O ET PATRICIO. Cum per virum inlustrem Ausonium cunctorum ad nos provincialium querella pervenit, eo quod .... laeti et .... aliaque corpora publicis obsequiis deputata quorundam se colonis vel<tei:pb facs="leges-novellae_0319" />famulis ignorantibus dominis sociassent, et nunc sub specie publicae corporationis procreatos liberos conantur iugo servitutis absolvere, idcirco agnoscat sublimis magnificentia tua divali nos in aeternum lege sanxisse, si qui vel si qua ex corporibus publicis ubi et ubi vel ex corporatis urbis Romae servis vel colonis se crediderint copulandos, agnationem eorum ad eos dominos pertinere, quorum inquilinus vel colonus fuisse constiterit: exceptis his, qui ante eam legem non taliter latam sese iunxisse noscuntur. DATA VII KAL. OCT. HERMENERICO ET BASILISCO CONSS.</tei:p>
 					</tei:div>
 				</tei:div>

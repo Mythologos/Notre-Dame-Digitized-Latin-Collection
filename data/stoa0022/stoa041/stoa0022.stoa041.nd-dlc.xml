@@ -9,12 +9,17 @@
 				<tei:respStmt>
 					<tei:persName>Kaitlin Stephan</tei:persName>
 					<tei:orgName>University of Notre Dame</tei:orgName>
-					<tei:resp>Post-corrected and sectioned text</tei:resp>
+					<tei:resp>Post-corrected OCR and sectioned text.</tei:resp>
 				</tei:respStmt>
 				<tei:respStmt>
 					<tei:persName>Stephen Bothwell</tei:persName>
 					<tei:orgName>University of Notre Dame</tei:orgName>
-					<tei:resp>OCR-ed and preprocessed text for Lace post-correction; checked text post-XML conversion</tei:resp>
+					<tei:resp>OCR-ed and preprocessed text for Lace post-correction; checked text post-XML conversion.</tei:resp>
+				</tei:respStmt>
+                <tei:respStmt>
+					<tei:persName>Hildegund Müller</tei:persName>
+					<tei:orgName>University of Notre Dame</tei:orgName>
+					<tei:resp>Provided supervision and initial financial support for digital edition creation initiative.</tei:resp>
 				</tei:respStmt>
 			</tei:titleStmt>
 			<tei:publicationStmt>
@@ -54,10 +59,17 @@
 				</tei:correction>
 			</tei:editorialDecl>
 			<tei:p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE Architecture</tei:p>
-			<tei:refsDecl n="CTS">
-				<tei:cRefPattern matchPattern="(\w+)" n="lines" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])" />
-			</tei:refsDecl>
-		</tei:encodingDesc>
+            <tei:refsDecl n="CTS">
+                <tei:cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+                    <tei:p>This pointer pattern extracts books.</tei:p>
+                </tei:cRefPattern>
+            </tei:refsDecl>
+            <tei:refsDecl n="CTS">
+                <tei:cRefPattern n="section" matchPattern="(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+                    <tei:p>This pointer pattern extracts sections.</tei:p>
+                </tei:cRefPattern>
+            </tei:refsDecl>
+        </tei:encodingDesc>
 		<tei:profileDesc>
 			<tei:langUsage>
 				<tei:language ident="lat">Latin</tei:language>
@@ -74,253 +86,254 @@
 			<tei:change when="2025-03-28" who="Stephen Bothwell">Filled in publicationStmt element.</tei:change>
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Finished adding licensing information. Altered project identifier in textparts to be ND-DLC.</tei:change>
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Fixes publisher element mislabeled as date element.</tei:change>
+            <tei:change when="2025-11-24" who="Stephen Bothwell">Tentatively revises textual divisions. Amends descriptions for attributions and adds attribution for Hildegund Müller.</tei:change>
 		</tei:revisionDesc>
 	</tei:teiHeader>
 	<tei:text>
 		<tei:body>
 			<tei:div type="edition" xml:lang="lat" n="urn:cts:latinLit:stoa0022.stoa041.nd-dlc">
-				<tei:div type="textpart" subtype="1" n="1">
-					<tei:div type="textpart" subtype="2" n="1.1">
+				<tei:div type="textpart" subtype="book" n="1">
+					<tei:div type="textpart" subtype="section" n="1.1">
 						<tei:p><tei:pb facs="csel-73_0472" />Etsi incrementum doloris sit id, quod doleas, scribere, tamen quoniam plerumque in eius, quem amissum dolemus, commemoratione requiescimus, eo quod in scribendo, dum in eum mentem dirigimus intentionemque defigimus, videtur nobis in sermone revivescere, signare aliquid de Valentiniani iunioris ultimis cordi fuit, ne aut oblitterasse silentio bene meriti de nobis pignoris memoriam videremur atque inhonoratam reliquisse aut refugisse incentivum dolendi, cum doluisse plerumque solatium sit dolentis, simul cum de ipso aut ad ipsum loquor, tamquam de praesente mihi vel ad praesentem sermo sit.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.2">
+					<tei:div type="textpart" subtype="section" n="1.2">
 						<tei:p>Quid igitur primum defleam? Quid primum amara conquestione deplorem? Conversi sunt dies nobis votorum nostrorum in lacrimas, siquidem Valentinianus nobis, sed<tei:pb facs="csel-73_0473" />non talis, qualis sperabatur, advenit. Et iste quidem vel morte sua promissum voluit inplere, sed nobis acerbissima est facta eius, quae exoptabatur, praesentia. Utinam adhuc nobis abesset, ut sibi viveret! Sed ille non passus, cum audiret Alpes Italiae hoste infestari barbaro, maluit periclitari se, si Gallias derelinqueret, quam nostro deesse periculo. Magnum crimen agnoscimus imperatoris, quod Romano subvenire voluit imperio! Haec causa mortis, quae plena laudis! Solvamus bono principi stipendiarias lacrimas, quia ille nobis solvit etiam mortis suae stipendium.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.3">
+					<tei:div type="textpart" subtype="section" n="1.3">
 						<tei:p>Nec tamen flendi admonitio necessaria. Flent omnes, flent et ignoti, flent et timentes, flent et inviti, flent et barbari, flent et qui videbantur inimici. Quantos iste de Galliis usque huc totius tractus itineris populorum egit gemitus! Omnes enim non tamquam imperatorem sibi, sed tamquam parentem publicum obisse domestico fletu doloris inlacrimant, suaque omnes funera dolent. Amisimus enim imperatorem, in quo duo pariter acerbant dolorem, annorum inmaturitas et consiliorum senectus. In his ergo fleo, sicut dixit propheta: Oculi mei caligaverunt a fletu, quia elongavit a me, qui consolabatur me. Oculi non solum corporis, sed etiam mentis hebetati<tei:pb facs="csel-73_0474" />sunt, et quadam caecitate omnis sensus obductus est, quoniam ereptus est mihi, qui convertit animam meam et ad spem maximam de summa rerum desperatione revocavit.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.4">
+					<tei:div type="textpart" subtype="section" n="1.4">
 						<tei:p>Audite, omnes populi, et videte dolorem meum. Virgines meae et iuvenes mei abierunt in captivitatem, sed cognito, quod de Valentiniani essent partibus, liberi reverterunt. Militavit hostis barbarus imperatori adulescenti et suae oblitus victoriae memor fuit imperialis reverentiae. Laxavit sponte, quos ceperat, excusans, quod ignorasset Italos. Nos adhuc murum Alpibus addere parabamus: Valentiniani gratia non expectavit Alpium vallum, fluenta amnium, aggeres nivium, sed Alpes et fluvios supergressa muro nos sui imperii protexit. Unde prophetici threni mihi utendum exordio videtur: Quomodo maeret Italia, quae abundabat gaudiis? Plorans ploravit in nocte, et lacrimae eius in maxillis eius, nec est, qui eam consoletur ab omnibus, qui diligunt eam. Omnes, qui amant illam, despexerunt eam. Omnis populus eius ingemescentes.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.5">
+					<tei:div type="textpart" subtype="section" n="1.5">
 						<tei:p>Et quia de Hierusalem dictum est, 'ploravit' et nostra Hierusalem, id est ecclesia, et 'ploravit in nocte', quoniam, qui eam splendidiorem fide sua et devotione faciebat, occubuit. Merito ergo 'plorans ploravit et adhuc lacrimae eius in maxillis eius'. Ubertatem<tei:pb facs="csel-73_0475" />quidem fletuum solet vultus umescentis declarare infusio, cum lacrimis genae rorant, sed quia scriptum est: Genae eius sicut fialae aromatis gignentes unguentaria, labia eius lilia distillantia myrram plenam, mystice ecclesiae gratia deflentis accipitur, quae in obitu Valentiniani bonum doloris sui effundit unguentum et vitam eius praedicando concelebrat. Cui mors obesse non potuit, eo quod odor praedicationis universorum ore celebrabilis faetorem omnem mortis abolevit.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.6">
+					<tei:div type="textpart" subtype="section" n="1.6">
 						<tei:p>Flet igitur ecclesia pignus suum, et lacrimae eius in maxillis eius. Quid sit maxilla, audi: Qui te percusserit in maxillam, praebe ei et alteram, eo quod in dolore sit patiens, ut paeniteat verberantem. Percussa eras, ecclesia, in maxilla tua, cum amitteres Gratianum, praebuisti et alteram, quando tibi Valentinianus ereptus est. Merito tibi non in una maxilla, sed in utraque sunt lacrimae, quia pie germanum utrumque deploras. Ploras, igitur, ecclesia, et fletu genae tuae velut fluentibus quibusdam stillicidiis pietatis exundant. Quae sunt istae genae ecclesiae, de quibus et alibi ait scriptura: Ut corium malorum granatorum genae tuae? Istae sunt genae,<tei:pb facs="csel-73_0476" />in quibus solet nitere verecundia, pulchritudo fulgere, in quibus aut flos iuventae aut perfectae aetatis insigne est. In obitu igitur fidelium imperatorum quidam fidei pudor, quaedam ecclesiae verecundia est, et in tam inmatura morte piorum principum omnis ecclesiae maestior pulchritudo est.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.7">
+					<tei:div type="textpart" subtype="section" n="1.7">
 						<tei:p>Plorat ecclesia in sapientibus suis, qui sunt velut caput ecclesiae; oculi enim sapientis in capite eius. Plorat in oculis, hoc est in suis fidelibus, quia scriptum est: Oculi tui sicut columbae extra taciturnitatem tuam, eo quod et videant spiritaliter et noverint ea, quae viderint, tacere mysteria. Plorat in sacerdotibus suis, qui sunt sicut genae ecclesiae, in quibus est 'barba Aaron', hoc est barba sacerdotalis, in quam de capite descendit unguentum. Isti sunt, in quibus est pulchritudo ecclesiae, in quibus flos eius gratior, in quibus aetas perfectior: qui velut cortices malorum punicorum decorem foris praeferant abstinentia corporali, intus autem commissam sibi plebem diversae aetatis et sexus foveant sapientia spiritali, obiecti quidem saeculo ad iniurias, sed interna mysteria dividentes. Plorat in virginibus suis, quae sunt sicut 'lilia', et lilia 'myrra plena', candorem integritatis et mortificatae corporalis inlecebrae gloriam praeferentes.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.8">
+					<tei:div type="textpart" subtype="section" n="1.8">
 						<tei:p>In his ergo flet, sicut scriptum est: Viae Sion lugent,<tei:pb facs="csel-73_0477" />sacerdotes eius ingemescunt, virgines eius abductae, et ipsa indignatur intra se. Et intra se quidem indignatur, ad Valentinianum autem dicit: Adsumam te et inducam te in domum matris meae et in secretum eius, quae concepit me. Potum tibi dabo a vino operosi unguenti, hoc est multi operis, multi odoris unguento, a fluxu malorum granatorum meorum, ut bibat vinum, quod laetificat cor hominis, et defluat in eum malorum granatorum fluxus, in quibus multus et diversus est fructus. Sermo enim multorum sensuum et de diversis scripturis abundans, sermo angelorum, sermo apostolorum ac prophetarum, quos uno velut corio ecclesia sancta conplectitur, malorum fluxus est granatorum.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.9">
+					<tei:div type="textpart" subtype="section" n="1.9">
 						<tei:p>Videns haec Valentinianus integrae plena gratiae respondet: Misericordiae domini, quod non defecimus, quia non sunt consummatae miserationes eius. Renovavit illas sicut lux matutina. Multi sunt gemitus mei et cor meum defecit. Sors mea dominus, dixi, ideo sustinebo eum. Bonus est dominus sustinentibus eum, animae, quae quaerit eum. Bonum est sperare in salutare domini. Bonum est viro, cum portavit iugum grave in iuventute sua: Sedebit singulariter et<tei:pb facs="csel-73_0478" />silebit, quia tulit iugum grave. Et ille quidem se suarum virtutum remuneratione solatur, eo quod in iuventute sua labores absorbuit, pericula multa toleravit, iugum maluit grave emendatioris propositi quam molle illud ac plenum deliciarum vivida mentis cervice portare.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.10">
+					<tei:div type="textpart" subtype="section" n="1.10">
 						<tei:p>Beatus plane, qui vel in senectute correxit errorem, beatus, qui vel sub ictu mortis animum avertit a vitiis. Beati enim, quorum tecta sunt peccata, quia scriptum est: Desine a malo et fac bonum et inhabita in saeculum saeculi. Quicumque ergo desierit a peccatis et fuerit ad meliora in quacumque conversus aetate, habebit superiorum indulgentiam peccatorum, quae fuerit vel paenitenti confessus adfectu vel corrigenti aversus ingenio. Sed huic cum plurimis veniae societas emerendae; plurimi enim sunt, qui se a peccatis et a lubrico iuventutis in senectute revocare potuerunt, rarus autem, qui in iuventute iugum grave seria sobrietate portaverit. Hoc est illud iugum, de quo ait dominus in evangelio: Venite ad me omnes, qui laboratis et onerati estis, et ego vos reficiam: tollite iugum meum super vos. Si quis ergo, antequam gravi oneretur peccatorum sarcina, tulerit iugum in iuventute, 'singulariter sedebit', non eum plurimis conferendus, sed cum illo, qui<tei:pb facs="csel-73_0479" />potest dicere: Quoniam tu singulariter in spe constituisti me.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.11">
+					<tei:div type="textpart" subtype="section" n="1.11">
 						<tei:p>Sed forte dicas: Quomodo iugum grave dicit Hieremias, eum in evangelio dominus dixerit: Iugum enim meum suave est et onus meum leve est? — Ac primo disce, quia Graecus 'iugum' tantummodo posuit, non addidit 'grave'. Tamen et illud adverte, quia, etsi ita esset in threnis, in evangelio 'iugum suave' dixerit et 'onus leve', non iugum leve. Potest enim grave iugum verbi esse, sed suave: grave adulescenti, grave iuveni, cuius aetas est florulentior, ut nolit iugo verbi subiciendam animi praebere cervicem. Potest et grave verbi iugum videri propter onera disciplinae, austeritatem correctionis, pondus abstinentiae restrictionemque lasciviae: Suave tamen est fructu gratiae, spe remunerationis aeternae, purioris conscientiae suavitate. Tamen iugum verbi suave dixit, onus oboedientiae leve, quoniam ei, qui iugum verbi patienti cervice susceperit, disciplinae onus grave esse non poterit.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.12">
+					<tei:div type="textpart" subtype="section" n="1.12">
 						<tei:p>Qui ergo tulerit in iuventute iugum, 'singulariter sedebit et silebit', revelata sibi gaudens divinae remunerationis aeterna mysteria. Aut certe 'silebit' non opus habens excusatione peccati, quod matura confessione praevenit et propera correctione deposuit. Non enim dicetur huic: Quae in iuventute non congregasti, quomodo invenies in senectute?<tei:pb facs="csel-73_0480" />Potest autem et sic intellegi, quoniam, qui cito portaverit iugum verbi, hoc est a iuventute, non se miscebit cum iuvenibus, sed 'sedebit seorsum et silebit', donec plena se perfectione virtutis erudiat et magnam induat animo patientiam, dabitque percutienti maxillam suam, etiam caedis contemptus iniuriam, ut mandatis obsequatur caelestibus.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.13">
+					<tei:div type="textpart" subtype="section" n="1.13">
 						<tei:p>Magnum est enim vel abstinere a vitiis iuventutis vel ea in ipso iuventutis vestibulo derelinquere atque ad seriora converti. Lubricae enim et perplexae viae sunt juventutis. Denique Salomon ait: Tria mihi inpossibilia intellegere et quartum, quod non cognosco: vestigia aquilae volantis et vias serpentis in petra et semitas navis navigantis et vias viri in iuventute. David autem ait: Delictum iuventutis meae et ignorantiae ne memineris. Iuvenis enim non solum fragilitate lubricae aetatis prolabitur, verum etiam ignorantia caelestium mandatorum plerumque delinquit: cito autem meretur veniam, qui praetendit ignorantiam. Propheta itaque dicit: 'Delicta iuventutis meae et ignorantiae ne memineris.' Non dicit: 'Delicta senectutis meae et scientiae ne memineris', sed quasi propheta, qui cito correxerit et emendaverit vitia iuventutis, aetatem ignorantiamque praetendit.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.14">
+					<tei:div type="textpart" subtype="section" n="1.14">
 						<tei:p>Valentinianus quoque, etiam in delicto prophetae<tei:pb facs="csel-73_0481" />similis, ait: 'Delicta adulescentiae meae et ignorantiae meae ne memineris.' Nec solum dixit, sed etiam ante correxit errorem, quam disceret esse lapsum alicuius erroris. Itaque dicit: 'Correctionem iuventutis meae memineris.' Error in pluribus est, in paucis correctio.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.15">
+					<tei:div type="textpart" subtype="section" n="1.15">
 						<tei:p>Et quid de aliis dicam, qui etiam ludo iuventutis putaverit abstinendum, resecandam aetatis laetitiam, severitatis publicae duritiam molliendam, lenitatem senectutis in alienis annis deferendam ei, qui in periculum convicti criminis vocaretur? Ferebatur primo ludis circensibus delectari: sic istud abstersit, ut ne sollemnibus quidem principum natalibus vel imperialis honoris gratia circenses putaret celebrandos. Aiebant aliqui ferarum eum venationibus occupari atque ab actibus publicis intentionem eius abduci: omnes feras uno momento iussit interfici.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.16">
+					<tei:div type="textpart" subtype="section" n="1.16">
 						<tei:p>Audire in consistorio negotia et Danihelis spiritu, in quibus dubitarent senes vel personae alicuius contuitu ducerentur, congruam vero adulescentem videres senilem ferre sententiam. Iactabant invidi, quod praemature prandium peteret: coepit ita frequentare ieiunium, ut plerumque ipse inpransus convivium sollemne suis comitibus exhiberet, quo et religioni sacrae satisfaceret et principis humanitati.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.17">
+					<tei:div type="textpart" subtype="section" n="1.17">
 						<tei:p>Scenicae alicuius forma ac<tei:pb facs="csel-73_0482" />decore deperire Romae adulescentes nobiles nuntiabatur: iussit eam ad comitatum venire. Missus pretio depravatus sine mandati effectu redit. Alterum misit, ne voluisse emendare vitia adulescentium et non potuisse videretur. Datus est obtrectandi aliquibus locus. Deductam tamen numquam aut spectavit aut vidit. Postea redire praecepit, ut et omnes cognoscerent irritum eius non esse mandatum et adulescentes doceret ab amore mulieris temperare, quam ipse, qui poterat habere in potestate, despexerat. Et haec fecit, cum adhuc non haberet uxorem et tamen exhiberet sui tamquam vinctus coniugio castitatem. Quis tam dominus servi quam ille sui corporis fuit? Quis tam aliorum arbiter quam ille suae censor aetatis?</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.18">
+					<tei:div type="textpart" subtype="section" n="1.18">
 						<tei:p>Quid de pietate eius loquar, qui cum hominem nobili ortum genere et locupleti prosapia, quae cito movere invidiam solent, regiae cupiditatis accusator urgeret et praefectus insisteret, respondit, ut nihil cruentum sanctis praesertim diebus statueretur? Et cum post aliquot dies accusatoris legeretur libellus, calumniam pronuntiavit, accusatum libere, donec praefectus cognosceret, observare iussit. Neque ante aut postea quisquam tanti criminis sub adulescente imperatore formidavit invidiam. Risit adulescens, quod robusti metuunt imperatores.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.19">
+					<tei:div type="textpart" subtype="section" n="1.19">
 						<tei:p>Miserat propter recuperanda templorum iura,<tei:pb facs="csel-73_0483" />sacerdotiorum profana privilegia, cultus sacrorum suorum Roma legatos et, quod est gravius, senatus nomine nitebantur. Et cum universi, in consistorio qui aderant, Christiani pariter atque gentiles, dicerent esse reddenda, solus velut Danihel excitato in se dei spiritu arguebat perfidiae Christianos, gentilibus obviabat dicens: 'Quod pius frater non eripuit, quomodo a me putatis esse reddendum, cum in eo et religio laedatur et frater?' — a quo se nollet pietate superari.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.20">
+					<tei:div type="textpart" subtype="section" n="1.20">
 						<tei:p>Et cum paterno conveniretur exemplo, quod sub patre suo ea nullus abstulerat, respondit: 'Patrem meum laudatis, quia non abstulit: nec ego abstuli. Numquid pater meus reddidit, ut me debere reddere postuletis? Postremo etiamsi pater reddidisset, frater abstulerat! Imitatorem in ea parte fratris esse me mallem. Aut numquid pater Augustus fuit et frater non fuit? Par utrique debetur reverentia et par utriusque est circa rem publicam gratia. Utrumque imitabor, ut et non reddam, quod et pater reddere non potuit, quia nullus abstulerat, et servem, quod a fratre est constitutum. Postulet parens Roma alia, quaecumque desiderat: Debeo adfectum parenti, sed magis obsequium debeo salutis auctori.'</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.21">
+					<tei:div type="textpart" subtype="section" n="1.21">
 						<tei:p>Quid de amore provincialium loquar, vel quo eos ipse conplectebatur, vel qui ab his consultori suo rependebatur,<tei:pb facs="csel-73_0484" />quibus nihil umquam indici passus est? 'Praeterita', inquit, 'non queunt solvere, nova poterunt sustinere?' Hoc laudant provinciae Iulianum: et ille quidem robusta aetate, iste in processu adulescentiae; ille plurima repperit et exhausit omnia, iste nihil invenit et omnibus abundavit.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.22">
+					<tei:div type="textpart" subtype="section" n="1.22">
 						<tei:p>Audivit in Transalpinis partibus positus ad Italiae fines barbaros adpropinquasse: sollicitus, ne alieno hoste suum regnum adtemptaretur, venire properabat, cupiens dimittere Gallicana otia et pericula nostra suscipere.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.23">
+					<tei:div type="textpart" subtype="section" n="1.23">
 						<tei:p>Haec mihi cum aliis communia. Illa privata, quod saepe me adpellabat absentem et a me initiandum se sacris mysteriis praeferebat. Quin etiam cum rumor quidam ad Viennensem pertulisset urbem, quod invitandi eius ad Italiam gratia eo pergerem, quam gaudebat, quam gratulabatur me sibi optato adfore! Mora ei adventus mei prolixior videbatur. Atque utinam adventus ipsius nullus praevenisset nuntius!</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.24">
+					<tei:div type="textpart" subtype="section" n="1.24">
 						<tei:p>Iam promiseram me profecturum, respondens vel honoratis petentibus vel praefecto, ut tranquillitati Italiae consuleretur, me, sicut superfluo ingerere non possem propter verecundiam, ita necessitatibus non defuturum. Confirmatum hoc erat. Ecce postridie litterae de instruendis mansionibus, invectio ornamentorum regalium aliaque huiusmodi, quae in-<tei:pb facs="csel-73_0485" />gressurum iter imperatorem significarent. Quibus rebus ab ipsis, a quibus fuerat postulata, intermissa legatio est.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.25">
+					<tei:div type="textpart" subtype="section" n="1.25">
 						<tei:p>Reus mihi videbar speratae meae praesentiae nec inpletae: sed utinam viventi tibi hunc deberem reatum! Excusarem, quod nulla tua audissem pericula, nullas tuas accepissem litteras, quod non potuissem propriis animalibus occurrere, etiamsi iter ingressus essem. Itaque securus veniae, dum dies subduco, adventus tui iter lego; ecce rescriptum accipio, ut sine mora pergendum putarem, eo quod vadem fidei tuae habere me apud comitem tuum velles. Num restiti? Num moratus sum? Additur eo, ut properarem ocius nec arbitrarer causam itineris mei synodum Gallorum esse episcoporum, propter quorum frequentes dissensiones crebro excusaveram, sed ut ipse baptizaretur.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.26">
+					<tei:div type="textpart" subtype="section" n="1.26">
 						<tei:p>In ipso egressu gestarum iam rerum indicia potui cognoscere, sed properandi studio nihil advertere poteram. Iam superabam Alpium iuga, et ecce nuntius amarus mihi et omnibus de tanti morte imperatoris. Reflexi iter et fletibus meis lavi. Quibus ego votis omnium proficiscebar; quo gemitu omnium revertebar! Non enim imperatorem sibi, sed salutem ereptam putabant. Quanto ipse angebar dolore! Primum quod tantus princeps, quod dulce pignus meum, quod ita mei cupidissimus occidisset. Quos ego aestus eius illo biduo fuisse conperi, quo litteris, quas ad me miserat, supervixit! Vesperi profectus est silentiarius, tertio die mane quaerebat, iamne<tei:pb facs="csel-73_0486" />remeasset, iamne venirem: ita sibi salutem quandam venturam arbitrabatur.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.27">
+					<tei:div type="textpart" subtype="section" n="1.27">
 						<tei:p>O iuvenis optime, utinam te viventem invenire potuissem, utinam te dilatio aliqua meo reservasset adventui! Nihil de aliqua mei virtute polliceor, nihil de ingenio atque prudentia, sed quanta ego cura inter te et comitem tuum, quanta sedulitate concordiam et gratiam refudissem! Qua me ipsum pro tua obtulissem fide, quam in me ipsum eos recepissem, quibus ille se timere dicebat! Certe si comes non esset inflexus, tecum remansissem. Praesumebam de te, quod ipse me audires, si pro te non esse auditum videres.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.28">
+					<tei:div type="textpart" subtype="section" n="1.28">
 						<tei:p>Multa habueram, quae tenerem; nunc nihil habeo praeter lacrimas et fletus. Cottidie mihi maior ad dolorem es, crescis ad gemitum. Omnes quanti me feceris, protestantur, omnes absentiam meam causam tuae mortis adpellant. Sed non sum Helias, non sum propheta, ut potuerim futura cognoscere. Sed sum 'vox clamantis' in gemitu, quo possim deflere praeterita. Quid enim habeo, quod melius faciam, quam ut tibi lacrimas pro tanto tuo in me adfectu rependam? Ego te suscepi parvulum, cum legatus ad hostem tuum pergerem, ego maternis traditum manibus amplexus sum, ego tuus iterum legatus repetivi Gallias, et mihi dulce illud officium fuit pro salute tua primo, deinde pro pace atque pietate, qua fraternas reliquias postulabas, nondum pro te securus et iam pro fraternae sepulturae honore sollicitus.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.29">
+					<tei:div type="textpart" subtype="section" n="1.29">
 						<tei:p>Sed revertamur ad threnos et ipsa doloris in-<tei:pb facs="csel-73_0487" />grediamur viscera: Quid testabor, inquit, tibi aut quid adsimilabo tibi, filia Hierusalem? Quis salvam faciet te et quis consolabitur te, virgo filia Sion? Quia magna facta est super te contritio tua. Quis sanabit te? Quis autem me consolabitur, a quo alii petunt consolationis officium? Inplevit me amaritudine, inebriavit me felle. Ventrem meum doleo, ut prophetico utar eloquio, quoniam, quem in evangelio eram generaturus, amisi.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.30">
+					<tei:div type="textpart" subtype="section" n="1.30">
 						<tei:p>Sed ille non amisit gratiam, quam poposcit, qui mihi in sermone, quo utebar ad plebem, hodie resurrexit. Nam cum in tractatum incidissem propositae lectionis, quod populus pauper benediceret deum, quaerere coepi, quis esset hic populus, et distinguere, quod esset populus alter dives, alter pauper, dives Iudaeorum, pauper ecclesiae, dives ille eloquiis sibi creditis, iste pauper aliena eloquia mutuatus. Merito pauper, quia congregatus a paupere est, illo videlicet, qui pauper factus est, cum dives esset, ut nos eius inopia ditaremur; exinanivit enim se, ut omnes repleret.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.31">
+					<tei:div type="textpart" subtype="section" n="1.31">
 						<tei:p>Sed quomodo pauper, qui habebat aeternitatis divitias et 'plenitudinem divinitatis'? Denique in carne erat et dicebat: Amodo videbitis filium hominis sedentem ad dexteram virtutis. Et alibi ad Petrum dicit: Tibi dabo claves regni caelorum. Hic ergo pauper, qui regnum caeleste donabat? Sed audi, quomodo pauper: Tollite, inquit,<tei:pb facs="csel-73_0488" />iugum meum super vos, quia mitis sum et humilis corde. Ideo et populus eius pauper est, non indigentia, quem divite illo populo video ditiorem; non solum enim oracula prophetarum, sed etiam apostolorum meruit divino fusa spiritu habere praecepta.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.32">
+					<tei:div type="textpart" subtype="section" n="1.32">
 						<tei:p>Non ergo inopia pauper, sed pauper spiritu, cui dictum est: Beati pauperes spiritu, ipsorum enim est regnum caelorum. Vere 'beati pauperes', qui acceperunt, quod divites non habebant. Ex hoc numero est ille propheticus pauper, de quo scriptum est: Iste pauper clamavit, et dominus exaudivit eum. Ex hoc populo ille, qui ait: Argentum et aurum non habeo, sed, quod habeo, do tibi: in nomine Iesu Nazareni surge et ambula. Ille ergo pauper auctor populi pauperis dicit: Deus, laudem meam ne tacueris, quoniam os peccatoris et os dolosi super me apertum est. Locuti sunt super me lingua dolosa, et sermonibus odii circumdederunt me et expugnaverunt me gratis. Pro eo, ut me diligerent, detrahebant mihi, ego autem orabam. Bonum scutum oratio, quo omnia adversarii ignita spicula repelluntur. Orabat ergo dominus Iesus, et eius imitator Valentinianus orabat.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.33">
+					<tei:div type="textpart" subtype="section" n="1.33">
 						<tei:p>Sed forte dicatur: 'Quid ei sua profuit oratio? Ecce in primo vitae occidit cursu.' — De celeritate mortis, non de genere loquor; non enim accusationis voce utor, sed doloris. — Sed etiam dominus orabat et crucifixus est; hoc enim orabat,<tei:pb facs="csel-73_0489" />ut 'peccatum mundi tolleret'. Audiamus ergo, quid oret Christi discipulus. Utique quod magister docuit. Docuit autem, ut vigilemus et oremus, ne ingrediamur in temptationem, hoc est, ne incidamus in peccatum. Haec est enim temptatio Christiani, si in suae animae periculum prolabatur: mortem autem timere non est perfectionis.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.34">
+					<tei:div type="textpart" subtype="section" n="1.34">
 						<tei:p>Rogare autem quis debeat et pro inimicis suis, orare etiam pro persequentibus, sicut ipse dominus orabat dicens: Pater, dimitte illis, non enim sciunt, quid faciunt. Vide clementiam magnam: Illi suum persequebantur auctorem, ipse adversariis etiam gravia peccata donabat; quin etiam ignorantiae velamine excusabat admissum dicens, quia 'nesciunt quid faciunt'; nam si scirent, dominum non persequerentur suum, in cuius potestate ac iure salutem suam esse arbitrarentur. Et quia non sola Christi persecutores eius erant morte contenti, addebant maledicta atque convicia, ut ait ipse: Maledicent ipsi, et tu benedices. Docuit nos; quod timere maledicta persequentium minime debeamus, cum habeamus benedictionis auctorem, nec movere nos convicia debeant, ubi praesul est, qui possit auferre maledicta.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.35">
+					<tei:div type="textpart" subtype="section" n="1.35">
 						<tei:p>Quid illud, quod mori non timuit? Immo pro omnibus se obtulit dicens, quod frustra innoxii in invidiam vocarentur, quod frustra propter se alii periclitarentur, sibique potius mortem optabat, ne ipse aliis causa mortis esset. Hoc est illud<tei:pb facs="csel-73_0490" />evangelicum domini in ipsa sui captione dicentis: Si me quaeritis, sinite hos ire. Occidit itaque pro omnibus, quos diligebat, pro quo amici sui parum putabant, si omnes perirent.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.36">
+					<tei:div type="textpart" subtype="section" n="1.36">
 						<tei:p>Advertimus, quem circa amicos suos habuerit animum, consideremus, quem erga germanas suas habuerit adfectum. In ipsis requiescebat, in ipsis consolabatur, in ipsis relaxabat animum et fessa curis corda mulcebat. Rogabat eas, ut, si quo pueritiae suae lapsu, si sermone aliquo offensae a fratre viderentur, ignoscerent, veniam sibi a domino deo depraecarentur. Manus, capita sororibus osculabatur, inmemor imperii, memor germanitatis. Et quanto magis aliis potestatis iure praestaret, hoc se magis humilem sororibus exhibebat. Rogabat, ut non meminissent iniuriae, meminissent gratiae.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.37">
+					<tei:div type="textpart" subtype="section" n="1.37">
 						<tei:p>Acciderat, ut quoddam de earum possessione audiret negotium; tantus enim erat, ut etiam in causa sororum aequus fore arbiter a provincialibus aestimaretur, quod, etsi circa sanctas necessitudines suas caritate propenderet, tamen pietatem suam iustitia temperaret. Audivit negotium non de iure, sed de possessione praedii. Hinc pietas pro sororibus, inde misericordiae pro orphano causa certabat, ut pro eo apud ipsas interveniret sorores. Remisit ad iudicem publice ne-<tei:pb facs="csel-73_0491" />gotium, ne aut ius aut pietatem laederet. Privatim tamen, quantum ex proposito nobilium puellarum advertimus, pium sanctis sororibus inpressit adfectum, ut concedendi praedii voluntatem haberent, indicium darent. Vere dignae tanto fratre germanae, quae id, quod mater sibi reliquerat, mallent de suo potius iure laxare quam fratrem in sua causa verecundiam sustinere.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.38">
+					<tei:div type="textpart" subtype="section" n="1.38">
 						<tei:p>Haec est vobis, sanctae animae, hereditas pretiosior fraternae laudis et gloriae, his vos pius frater nobiliores et ditiores reddidit, qui caput vestrum non gemmis onerabat, sed osculis, manus vestras non tam regalibus ambiebat insignibus, quam imperatorio ore lambebat. In vestrae fructu praesentiae omne ponebat solatium, ut nec ipsam nimie desideraret uxorem. Ideo nuptias differebat, quia pius eum vestrae gratiae pascebat adfectus. Haec vobis desiderio amplius quam dolori sint, ut fraterna gloria plus reficiat mentem quam dolor torqueat. Pascunt frequenter et lacrimae et mentem ablevant, fletus refrigerant pectus et maestum solantur adfectum.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.39">
+					<tei:div type="textpart" subtype="section" n="1.39">
 						<tei:p>Durum quidem funus videtis, sed stabat et sancta Maria iuxta crucem filii et spectabat virgo sui unigeniti passionem. Stantem illam lego, flentem non lego. Unde dixit ei filius: Mulier, ecce filius tuus, et discipulo dixit: Ecce mater tua, hereditatem illi caritatis suae et gratiae derelinquens. In quo vobis, pia pignora, quoniam fratrem<tei:pb facs="csel-73_0492" />vestrum servare propter mea peccata non merui, adfectum paternum exhibere desidero. Illum intueor in vobis, illum teneo, illum puto mihi esse praesentem, immo utrumque germanum, quos velut oculos mihi effossos arbitror. Felicius episcopos persequuntur imperatores quam diligunt. Quanto mihi beatius Maximus minabatur! In ilius odio laus erat, in horum amore supplicii feralis hereditas. Utinam, filii, pro vobis licuisset hunc spiritum fundere! Conpendium doloris inveneram et gloriosius mihi fuerat pro tantis obire pignoribus.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.40">
+					<tei:div type="textpart" subtype="section" n="1.40">
 						<tei:p>Sed ad vestram, sanctae filiae, consolationem revertar, quamvis rerum gestarum acerbitas vim omnem consolationis absorbeat. Quae si brevis sit, nihil adfert, quo maestum adfectum demulceat, sin prolixior, longiorem adfert admonitionem doloris. Quo enim prolixior fueris, hoc magis in consolando adficies eum, quem consolari velis, et diutius maerorem eius tenebis.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.41">
+					<tei:div type="textpart" subtype="section" n="1.41">
 						<tei:p>Non igitur velut penicillo quodam sermonis mei vestras abstergebo lacrimas; neque enim id facere vellem, etiamsi possem — est enim piis adfectibus quaedam etiam flendi voluptas et plerumque gravis lacrimis evaporat dolor —. Sed id postulo, ne vel<tei:pb facs="csel-73_0493" />infixum pectori vestro fratrem duris gemitibus revellatis vel avertatis planctibus vel requiescentem excitetis. Ille vobis maneat in corde, ille vivat in pectore, ille amplexibus piis haereat, ut solebat, ille fraterna oscula premat, ille semper in oculis sit, semper in osculis, semper in adloquiis, semper in mentibus, ille iam talis, ut ei nihil timeatis sicut ante. Obliviscamini eius aerumnam, teneatis gratiam. Ille vobis auxiliaturus speretur, ille noctibus praesul adsistat, illum a vobis iam nec somnus excludat. Propter ipsum delectet quies, ut vobis gratior revertatur. In vobis est, filiae, ut fratrem vobis iam nemo possit auferre.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.42">
+					<tei:div type="textpart" subtype="section" n="1.42">
 						<tei:p>Sed corpus eius tenere desideratis, tumulum circumfusae tenetis. Ille tumulus vobis fratris habitatio sit, ille sit aula palatii, in quo cara vobis membra requiescent.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.43">
+					<tei:div type="textpart" subtype="section" n="1.43">
 						<tei:p>Quodsi me ad illum revocatis dolorem, quod cito excessit e vita, nec ego abnuo inmatura obisse aetate, quem nostrae vitae temporibus fulcire cuperemus, ut de nostris annis viveret, qui fungi non potuit suis.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.44">
+					<tei:div type="textpart" subtype="section" n="1.44">
 						<tei:p>Sed quaero, utrum aliquis sit post mortem sensus an nullus. Si est, vivit; immo quia est, vita iam fruitur aeterna. Quomodo enim non habet sensum, cuius anima et vivit et viget et remeabit ad corpus et faciet illud, cum refusa fuerit, revivescere? Cla-<tei:pb facs="csel-73_0494" />mat apostolus: Nolumus autem vos ignorare, fratres, de dormientibus, ut non tristes sitis, sicut et ceteri, qui spem non habent. Nam si credimus, quod Iesus mortuus est et resurrexit, ita et deus illos, qui dormierunt, per Iesum adducet cum ipso. Manet ergo eos vita, quos manet resurrectio.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.45">
+					<tei:div type="textpart" subtype="section" n="1.45">
 						<tei:p>Quod si gentes, quae spem resurrectionis non habent, hoc uno se consolantur, quo dicant, quod nullus post mortem sensus sit defunctorum ac per hoc nullus remaneat sensus doloris, quanto magis nos consolationem recipere debemus, quia mors metuenda non sit, eo quod finis sit peccatorum, vita autem desperanda non sit, quae resurrectione reparatur? Iob quoque docet nec mortem timendam et potius optandam piis dicens: Utinam in inferno me custodires, absconderes me, donec mitigetur ira tua et constituas mihi tempus, in quo memor sis mei. Si enim mortuus fuerit homo, vivet. Consummans dies vitae meae sustinebo, donec iterum fiam. Tunc vocabis, et ego tibi oboediam : opera autem manuum tuarum ne despicias.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.46">
+					<tei:div type="textpart" subtype="section" n="1.46">
 						<tei:p>Esto tamen, dolendum sit, quod primaeva obierit aetate: gratulandum tamen, quod virtutum stipendiis veteranus decesserit. Tanta enim fuit emendatio vitae eius in<tei:pb facs="csel-73_0495" />illo omnibus lubrico adulescentiae tempore, tanta laus morum eius, ut omnem memoriam doloris obducat. Quod enim obiit, fragilitatis est, quod talis fuit, admirationis. Quam beata fuisset res publica, si eum diutius servare potuisset! Sed quia vita sanctorum non hic in terris est, sed in caelo — iustis enim vivere Christus et mori lucrum, quia dissolvi et cum Christo esse multo melius —, dolendum est, quod nobis cito raptus sit, consolandum, quod ad meliora transierit.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.47">
+					<tei:div type="textpart" subtype="section" n="1.47">
 						<tei:p>Denique David moriturum filium flebat, mortuum non dolebat. Flebat, ne sibi eriperetur, sed flere desivit ereptum, quem sciebat esse cum Christo. Et ut scias verum esse, quod adsero: Incestum Amnon filium flevit occisum, parricidam Abessalon doluit interemptum dicens: Filius meus Abessalon, filius meus Abessalon, innocentem filium non putavit esse lugendum, quia illos sibi perisse pro scelere, hunc pro innocentia credidit esse victurum.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.48">
+					<tei:div type="textpart" subtype="section" n="1.48">
 						<tei:p>Nihil ergo habetis, quod gravissime doleatis in fratre: homo natus est, humanae fuit obnoxius fragilitati. Nemo se redimit a morte, non dives, non ipsi reges, immo ipsi gravioribus subiacent. Iob dixit: Numerati anni dati sunt potenti, timor autem eius in auribus eius; quando videtur pacem habere, tunc veniet eius eversio. Vobis quoque ipsis tam acerba incidisse patienter ferre debetis, quae<tei:pb facs="csel-73_0496" />videtis vobis communia esse cum sanctis. Etiam David amissis filiis destitutus est. Optasset illos tales obire, qualis vobis frater ereptus est. Ille crimina doluit, non exitum filiorum.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.49">
+					<tei:div type="textpart" subtype="section" n="1.49">
 						<tei:p>Sed esto, fuerit ingemiscendum. Quo usque luctus tempora protrahantur? Duorum mensuum curricula in fraterni funeris cottidiano clausistis amplexu. Sola in scripturis Iepthae filia fletus sui tempora postulavit, cognito, quod pater eius profecturus ad proelium voverat, quia id rerum potitus offerret domino, quod sibi primum occurreret. Post victoriam revertenti occurrerat filia gnara pietatis, ignara promissi. Vidit eam et ingemuit pater dicens: Heu me, filia, inpedisti me, in stimulum doloris facta es mihi. Ego vero aperui os meum de te ad dominum et non potero avertere. Illa dixit ad eum: Pater, si in me aperuisti os tuum, fac mihi ita, ut exiit de ore tuo. Et iterum dixit: Sine me mensibus duobus et vadens flebo in montibus super virginitatem meam, ego et conpares amicae meae. Itaque duobus exactis regressa mensibus sacrificii munus implevit. Quae decreto populi Israhel quaternis in anno diebus ab eiusdem plebis feminis deplorabatur.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.50">
+					<tei:div type="textpart" subtype="section" n="1.50">
 						<tei:p>Ad deflendum igitur virginitatis suae<tei:pb facs="csel-73_0497" />florem duos sat esse menses Iepthae filia iudicavit, et adhuc non venerat resurrectio. Et hoc spatio temporis satis putavit a paucis se esse defletam. Vobiscum omnes populi defleverunt, omnes ingemuerunt provinciae, et adhuc parva putatis vestri haec esse supplicia? Si fratrem vestro redimere possetis exitio, nollet tamen ille vestra adflictione resuscitari, qui se melius vivere credit in vobis, qui optavit potius se ipsum mori quam vestram videre iniuriam, qui pro vobis se libenter fuit paratus offerre, qui ipso nostri doloris die dicitur hanc solam emisisse vocem: 'Vae miseris sororibus meis!' Itaque magis vestram destitutionem quam suam mortem dolebat.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.51">
+					<tei:div type="textpart" subtype="section" n="1.51">
 						<tei:p>Sed audio vos dolere, quod non acceperit sacramenta baptismatis. Dicite mihi: Quid aliud in nobis est nisi voluntas, nisi petitio? Atqui etiam dudum hoc voti habuit, ut, antequam in Italiam venisset, initiaretur, et proxime baptizari se a me velle significavit, et ideo prae ceteris causis me acciendum putavit. Non habet ergo gratiam, quam desideravit, non habet, quam poposcit? Et quia poposcit, accepit, et ubi illud est: Iustus quacumque morte praeventus fuerit, anima eius in requie erit.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.52">
+					<tei:div type="textpart" subtype="section" n="1.52">
 						<tei:p>Solve igitur, pater sancte, munus servo tuo, quod Moyses, quia in spiritu vidit, accepit, quod David, quia<tei:pb facs="csel-73_0498" />ex revelatione cognovit, emeruit. Solve, inquam, servo tuo Valentiniano munus, quod concupivit, munus, quod poposcit sanus, robustus, incolumis. Si adfectus aegritudine distulisset, tamen non penitus a tua misericordia esset alienus, qui celeritate temporis esset, non voluntate, fraudatus. Solve ergo servo tuo munus tuae gratiae, quam ille numquam negavit, qui ante diem mortis templorum privilegia denegavit his urgentibus, quos revereri posset. Adstabat virorum caterva gentilium, supplicabat senatus. Non metuebat hominibus displicere, ut tibi soli placeret in Christo. Qui habuit spiritum tuum, quomodo non accepit gratiam tuam?</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.53">
+					<tei:div type="textpart" subtype="section" n="1.53">
 						<tei:p>Aut si, quia sollemniter non sunt celebrata mysteria, hoc movet, ergo nec martyres, si catechumeni fuerint, coronantur; non enim coronantur, si non initiantur. Quodsi suo abluuntur sanguine, et hunc sua pietas abluit et voluntas.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.54">
+					<tei:div type="textpart" subtype="section" n="1.54">
 						<tei:p>Ne, quaeso, eum, domine, a fratre seiungas, ne iugum hoc piae germanitatis patiaris abrumpi. Hic tuus iam et tuo iudicio vindicatus periclitatur amplius Gratianus, si separetur a fratre, si non mereatur esse cum eo, per quem meruit vindicari. Quas ille nunc manus ad te, pater, erigit!<tei:pb facs="csel-73_0499" />Quas pro fratre preces fundit! Quo ei inhaeret amplexu! Quemadmodum sibi eum non patitur avelli!</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.55">
+					<tei:div type="textpart" subtype="section" n="1.55">
 						<tei:p>Adest etiam pater, qui militiam sub Iuliano et tribunatus honores fidei amore contempsit. Dona patri filium, fratri germanum suum, quorum utrumque imitatus, alterum fide, alterum devotione pariter atque pietate in templorum privilegiis denegandis, quod patri defuerat, adiunxit, quod frater constituit, custodivit. Et huic adhuc intercessionem adscisco, cui remunerationem praesumo.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.56">
+					<tei:div type="textpart" subtype="section" n="1.56">
 						<tei:p>'Date manibus' sancta mysteria, pio requiem eius poscamus adfectu. Date sacramenta caelestia, 'animam nepotis' nostris oblationibus prosequamur. Extollite, populi, mecum manus in sancta, ut eo 'saltem munere' vicem eius meritis rependamus. Non ego floribus tumulum eius aspergam, sed spiritum eius Christi odore perfundam. Spargant alii 'plenis lilia' calathis, nobis Christus est lilium. Hoc reliquias eius sacrabo, hoc eius commendabo gratiam. Numquam ego piorum fratrum separabo nomina, merita discernam. Scio, quod dominum commemoratio ista conciliet et copula ista delectet.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.57">
+					<tei:div type="textpart" subtype="section" n="1.57">
 						<tei:p>Nec putet aliquis meritis eorum obitus celeritate detractum. Raptus est et Enoch, ne malitia mutaret cor eius, et Iosias XVIII anno regni sui ita domini pascha celebravit, ut omnes<tei:pb facs="csel-73_0500" />retro principes devotione superaret, nec diutius fidei suae meritis supervixit, immo quia plebi Iudaeae grave inminebat exitium, rex iustus ante sublatus est. Metuo, ne et tu nobis aliqua nostri offensione sis raptus, ut octavo decimo regni tui anno inminentis mali acerbitatem quasi iustus evaderes.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.58">
+					<tei:div type="textpart" subtype="section" n="1.58">
 						<tei:p>Sed iam cara mihi conplectar viscera et debito condam sepulchro. Prius tamen singula membra perspiciam. Valentinianus meus, iuvenis meus candidus et rubeus habens in se imaginem Christi — talibus enim prosequitur ecclesia in Canticis Christum; nec iniuriam putes: charactere domini inscribuntur et servuli et nomine imperatoris signantur milites. Denique et ipse dominus dicit: Nolite tangere christos meos, et: Vos estis lux mundi, et Iacob dixit: Iuda, te conlaudent fratres tui. Ad filium loquebatur et dominum revelabat. Et de Ioseph dixit: Filius meus ampliatus, filius meus ampliatus Ioseph, et Christum significabat.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.59">
+					<tei:div type="textpart" subtype="section" n="1.59">
 						<tei:p>Licet ergo et mihi charactere domini signare servulum — iuvenis meus candidus et rubeus electus de decem milibus! Electus est filius meus, cum post mortem patris parvulus adscisceretur imperio. Caput eius aurum cephaz, oculi eius sicut columbae super abundantiam aquarum. Ibi enim sedimus et flevimus, dixerunt, qui inde venerunt.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.60">
+					<tei:div type="textpart" subtype="section" n="1.60">
 						<tei:p>Venter eius pyxis eburnea, qui reciperet oracula scripturarum, ut posset dicere: Ventrem meum, doleo, sicut dixit propheta; dicit enim haec, qui imitator est Christi.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.61">
+					<tei:div type="textpart" subtype="section" n="1.61">
 						<tei:p>Genae eius sicut fialae aromatis, quibus Christi influebat unguentum.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.62">
+					<tei:div type="textpart" subtype="section" n="1.62">
 						<tei:p>Labia eius sicut lilia stillantia<tei:pb facs="csel-73_0501" />myrra plena. Manus eius tornatae, aureae, plenae tharsis, eo quod in verbis eius iustitia refulgeret, in factis et operibus reniteret gratia: in quo et plenum virtutis auctoritatisque regalis esset adloquium nec inflexa aliquo mortis terrore constantia et factorum pretiosa et emendata correctio; omnis enim bonus operarius manus Christi est.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.63">
+					<tei:div type="textpart" subtype="section" n="1.63">
 						<tei:p>Fauces eius dulcedines et totus desiderium. Quam dulcia enim omnia iudicia eius universorum faucibus adhaeserunt! Quanta<tei:pb facs="csel-73_0502" />gratia sermones ipsius singuli recensentur! Quemadmodum, fili, desideraris a populis! Mihi certe inpressisti, quae pectore teneo, verba illa postrema, quibus me vadem tuum fieri postulabas. Reliquisti ipse de me testimonium iudicii gloriosi. Ego tibi fidem meam exhibere non potui, quam parabam; dixi tamen absens, et dicentem me fidem pro te Christus audivit. Tenetur in caelo sponsio mea, etsi non tenetur in terris. Obligatus sum deo, etsi non potui hominibus obligari.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.64">
+					<tei:div type="textpart" subtype="section" n="1.64">
 						<tei:p>Locutus sum de corpore tuo, nunc adloquar animam tuam dignam propheticis ornamentis. Isdem igitur utar exordiis: Quaenam est haec prospiciens sicut diluculum, speciosa sicut luna, electa sicut sol? Videor mihi te videre fulgentem, videor audire dicentem: 'Diluculum mihi est pater: nox terrena praecessit, dies caelestis adpropinquavit.' Prospicis igitur nos, sancta anima, de loco superiore tamquam inferiora respiciens. Existi de tenebris istius saeculi, et 'ut luna' resplendes, 'ut sol' refulges. Et bene 'ut luna', quia et ante, in umbra licet istius corporis, refulgebas et terrarum tenebras inluminabas et nunc lumen a sole iustitiae mutuata clarum diem ducis. Videre igitur videor te tamquam de corpore recedentem et repulsa noctis caligine surgentem diluculo<tei:pb facs="csel-73_0503" />sicut solem, adpropinquantem deo et rapido volatu sicut aquilam, quae terrena sunt, relinquentem.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.65">
+					<tei:div type="textpart" subtype="section" n="1.65">
 						<tei:p>Convertere, Solamitis, convertere, convertere et videbimus in te. Convertere ad nos 'pacifica', ut gloriam tuam sororibus tuis monstres et incipiant se tuae quietis et gratiae securitate solari. Semel tantum ad nos convertere, ut te videamus, et rursus convertere atque ad Hierusalem illam civitatem sanctorum tota intentione festina. Aut certe, quia ad animam piam Christus hoc dicit, iubet illam paulisper converti, ut nobis gloria eius appareat et requies futura cum sanctis, et postea praecipit eam ad illud supernum sanctorum festinare consortium.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.66">
+					<tei:div type="textpart" subtype="section" n="1.66">
 						<tei:p>Quid videbitis, inquit, in Solamitide, quae venit sicut chori castrorum, hoc est in ea, quae multum et adversum plurimos in corpore proeliata est? Etenim pugnavit adversus extraneos hostes, pugnavit adversus lubricas. saeculi mutationes, pugnavit adversus corporis fragilitates, adversus multiplices passiones. Audivit a domino: 'Convertere, Solamitis'. Conversa est 'ad pacem' semel in saeculo, conversa est iterata conmonitione ad gratiam Christi, et ideo pulchra conversio<tei:pb facs="csel-73_0504" />eius in saeculo, pulcherrimus incessus eius et volatus in caelum.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.67">
+					<tei:div type="textpart" subtype="section" n="1.67">
 						<tei:p>Unde meretur audire: Speciosi facti sunt gressus tui in calciamentis, filia Aminadab, hoc est 'filia principis'; speciosos enim processus habuisti in corpore, tamquam calciamento eo usa, non ut involucro, ut quasi superior et eminentior, quo velles, tuum circumferres sine ulla offensione vestigium, vel certe sicut calciamentum illud exsolveres, sicut Moyses fecit, cui dictum est: Solve calciamentum. pedum tuorum.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.68">
+					<tei:div type="textpart" subtype="section" n="1.68">
 						<tei:p>Dicit igitur tibi nunc pater Aminadab, ille 'populi princeps': Audi, filia, et vide, quoniam concupivit rex speciem tuam. Speciosi ergo facti sunt gressus tui in calciamentis, filia Aminadab. Moduli femorum tuorum similes torquibus, hoc est consonans sibi in omnibus factis tuis gratia atque moderatio magnorum aequavit insignia triumphorum. Denique moderatione tua et tranquillitate pacifica nec Gallia hostem sensit et Italia hostem reppulit, qui eius finibus inminebat. Torques autem insignia esse victoriae dubitari non potest, cum hi, qui in bello fortiter fecerint, torquibus<tei:pb facs="csel-73_0505" />honorentur.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.69">
+					<tei:div type="textpart" subtype="section" n="1.69">
 						<tei:p>Umbilicus tuus crater tornatilis non deficiens mixto. Venter tuus acervus tritici munitus inter lilia. Cervix tua sicut turris eburnea. Oculi tui stagna in Esebon. Bonus 'umbilicus' animae, virtutum omnium capax sicut crater ab ipso fidei auctore tornatus. Sapientia enim in cratere miscuit vinum suum dicens: Venite, edite panes meos et bibite vinum, quod, miscui vobis. Ergo umbilicus iste tornatus omni decore virtutum non deficit mixto. Venter quoque eius non solum iustitiae velut frumentario cibo replebatur, sed etiam gratiae suavitate, quae florebat ut lilium. Cervix quoque eius candida et pura, iugo Christi sponte subiecta; cogitationes rationabiles, fidei odor, 'circumcisionis adtentio', ornatus capitis gloriosus, quod non regalia diademata, sed domini sanguinis insignia coronarent.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.70">
+					<tei:div type="textpart" subtype="section" n="1.70">
 						<tei:p>Merito tamquam rex peccati victor et caelesti corona redimitus ascendit, cuius animae dicit deus verbum: Quid pulchra et suavis facta es, caritas, in deliciis tuis, pulchra per virtutis decorem, suavis per gratiam, procera sicut palma, quae vincentis est praemium.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.71">
+					<tei:div type="textpart" subtype="section" n="1.71">
 						<tei:p>Huic ascendenti animae Gratianus frater occurrit et conplexus eam dicit: Ego fratri meo, et super me conversio eius, vel quod sibi eum cupiat inhaerere, vel quod pietate fraterna quasi advocatus adsistat, dicens conversionem eius etiam suae gratiae praeferendam.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.72">
+					<tei:div type="textpart" subtype="section" n="1.72">
 						<tei:p>Veni, inquit, frater meus, exeamus n agrum, requiescamus in castellis, diluculo surgamus in vineas, hoc est: Venisti eo, ubi diversarum virtutum fructus pro singulorum meritis deferuntur, ubi abundant meritorum praemia. 'Exeamus' ergo 'in agrum', in quo non vacuus labor, sed fecundus proventus est gratiarum. Quod in terris seminasti, hic mete; quod ibi sparsisti, hic collige. Aut certe veni in illum agrum, qui est odor Iacob, hoc est veni in gremium Iacob, ut sicut Lazarus pauper in Abrahae sinu, ita etiam tu in Iacob patriarchae tranquillitate requiescas; sinus enim patriarcharum recessus quidam est quietis aeternae. Merito ergo Iacob ager est fructuosus, sicut Isaac patriarcha testatus est dicens: Ecce odor filii mei tamquam odor agri pleni, quem benedixit dominus.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.73">
+					<tei:div type="textpart" subtype="section" n="1.73">
 						<tei:p>'Requiescamus', inquit, 'in castellis', ostendens illic esse requiem tutiorem, quae septo caelestis refugii munita atque vallata non exagitetur saecularium incursibus bestiarum.<tei:pb facs="csel-73_0506" /></tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.74">
+					<tei:div type="textpart" subtype="section" n="1.74">
 						<tei:p>In foribus, inquit, nostris omnes fetus arborum: nova et vetera, frater meus, servavi tibi. Quis dabit te, frater, fratrem mihi, lactantem ubera matris meae? Inveniens te foris osculabor te, adsumam te et inducam te in domum matris meae et in secretum<tei:pb facs="csel-73_0507" />eius, quae concepit me. Potum dabo tibi a vino operosi unguenti, a fluxu malorum granatorum meorum. Laeva eius sub caput meum et dextera eius conplectetur me. Promittit fratri augustae memoriae Gratianus praesto sibi fructus diversarum esse virtutum; fuit enim et ipse fidelis in domino, pius atque mansuetus, puro corde. Fuit etiam castus corpore, qui praeter coniugium nescierit feminae alterius consuetudinem.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.75">
+					<tei:div type="textpart" subtype="section" n="1.75">
 						<tei:p>Ideo 'in foribus' sedis suae habet fructus paratos nec longe petendos. Offert, quae servaverit fratri 'nova et vetera', hoc est et testamenti veteris et evangelii sacramenta, et dicit: 'Quis dabit te, frater, fratrem mihi lactantem ubera matris meae?' Hoc est: non quicumque te, sed Christus inluminavit gratia spiritali. Ille te baptizavit, quia humana tibi officia defuerunt. Plus adeptus es, qui minora te amisisse credebas. Quae sunt 'ubera' ecclesiae nisi sacramenta baptismatis? Et bene ait 'lactantem', quasi qui baptizatus lactis nivei sucum requirat. 'Inveniens', inquit, 'te foris osculabor te', hoc est extra corpus te reperiens osculo mysticae pacis amplectar. 'Nemo' te 'spernet', nullus excludet, 'in penetralia' te et arcana ecclesiae 'matris' inducam et in omnia secreta mysterii, ut bibas 'poculum' gratiae spiritalis.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.76">
+					<tei:div type="textpart" subtype="section" n="1.76">
 						<tei:p>Amplexatus igitur fratrem ducere coepit ad propriam mansionem,<tei:pb facs="csel-73_0508" />et quia pro officio ad ulteriora processerat, cum fratre coepit ascendere petens, ut sibi et fratri maior illic caritas augeatur, eo quod vitia humana defecerant, invidia atque iactantia, quae in plerisque solent fraternae pietatis iura vacuare.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.77">
+					<tei:div type="textpart" subtype="section" n="1.77">
 						<tei:p>Videntes eos vel angeli vel aliae animae quaerunt ab his, quae veluti comitatu suo fratres hos et officio deducebant, dicentes: Quae est haec, quae ascendit candida innitens super fratrem suum? Nec nos quidem dubitabamus de meritis Valentiniani, sed iam credamus vel testimoniis angelorum, quod detersa labe peccati ablutus ascendit, quem sua fides lavit et petitio consecravit. Credamus et sicut alii habent, quia ascendit a deserto, hoc est ex hoc arido et inculto loco ad illas florulentas delectationes, ubi cum fratre coniunctus aeternae vitae fruitur voluptate.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.78">
+					<tei:div type="textpart" subtype="section" n="1.78">
 						<tei:p>'Beati ambo', 'si quid' meae orationes 'valebunt': 'nulla dies' vos silentio praeteribit, nulla inhonoratos vos mea transibit oratio, nulla nox non donatos aliqua praecum mearum contextione transcurret, omnibus vos oblationibus frequentabo. Quis prohibebit innoxios nominare, quis vetabit conmendationis prosecutione conplecti? Si oblitus fuero te, sancta Hierusalem, hoc est sancta anima, pia et 'pacifica' germanitas, obliviscatur me dextera mea, adhaereat lingua mea faucibus meis, si non meminero<tei:pb facs="csel-73_0509" />tui, si non meminero Hierusalem in principio laetitiae meae. Ipse me citius quam vos obliviscar, et si umquam sermo tacebit, loquetur adfectus, et si vox deficiet, non deficiet gratia, quae meis est infixa praecordiis.</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.79">
+					<tei:div type="textpart" subtype="section" n="1.79">
 						<tei:p>Quomodo ceciderunt potentes! Quomodo uterque super illa Babylonis ceciderunt flumina! Quomodo rapidiora utriusque vitae fuere curricula quam ipsius Rhodani sunt fluenta! O mihi, Gratiane et Valentiniane, speciosi et carissimi, quam angusto vitam fine clausistis, quam proxima vobis mortis fuere confinia, quam sepulcra vicina! Gratiane, inquam, et Valentiniane, in vestris nominibus adhaerere iuvat, atque delectat in vestri conmemoratione requiescere. O omnibus, Gratiane et Valentiniane, speciosi et carissimi, inseparabiles in vita et in morte non estis separati. Non vos discrevit tumulus, quos non discernebat adfectus, non causa mortis separavit, quos pietas una iungebat. Non virtutum distantia dispares fecit super columbas simpliciores, super aquilas leviores, super agnos clementiores, super vitulos innocentiores. Gratiani sagitta non est reversa retro, et Valentiniani iustitia 'non fuit vacua' nec inanis auctoritas. Quomodo sine pugna ceciderunt potentes!</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.79b">
+					<tei:div type="textpart" subtype="section" n="1.79b">
 						<tei:p>Doleo in te, fili Gratiane, 'suavis mihi valde'. Plurima dedisti tuae pietatis insignia. Tu me<tei:pb facs="csel-73_0510" />inter tua pericula requirebas, tu in tuis extremis me appellabas, meum de te plus dolebas dolorem. Doleo etiam in te, fili Valentiniane, 'speciosus mihi valde'. Ceciderat amor tuus in me sicut amor pignoris. Tu per me putabas eripi te periculis, tu me non solum ut parentem diligebas, sed ut redemptorem tui et liberatorem sperabas. Tu dicebas: 'Putasne videbo patrem meum?' Speciosa de me voluntas tua, sed non efficax praesumptio. Ei mihi, vana spes in homine! Sed tu in sacerdote dominum requirebas. Ei mihi, quod voluntatem tuam non ante cognovi! Ei mihi, quod non clanculo ante misisti! Ei mihi, qualia amisi pignora! Quomodo ceciderunt potentes et perierunt arma concupiscenda!</tei:p>
 					</tei:div>
-					<tei:div type="textpart" subtype="2" n="1.80">
+					<tei:div type="textpart" subtype="section" n="1.80">
 						<tei:p>Domine, quia nemo habet, quod alii plus deferat quam quod sibi optat, non me ab illis post mortem separes, quos in hac vita carissimos sensi. Domine, peto, ut ubi ego fuero, et illi sint mecum: vel illic eorum perpetua copula fruar, quia hic uti eorum diuturniore coniunctione non potui. Te quaeso, summe deus, ut carissimos iuvenes matura resurrectione suscites et resuscites, ut inmaturum hunc vitae istius cursum matura resuscitatione conpenses.</tei:p>
 					</tei:div>
 				</tei:div>
