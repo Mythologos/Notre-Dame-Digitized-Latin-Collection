@@ -1,6 +1,6 @@
 <ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:stoa0380" urn="urn:cts:latinLit:stoa0380.stoa001">
   <ti:title xml:lang="lat">Commentaria Senecae &quot;De Clementia&quot;</ti:title>
-  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0380.stoa001" urn="urn:cts:latinLit:stoa0380.stoa001.nd-dlc">
+  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0380.stoa001" urn="urn:cts:latinLit:stoa0380.stoa001.nd-dlc-lat1">
     <ti:label xml:lang="lat">L. Annei Senecae, Romani Senatoris ac Philosophi Clarissimi, Libri Duo De Clementia, ad Neronem Caesarem: Io. Calvini Noviodunaei Commentariis Illustrati. Parisiis apud Ludovicum Cyaneum.</ti:label>
     <ti:description xml:lang="mul">Corpus Reformatum: Ioannis Calvini Opera Quae Supersunt Omnia, vol. 33. Baum, Johann Wilhe, Cunitz, Ed, and Reuss, Eduard, editors. C. A. Schwetschke and Son: Braunschweig, 1866.</ti:description>
   </ti:edition>

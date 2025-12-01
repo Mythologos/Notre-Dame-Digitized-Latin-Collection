@@ -1,0 +1,225 @@
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xml:space="preserve">
+	<tei:teiHeader xml:lang="en">
+		<tei:fileDesc>
+			<tei:titleStmt>
+				<tei:title xml:lang="lat">Liber Legum Novellarum Divi Marciani A.</tei:title>
+				<tei:title type="sub">an electronic transcription.</tei:title>
+				<tei:author>Theodosius II</tei:author>
+				<tei:funder>University of Notre Dame</tei:funder>
+				<tei:respStmt>
+					<tei:persName>Stephen Bothwell</tei:persName>
+					<tei:orgName>University of Notre Dame</tei:orgName>
+					<tei:resp>OCR-ed and preprocessed text for Lace post-correction; post-corrected and sectioned text; checked text post-XML conversion</tei:resp>
+				</tei:respStmt>
+				<tei:respStmt>
+                    <tei:persName>Hildegund Müller</tei:persName>
+                    <tei:orgName>University of Notre Dame</tei:orgName>
+					<tei:resp>Provided supervision and initial financial support for digital edition creation initiative.</tei:resp>
+				</tei:respStmt>
+			</tei:titleStmt>
+			<tei:publicationStmt>
+				<tei:authority>University of Notre Dame</tei:authority>
+				<tei:idno type="filename">stoa0279.stoa001.nd-dlc-lat4.xml</tei:idno>
+				<tei:availability>
+					<tei:licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+						<tei:p>Available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC-BY-NC-SA 4.0) International License.</tei:p>
+					</tei:licence>
+				</tei:availability>
+				<tei:date>2025</tei:date>
+				<tei:publisher>University of Notre Dame</tei:publisher>
+				<tei:pubPlace>Notre Dame, Indiana, United States of America</tei:pubPlace>
+			</tei:publicationStmt>
+			<tei:sourceDesc>
+				<tei:biblStruct>
+					<tei:monogr>
+						<tei:author>
+							<tei:persName>Theodosius II</tei:persName>
+						</tei:author>
+						<tei:title xml:lang="lat">Theodosiani libri XVI cum Constitutionibus Sirmondianis: et Leges novellae ad Theodosianum pertinentes / consilio et auctoritate Academiae litterarum regiae borussicae ediderunt Th. Mommsen et Paulus M.</tei:title>
+						<tei:editor>
+							<tei:persName>Mommsen, Theodor</tei:persName>
+							<tei:persName>Meyer, Paul M.</tei:persName>
+						</tei:editor>
+						<tei:imprint>
+                            <tei:pubPlace>Berlin</tei:pubPlace>
+							<tei:publisher>Weidmann</tei:publisher>
+							<tei:date>1905</tei:date>
+						</tei:imprint>
+					</tei:monogr>
+                    <tei:ref target="https://babel.hathitrust.org/cgi/pt?id=coo.31924022080968&amp;seq=295">Hathitrust</tei:ref>
+				</tei:biblStruct>
+			</tei:sourceDesc>
+		</tei:fileDesc>
+		<tei:encodingDesc>
+			<tei:editorialDecl>
+				<tei:correction>
+					<tei:p>Lace v. 0.6.22 copyright 2013-2021, Bruce Robertson, Dept. of Classics, Mount Allison University.</tei:p>
+				</tei:correction>
+			</tei:editorialDecl>
+			<tei:p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE Architecture</tei:p>
+            <tei:refsDecl n="CTS">
+                <tei:cRefPattern n="law" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+                    <tei:p>This pointer pattern extracts laws.</tei:p>
+                </tei:cRefPattern>
+            </tei:refsDecl>
+            <tei:refsDecl n="CTS">
+                <tei:cRefPattern n="section" matchPattern="(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+                    <tei:p>This pointer pattern extracts sections of laws.</tei:p>
+                </tei:cRefPattern>
+            </tei:refsDecl>
+        </tei:encodingDesc>
+		<tei:profileDesc>
+			<tei:langUsage>
+				<tei:language ident="lat">Latin</tei:language>
+			</tei:langUsage>
+		</tei:profileDesc>
+		<tei:revisionDesc>
+			<tei:change when="2025-03-20" who="Stephen Bothwell">Initial markup of new file. Fixed misplaced page breaks and did initial clean-ups. Removed symbols related to textual variations. Added headers. Performed spell-checking pass.</tei:change>
+			<tei:change when="2025-03-24" who="Stephen Bothwell">Added publication information and removed invalid paragraph element.</tei:change>
+			<tei:change when="2025-03-28" who="Stephen Bothwell">Filled in publicationStmt element.</tei:change>
+			<tei:change when="2025-04-24" who="Stephen Bothwell">Removed a couple misplaced punctuation or other characters.</tei:change>
+			<tei:change when="2025-06-17" who="Stephen Bothwell">Finished adding licensing information. Altered project identifier in textparts to be ND-DLC.</tei:change>
+			<tei:change when="2025-06-17" who="Stephen Bothwell">Fixes publisher element mislabeled as date element.</tei:change>
+            <tei:change when="2025-11-24" who="Stephen Bothwell">Tentatively revises textual divisions. Amends descriptions for attributions and adds attribution for Hildegund Müller.</tei:change>
+            <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards.</tei:change>
+		</tei:revisionDesc>
+	</tei:teiHeader>
+	<tei:text>
+		<tei:body>
+			<tei:div type="edition" xml:lang="lat" n="urn:cts:latinLit:stoa0279.stoa001.nd-dlc-lat4">
+				<tei:div type="textpart" subtype="law" n="1">
+					<tei:head>I. NEMINEM EXHIBERI DE PROVINCIA AD COMITATVM NISI AD RELATIONEM IVDICIS A QVO FVERIT APPELLATVM.</tei:head>
+					<tei:div type="textpart" subtype="section" n="0">
+						<tei:p><tei:pb facs="leges-novellae_0298" />IMPP. VALENTINIANI ET MARCIANI AA. EDICTVM. Multa remediorum genera nostrae clementiae provincialibus suis prospicere gestienti et crebra cogitatio subpetit et ipse rerum usus adportat. Nam cum venalem iudicum ambitum radicitus amputasset et ad res privatas vel publicas sincerissime gubernandas homines spectandos atque consultos traxisset invitos — sciens quippe felicem fore rem publicam, si a nolentibus et actus publicos repulsantibus regeretur —, cogitanti nostrae pietati statim occurrit, quonam modo possint longi itineris intervallo et enormibus sumptibus legitimo egentes auxilio liberari. Videtis enim agmina, videtis catervas adeuntium infinitas non solum a finitimis<tei:pb facs="leges-novellae_0299" />provinciis, verum extremo orbis Romani limite confluentes et adversum suos adversarios conquerentes. Quod profecto nullatenus accidisset, si in locis integritas vel severitas iudicum floruisset. Ne igitur huiusmodi flagitia etiam ulterius porrigantur, ne quis desertis laribus suis aut certe dulcibus pignoribus per incognitas mundi partes diutius pervagetur, hoc consultissimo edicto statuendum pariter et omnibus declarandum pietas nostra decernit:</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="1">
+						<tei:p>Quicumque civilem actionem vel certe criminalem accusationem adversariis suis intendere moliuntur, viros clarissimos adeant provinciarum rectores et expositis querimoniis insinuatisque desideriis suis paratissimum promptissimumque posthac subsidium iuris expectent. Illi noxiae potentiae vim legum benignam obponant, illi divitiis integram mentem obiciant. Non illos supercilium, quod hoc tempore nullum est, terrebit, non effeminabit mentem severam quilibet census oblatus. Sed unicuique, non altiore suspecta, non despecta humiliore fortuna, nostrae mandatorum non inmemores pietatis et antiquo et nostro iure succurrent et querimonias suas probantibus aut indemnitate servata aut legitima vindicta consulent subsecuta.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="2">
+						<tei:p>Has ergo ob causas nullum adversarium suum a proximis vel longinquis partibus, non per sacros adfatus, non per magnificentissimorum vel inlustrium iudicum sententias volumus exhibere, nisi forsitan aut propter potestatem adversarii aut ipsius rei difficultatem aut publici debiti molem deficiente rectore provinciae spectabilis iudicis, qui in locis vel proximo deget, vel amplissimae potestatis vel aliorum maiorum iudicum auxilium postuletur.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="3">
+						<tei:p>His pro commodo vestro et pro nostri imperii humanitate dispositis unusquisque vestrum, cum sint in locis iudices legum custodes et earum pervigiles defensores, prout quisque possit sine peregrinatione, sine sumptibus super dubiis rebus et adire iudices et auxilium ami-<tei:pb facs="leges-novellae_0300" />cum legibus adipisci, haec quae dicta sunt observare debebit. Si vero vel ab adversario tamquam excedente provinciale praesidium fuerit contemptus vel a iudice non auditus hocque in amplissimae potestatis vel alio maiore, conpetenti tamen, examine per relationem iudicis contra adversarium missam seu ipsum iudicem documentis quibusdam neglexisse nostrae maiestatis edicta sui periculi memor se promiserit probaturum, tunc post indemnitatem ei legibus servatam etiam vindicta iuri congrua in convictum protinus subsequetur.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="4">
+						<tei:p>Quod si appellatio apud iudicem fuerit subsecuta, ea, quae super provocationibus legibus antiquitus statuta sunt, diligentius modis omnibus complebuntur.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="5">
+						<tei:p>His additur aliud maius, quod innocentes praecipue hactenus conterebat. Nonnulli namque suis adlegationibus diffidentes, vexare suos adversarios tantummodo cupientes, non iure cum his, sed arte pugnabant et per sermonem fucatum et falerata verba, nonnumquam legibus arte confusis, ad aliena eos iudicia pertrahebant, ita ut hinc saepius eveniret, ut et miles in civili et privatus in militari, sed sibi incongruo, peregrinaretur iudicio. Ergo hanc quoque partem ne ad laesionem nobis subiectorum per iuris et legum contemptum ulterius perduraret, hoc providentissimo edicto nostra pietas censuit emendandum. Iubemus namque omnes pro priscis ac saluberrimis institutis suos adversarios satisfactionem forsitan differentes in proprio, non in minime conpetenti fictis quibusdam occasionibus exposcere litigii foro.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="6">
+						<tei:p>Actor rei forum sequatur. Quod sine caelesti sententia non constat esse decretum, intactum inviolatumque servetur: nemo a nostra serenitate postulet — nec enim impetrabit non rescriptum non mandatum vel iussum quod<tei:pb facs="leges-novellae_0301" />dicunt sacrum — suos adversarios in minime conpetenti iudicio respondere, maxime cum hoc tempore, quod superius dictum est, unusquisque clarissimorum vel spectabilium iudicum, si tamen propter causas praedictas ita usus tulerit, et integras adeuntibus aures praebere et omni postposita invidia, omni spreta gratia recto proposito potuerit iudicare.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="7">
+						<tei:p>Quam formam etiam in militari parte volumus observari nec passim aliquem armatae militiae sociatum longinquis partibus trahi, sed in locis apud conpetentem iudicem pulsari, nisi tamen super maximis et necessariis causis et militarem iudicem in locis excedentibus fuerit accusatus: non ignorante eo, cuius ex interpellatione aliquis secundum datam formam in longinqua fuerit protractus examina, quod, si culpa sui fuerit dilata cognitio vel minime actioni suae adfuerit vel delata probaverit, pro calumnia quidem poenam luat legibus constitutam; pro vero pecuniaria causa post dispendia, post sumptus, considerata quantitate postulatorum vel medii itineris intervallo, condemnationem pro aestimatione iudicis sustinebit. Nam dignum est eos, qui maiorum nostrorum nostrarumque legum, avaritia stimulante vel invidia incitante, fines perturbare seu castra perfringere conabuntur militantum, saltem intimato, quo magis puniuntur, dispendio refrenari.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="8">
+						<tei:p>Ergo consulite vestris commodis, nostris saluberrimis parete praeceptis. Nemo a nostra pietate maioribus occupata vel a magnificentissimis seu inlustribus iudicibus nisi in maximis ac necessariis, quod superius cautum est, rebus publicis vel debitis exhibitionis subsidium poscat. Nam si quis aliter quam edicta continent petulanti animo his despectis maiorem iudicem vel nostram primum contra ordinem legum adierit maiestatem, sciat se non solum litis iacturae atque plus petitionis<tei:pb facs="leges-novellae_0302" />periculo, verum etiam conpetenti motui fore subdendum. DAT. V ID. OCT. CONSTANTINOPOLI VALENTINIANO A. VII ET AVIENO V̅C̅. CONSS.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="INT">
+						<tei:p>INTERPRETATIO. Si quis adversarium suum aut repetitione aut criminis obiectione pulsaverit, in provincia, in qua consistit ille qui pulsatur, suas exerat actiones nec aestimet adversarium suum alibi aut longius ad iudicium pertrahendum: illi vero qui pulsatus fuerit, si iudicem suspectum habuerit, liceat appellare. Simili etiam et militantes ordine teneantur, ut et ipsi apud conpetentes iudices, quas conpetere sibi credunt, exerant actiones, quia omnibus legibus constitutum est, ut actor rei forum sequatur.</tei:p>
+					</tei:div>
+				</tei:div>
+				<tei:div type="textpart" subtype="law" n="2">
+					<tei:head>II. DE INDVLGENTIIS RELIQVORVM.</tei:head>
+					<tei:div type="textpart" subtype="section" n="0">
+						<tei:p>IMPP. VALENTINIANVS ET MARCIANVS AA. PALLADIO P(RAEFECTO) P(RAETORI)O. Curae nobis est utilitati humani generis providere; nam id die ac nocte prospicimus, ut universi, qui<tei:pb facs="leges-novellae_0303" />sub nostro imperio vivunt, et armorum praesidio ab hostili impetu muniantur et in pace libero otio ae securitate potiantur. Ideoque mirati sumus laudabilem suggestionem celsitudinis tuae, quae praeter alias virtutes, quibus sublimitas tua plurimum pollet, etiam humanitatem tui culminis evidenter ostendit. Nam debitorum, quae in reliquis trahuntur, exactionem molestiam esse testatur obnoxiis ac merito postulavit, ut praedicti debitores sacra nostra indulgentia liberentur. Quapropter admirabilem insinuationem tuam probandam esse censuimus.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="1">
+						<tei:p>Cesset igitur pro securitate provincialium exactio reliquorum et a sextae indictionis initio usque ad finem quintae decimae nuper elapsae debita deleantur, sive ex possessionibus liberari vel patrimonialis templorumve aut civilis fiscalisve iuris, seu in auro seu in argento seu in speciebus vel in metallica quacumque materia aliove quolibet conlationis titulo in publicis calculis residere noscuntur. Et sive arcae sublimitatis tuae sive thesauris sive sacro debentur aerario, sive cellariis vel privatae rei nostrae aut dominicae domui, sive operibus huius inclitae urbis, omnia conlatoribus nec non curialibus seu cohortalibus seu provincialibus officiis et aliis, quicumque reperiuntur obnoxii, remittantur.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="2">
+						<tei:p>Et ne qua liberalitatem nostram caligo fraudis valeat inpedire, etsi in privatum contractum vel in cautionem debitum publicum transisse vel novatum esse dicatur aut si quis curialis exactor vel cohortalis conpulsor pro obnoxio se intulisse commemoret, nihilominus liberalitas nostra firma permaneat.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="3">
+						<tei:p>Curialibus etiam et cohortalibus nulla super exactionibus adversus obtiones vel actuarios vel devotissimos milites querellae permittatur occasio, ita ut et obtiones et actuarii et devotissimi milites invicem taceant et nullam adversus curiales seu cohortales vel conlatores seu officia provincialia seu decuriones moveant pro debitis publicis actionem, etiam si quas<tei:pb facs="leges-novellae_0304" />expensas se pro aliis intulisse contendant.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="4">
+						<tei:p>Praeterea quidquid ex titulo senatorii follis in provinciis debetur, hoc quoque remitti iubemus.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="5">
+						<tei:p>Si quid autem ex quintae decimae indictionis vel superiorum temporum debitis ad expensas primae indictionis seu posteriorum temporum deputatum est et si quid ex naulis ac pretiis materiarum et relevatis vel donatis aut translatis atque adaeratis vel ab arca sacratissimae Constantinopolitanae urbis debetur, id huius donationis beneficio non tenebitur. Sed et si quid in auro vel in speciebus vel in materiis civitatum operibus deputatum est et hoc erogatum non esse monstratur, eius quoque ratio servetur intacta nec possint debitores huius donationis auxilio niti, sed conpellantur hi, qui noxii reperiuntur, inplere suscepta opera et sumptuum reddere rationes. Nec enim oportet hanc liberalitatem nostram eo usque protendi, ut in aliorum lucra iniuste proficiat, quod ornatui urbium delegatum est.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="6">
+						<tei:p>Sentiant universi, quantum sibi pietas nostra profuerit, et in posterum devoto animo pensitationes publicas solvant qui se sciant praeteritis debitis liberatos, Palladi p(arens) k(arissime) a(tque) a(mantissime).</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="7">
+						<tei:p>Inlustris igitur et praecelsa magnitudo tua huius saluberrimae pragmaticae legis moderationem per universos populos ac provinciarum iudices edictis propositis divulgari curabit, ut securi et beneficium nostrae pietatis et securitatis suae fructum libenter agnoscant. SCRIPTA PALLADIO V(IRO) INL(VSTRI) P(RAEFECTO) P(RAETORI)O ORIENTIS, HERMOGENI V(IRO) INL(VSTRI) COMITI SACRARVM LARGITIONVM, GENETHLIO V(IRO) INL(VSTRI) COMITI RERVM PRIVATARVM, MAXIMINO V(IRO) INL(VSTRI) COMITI ET PRAEPOSITO SACRI CVBICVLI . . . . . D. N. VALENTINIANO A. VII ET AVIENO V̅C̅. CONSS.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="INT">
+						<tei:p><tei:pb facs="leges-novellae_0305" />INTERPRETATIO. Lex ista hoc continet, ut per provincias relaxatae beneficio principis tributorum reliquiae non quaerantur, tamen quod exactum est, si apud exactores resedisse constiterit, id praecipit, ut publicis debeat utilitatibus non perire, sed quod exactum est a retentatoribus thesauris inferatur et a provincialibus vel a possessoribus quod solutum non fuerit non quaeratur.</tei:p>
+					</tei:div>
+				</tei:div>
+				<tei:div type="textpart" subtype="law" n="3">
+					<tei:head>III. DE PRAEDIIS CIVITATVM OMNIVM.</tei:head>
+					<tei:div type="textpart" subtype="section" n="0">
+						<tei:p>IMPP. VALENTINIANVS ET MARCIANVS AA. PALLADIO P(RAEFECTO) P(RAETORI)O ORIENTIS. Avaritiae suae culpam arguit, qui pro possessionibus, quas detinet, debitas functiones inferre cunctatur. Itaque inter ceteros egregios actus, quibus rei publicae tua sublimitas prodest, etiam suggestionem de praediis iuris civilis oblatam iure laudamus, per quam postulatum est, ut, si qui memorata praedia dempto civili canone consecuti sunt, veterem canonem in posterum cogantur agnoscere.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="1">
+						<tei:p>Celsitudo igitur tua id nobis placuisse cognoscat, ut, si qui vel ex titulo donationis vel ex emptione sive ex alio quolibet titulo possessiones iuris civilis, tantummodo quae huius iuris esse vere probantur, cuiuslibet civitatis et praecipue huius aeternae urbis, cui maiorem debemus favorem, tam civilis, ut dictum<tei:pb facs="leges-novellae_0306" />est, iuris quam etiam agonotheticas possessiones, ex consulatu Auxonii et Olybrii dempto civili canone acceperunt, inpositum praediis canonem iuxta fidem publicorum monumentorum civitati, ad quam praedia pertinuerunt, praebere iubeantur: ex praesenti quoque quarta indictione, cessante praeteriti temporis canonis exactione, manente penes eos successoresque eorum et detentatores inlibato dominio. Nam si privatis viris debita non patimur denegari, multo magis praebenda sunt civitatibus quae iure debentur, cum sufficiat possessoribus, quod apud eos dominium in perpetuum ex nostra liberalitate permaneat.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="2">
+						<tei:p>Si quae tamen possessiones iuris civilis canonem privatis largitionibus in praesenti praebent vel numquam ademptum vel postea inpositum, ad hanc pragmaticam iussionem non pertinebunt, sed privato aerario canonem, quem nunc agnoscunt, inferre ex more debebunt, dominio firmiter apud eos successoresque eorum et detentatores pari modo permanente.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="3">
+						<tei:p>Illud etiam dispositionis culminis tui probamus atque firmamus, ut, si qui cuiuslibet iudicis commotione multati sunt et partem seu totam multam adhuc debere noscuntur, id quoque indulgentia nostrae clementiae perfruantur, ut nullam sustineant exactionem, Palladi p(arens) k(arissime) a(tque) a(mantissime).</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="4">
+						<tei:p>Celsitudo igitur tua haec, quae per hanc pragmaticam legem sanximus, rectoribus provinciarum declarare non differat, ut et civitates et possessores et ceteri, de quibus haec constituimus, utilitati suae consultum esse laetentur. DAT. XV KAL. FEBR. CONSTANTINOPOLI MARCIANO A. I CONS.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="INT">
+						<tei:p><tei:pb facs="leges-novellae_0307" />INTERPRETATIO. Si quid de fiscalibus agris vel aedificiis donatione principis vel venditione vel qualibet ratione ad privatos fortasse pervenerit, id lex ista constituit ut soluto canone a possessoribus in perpetuum teneatur et, inpletis fiscalibus debitis, illi qui possident heredibus suis relinquendi aut quibus voluerint donandi habeant potestatem.</tei:p>
+					</tei:div>
+				</tei:div>
+				<tei:div type="textpart" subtype="law" n="4">
+					<tei:head>IIII. DE MATRIMONIIS SENATORVM.</tei:head>
+					<tei:div type="textpart" subtype="section" n="0">
+						<tei:p>IMPP. VALENTINIANVS ET MARCIANVS AA. PALLADIO P(RAEFECTO) P(RAETORI)O. Leges sacratissimae, quae constringunt omnium vitas, intellegi ab omnibus debent, ut universi praescripto earum manifestius cognito vel inhibita declinent vel permissa sectentur. Si quid vero in isdem legibus latum fortassis obscurius fuerit, oportet id imperatoria interpretatione patefieri, ut omnis sanctionis removeatur ambiguum et in suam partem iuris dubia derivare litigatorum contentio alterna non possit, negotiorum quoque cognitores ac tribunalium praesides apertam definitionem legum secuti suspensis nutantibusque sententiis inter scita incerta non fluctuent. Plana enim et facilis ad pronuntiandum via patet iudici, quotiens non est illud ambiguum, iuxta quod necesse est<tei:pb facs="leges-novellae_0308" />iudiciaria.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="1">
+						<tei:p>Magnificentia tua in causis omnibus terminandis rectum semper tramitem studens tenere iustitiae consuluit clementiam nostram super Constantinianae legis ea parte, in qua aliquid existere videtur ambiguum. Nam cum sanciret, ne senatori, perfectissimo, duumviro, flamini municipali, sacerdoti provinciae habere liceret uxorem ancillam ancillae filiam, libertam libertae filiam, sive Romanam vel Latinam factam, scaenicam vel scaenicae filiam, tabernariam vel tabernari filiam vel lenonis aut harenarii filiam aut eam, quae mercimoniis publicis praefuit, vetitis interdictisque personis adiecit etiam humilem abiectamque personam. Exinde de matrimonio magnam dubitationem in iudiciis nasci tua adseruit celsitudo, utrumne haec nomina etiam ad pauperes ingenuas feminas referri debeant easque a matrimonio senatorum praescriptum legis excludat. Absit hoc nefas illis penitus temporibus, ut credatur cuiquam dedecori data esse paupertas, cum saepe plurimis multum paraverint gloriae opes modicae et continentiae fuerit testimonium census angustior. Quis arbitretur inclitae recordationis Constantinum, cum geniales senatorios toros contaminari pollutarum mulierum faece prohiberet, fortunae munera bonis naturalibus praetulisse et divitiis, quas varietas casuum tam potest adimere quam tribuere, postposuisse ingenuitatem, quae auferri non potest, si semel nata sit?</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="2">
+						<tei:p>Ille vero honesti amantissimus et morum sanctissimus censor eas humiles abiectasque iudicavit esse personas et matrimoniis senatorum duxit indignas, quas aut nascendi decolor macula aut vita probrosis quaestibus dedita sordentibus notis polluit et vel per originis turpitudinem vel obscaenitate professionis infecit. Ideoque omnem dubitationem,<tei:pb facs="leges-novellae_0309" />quae quorundam mentibus iniecta fuerat, auferentes, manentibus et solidissima in perpetuum firmitate durantibus cunctis his, quae super matrimoniis senatorum sanxit constitutio divae memoriae Constantini, humilem vel abiectam feminam minime eam iudicamus intellegi, quae, licet pauper, ab ingenuis tamen parentibus nata sit. Sed licere statuimus senatoribus et quibuscumque amplissimis dignitatibus praeditis ex ingenuis natas, quamvis pauperes, in matrimonium sibi adscire nullamque inter ingenuas ex divitiis et opulentiore fortuna esse distantiam.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="3">
+						<tei:p>Humiles vero abiectasque personas eas tantummodo mulieres esse censemus, quas enumeratas et specialiter expressas copulari matrimoniis senatorum lex praedicta non passa est: hoc est ancillam ancillae filiam, libertam libertae filiam, sive Romanam vel Latinam factam, scaenicam vel scaenicae filiam, tabernariam vel tabernari vel lenonis aut harenarii filiam aut eam, quae mercimoniis publice praefuit. Quod quidem haud dubie credimus ipsum divae memoriae Constantinum in ea, quam promulgavit, sanctione sensisse ideoque huiusmodi inhibuisse nuptias, ne senatoribus harum feminarum, quas nunc enumeravimus, non tam conubia quam vitia iungerentur.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="4">
+						<tei:p>Cetera etiam, quae ab inclitae recordationis Constantino vel ab aliis post eum divis principibus super naturalibus filiis eorumque matribus, de concubinis quoque ingenuis et de his, quae post uxoris obitum in nuptias convenerunt, quaecumque sacris constitutionibus definita sunt, iubemus inviolabiliter custodiri: ita tamen, ut promulgatas prius leges eae, quae postmodum latae sunt, auctoritate praecedant et quaecumque ex ipsis est posterior tempore sit validior sanctione, Palladi p(arens) k(arissime) a(tque) a(mantissime).</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="5">
+						<tei:p>Inl(ustris) igitur et magnifica auctoritas tua hanc serenitatis nostrae<tei:pb facs="leges-novellae_0310" />legem perpetuo in aevum omne valituram edictis ex more propositis ad omnium notitiam faciat pervenire. DAT. PRID. NON. APRIL. CONSTANTINOPOLI AETIO ET STVDIO V̅V̅. C̅C̅. CONSS.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="INT">
+						<tei:p>INTERPRETATIO. Hac lege permissum est, ut exceptis vilibus infamibusque personis, quas lex ista commemorat, pauperes et sine ulla dignitate natalium, dummodo honestas et honestis parentibus procreatas, senatores, si voluerint, uxores eligendi et ducendi habeant potestatem. Quod et omnibus exemplo legis huius sine dubitatione permittitur.</tei:p>
+					</tei:div>
+				</tei:div>
+				<tei:div type="textpart" subtype="law" n="5">
+					<tei:head>V. DE TESTAMENTIS CLERICORVM.</tei:head>
+					<tei:div type="textpart" subtype="section" n="0">
+						<tei:p>IMP. MARCIANVS A. PALLADIO P(RAEFECTO) P(RAETORI)O. Saepe materiam scribendis ferendisque legibus negotia inopinato exorta suppeditant et aut novas constitui sanctiones aut durius et asperius latas faciunt abrogari. Aequalis enim in utroque aequitas est vel<tei:pb facs="leges-novellae_0311" />promulgare, quae iusta sunt, vel antiquare, quae gravia sunt. Nuper cum de testamento cl(arissimae) m(emoriae) fem(inae) Hypatiae, quae inter alios virum religiosum Anatolium presbyterum in portione manifesta bonorum suorum scripsit heredem, amplissimo senatu praesente tractaret pietas mea et dubium videretur, an valere deberent eae voluntates viduarum, quae testamento suo aliquid his clericis relinquunt, qui sub praetextu religionis huiusmodi feminarum domos adeunt, cum lex divae memoriae Valentiniani et Valentis et Gratiani ecclesiasticos vel eos, qui continentium se volunt nomine nuncupari, nihil quacumque liberalitate viduarum vel extremo iudicio permittat adipisci, contra haec autem divae memoriae Valentiniani Theodosii et Arcadii constitutio legeretur: . . . . . inspicientibus et aestimantibus nobis latoris animum visum est iusta ac rationabili paenitentia priorum constitutionum vigorem antiquare voluisse. Nam cum in prima lege viduarum tantummodo mentio facta sit, in secunda autem tantummodo diaconissarum, intellegitur eam constitutionem, quae viduarum et diaconissarum meminit, de lege utraque dixisse.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="1">
+						<tei:p>Quod cum de voluntate latoris et de sanctione legis nobis videretur, universum testamentum iussimus relegi atque replicari; et cum repertum fuisset alias quoque partes eiusdem voluntatis ita iuste ac prudenter institutas, ut nullum bene de se meritum neglexerit, multa sacrosanctis ecclesiis, multa pauperibus, multa monachis religionis intuitu, multa captivorum redemptioni commota miserabili eorum sorte contulerit, multa libertis suis delatorum sibi obsequiorum contemplatione<tei:pb facs="leges-novellae_0311" />praestiterit, alteram quoque partem institutionis, in qua Anatolium presbyterum reliquit heredem, advertimus ordine fuisse dispositam. Ea enim mobilia, quae plurimis iuste ac pie reliquit, per hunc voluit universa conpleri, ut non solum heredis, sed paene etiam dispensatoris fungatur officio. Ideoque huiusmodi praedictae clarissimae memoriae Hypatiae voluntatem etiam in ea parte, qua Anatolium presbyterum instituit heredem, mea auctoritate firmavi.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="2">
+						<tei:p>Sed ne in posterum vel ex prioribus constitutionibus, quarum superius fecimus mentionem et quas nunc praecipio penitus abrogari, vel ex praesentis negotii dubitatione aliquid forte relinquatur ambiguum, securitati vel fiduciae morientium providentes generali perpetuoque victura hac lege sancimus, ut sive vidua sive diaconissa seu virgo deo dicata vel sanctimonialis mulier, sive quocumque alio nomine religiosi honoris vel dignitatis femina nuncupatur, testamento vel codicillo suo, quod tamen alia omni iuris ratione munitum sit, ecclesiae vel martyrio vel clerico vel monacho vel pauperibus aliquid vel ex integro vel ex parte in quacumque re vel specie crediderit relinquendum, id modis omnibus ratum firmumque consistat, sive hoc institutione sive substitutione, seu legato aut fideicommisso per universitatem seu specialibus, sive scripta sive non scripta voluntate fuerit derelictum: omni in posterum de huiusmodi negotio ambiguitate submota.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="3">
+						<tei:p>Donationibus etiam vel qualibet liberalitate tam viduarum quam diaconissarum sive virginum, quae deo dicatae sunt, vel sanctimonialium quaecumque in ecclesiam<tei:pb facs="leges-novellae_0313" />vel martyrium vel clericum vel monachum vel pauperes conlata fuerint, pari robore firma esse praecipio, Palladi p(arens) k(arissime) a(tque) a(mantissime).</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="4">
+						<tei:p>Inlustris igitur et magnifica auctoritas tua ea, quae generali legis huius sanctione decrevi, edictis ex more propositis ad omnium notitiam faciat pervenire. DAT. X KAL. MAI. CONSTANTINOPOLI ANTHEMIO V̅C̅. CONS.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="INT">
+						<tei:p>INTERPRETATIO. Sanctimonialibus viduis diaconissis omnibusque religiosis matronis hac lege permittitur, ut, seu per testamentum seu per fideicommissum seu per nuncupationem seu per codicillos vel quibuslibet aliis scripturis, quod voluerint ecclesiae episcopis presbyteris vel diaconibus et omnibus clericis relinquendi habeant potestatem. Et si voluerint heredibus suis quoscumque post eorum obitum substituere, habeant potestatem.</tei:p>
+					</tei:div>
+				</tei:div>
+			</tei:div>
+			<tei:div type="translation" />
+			<tei:div type="apparatus" />
+			<tei:div type="commentary" />
+		</tei:body>
+	</tei:text>
+</tei:TEI>

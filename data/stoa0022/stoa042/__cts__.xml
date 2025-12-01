@@ -1,6 +1,6 @@
 <ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:stoa0022" urn="urn:cts:latinLit:stoa0022.stoa042">
   <ti:title xml:lang="lat">De Paradiso</ti:title>
-  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0022.stoa042" urn="urn:cts:latinLit:stoa0022.stoa042.nd-dlc">
+  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0022.stoa042" urn="urn:cts:latinLit:stoa0022.stoa042.nd-dlc-lat1">
     <ti:label xml:lang="lat">De Paradiso</ti:label>
     <ti:description xml:lang="mul">Sancti Ambrosii Opera. Pars prima, Qua continentur libri: Exameron; De Paradiso; De Cain et Abel; De Noe; De Abraham; De Isaac; De bono mortis, (Corpus scriptorum ecclesiasticorum Latinorum, Volume 32.1). Schenkl, Karl, editor. New York and London: Johnson Reprint Corporation; F. Tempsky, F. Tempsky, G. Freytag, 1962.</ti:description>
   </ti:edition>

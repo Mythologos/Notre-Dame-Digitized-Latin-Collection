@@ -1,6 +1,6 @@
 <ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:stoa0381" urn="urn:cts:latinLit:stoa0381.stoa001">
   <ti:title xml:lang="lat">Epistolae</ti:title>
-  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0381.stoa001" urn="urn:cts:latinLit:stoa0381.stoa001.nd-dlc">
+  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0381.stoa001" urn="urn:cts:latinLit:stoa0381.stoa001.nd-dlc-lat1">
     <ti:label xml:lang="lat">Epistolae</ti:label>
     <ti:description xml:lang="mul">Opera omnia. Nunc primum in unum collegit et cum codicibus manuscriptis contulit J. A. Giles, vol. I. Giles, J. A., editor. J. H. Parker: Oxford, 1848.</ti:description>
   </ti:edition>

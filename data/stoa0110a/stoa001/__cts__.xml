@@ -1,6 +1,6 @@
 <ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:stoa0110a" urn="urn:cts:latinLit:stoa0110a.stoa001">
   <ti:title xml:lang="lat">Interpretationes Vergilianae</ti:title>
-  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0110a.stoa001" urn="urn:cts:latinLit:stoa0110a.stoa001.nd-dlc">
+  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0110a.stoa001" urn="urn:cts:latinLit:stoa0110a.stoa001.nd-dlc-lat1">
     <ti:label xml:lang="lat">Interpretationes Vergilianae</ti:label>
     <ti:description xml:lang="mul">Tiberi Claudi Donati ad Tiberium Claudium Maximum Donatianum filium suum interpretationes Vergilianae, 2 vols. Georges, Heinrich, editor. Leipzig: B. G. Teubner, 1905-1906.</ti:description>
   </ti:edition>

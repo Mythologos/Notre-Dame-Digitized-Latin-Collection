@@ -1,6 +1,6 @@
 <ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:stoa0382" urn="urn:cts:latinLit:stoa0382.stoa001">
   <ti:title xml:lang="lat">Scripta Breviora</ti:title>
-  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0382.stoa001" urn="urn:cts:latinLit:stoa0382.stoa001.nd-dlc">
+  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0382.stoa001" urn="urn:cts:latinLit:stoa0382.stoa001.nd-dlc-lat1">
     <ti:label xml:lang="lat">Scripta Breviora</ti:label>
     <ti:description xml:lang="mul">Opere latine minori (Buccolicum carmen, carminum et epistolarum quae supersunt, scripta breviora). Francesco Massera, Aldo, editor. G. Laterza &amp; Figli: Bari, 1928.</ti:description>
   </ti:edition>

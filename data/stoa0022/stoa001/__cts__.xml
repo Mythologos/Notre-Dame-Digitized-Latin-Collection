@@ -1,6 +1,6 @@
 <ti:work xml:lang="lat" xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:stoa0022" urn="urn:cts:latinLit:stoa0022.stoa001">
   <ti:title xml:lang="lat">De Excessu Fratris</ti:title>
-  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0022.stoa001" urn="urn:cts:latinLit:stoa0022.stoa001.nd-dlc">
+  <ti:edition xml:lang="lat" workUrn="urn:cts:latinLit:stoa0022.stoa001" urn="urn:cts:latinLit:stoa0022.stoa001.nd-dlc-lat1">
     <ti:label xml:lang="lat">De Excessu Fratris</ti:label>
     <ti:description xml:lang="mul">Sancti Ambrosii Opera. Pars septima: Explanatio symboli. De sacramentis. De mysteriis. De paenitentia. De excessu fratris. De obitu Valentiniani. De obitu Theodosii., (Corpus scriptorum ecclesiasticorum Latinorum, Volume 73). Faller, Otto, editor. Vindobonae: Hoelder-Pichler-Tempsky, 1955.</ti:description>
   </ti:edition>

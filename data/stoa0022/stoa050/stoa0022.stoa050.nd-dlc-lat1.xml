@@ -1,0 +1,132 @@
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xml:space="preserve">
+	<tei:teiHeader xml:lang="en">
+		<tei:fileDesc>
+			<tei:titleStmt>
+				<tei:title xml:lang="lat">Explanatio Symboli</tei:title>
+				<tei:author>Ambrosius Mediolanensis</tei:author>
+				<tei:editor>Otto Faller</tei:editor>
+				<tei:funder>University of Notre Dame</tei:funder>
+				<tei:respStmt>
+					<tei:persName>Kaitlin Stephan</tei:persName>
+					<tei:orgName>University of Notre Dame</tei:orgName>
+					<tei:resp>Post-corrected OCR and sectioned text.</tei:resp>
+				</tei:respStmt>
+				<tei:respStmt>
+					<tei:persName>Stephen Bothwell</tei:persName>
+					<tei:orgName>University of Notre Dame</tei:orgName>
+					<tei:resp>OCR-ed and preprocessed text for Lace post-correction; checked text post-XML conversion.</tei:resp>
+				</tei:respStmt>
+                <tei:respStmt>
+					<tei:persName>Hildegund Müller</tei:persName>
+					<tei:orgName>University of Notre Dame</tei:orgName>
+					<tei:resp>Provided supervision and initial financial support for digital edition creation initiative.</tei:resp>
+				</tei:respStmt>
+			</tei:titleStmt>
+			<tei:publicationStmt>
+				<tei:authority>University of Notre Dame</tei:authority>
+				<tei:idno type="filename">stoa0022.stoa050.nd-dlc-lat1.xml</tei:idno>
+				<tei:availability>
+					<tei:licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+						<tei:p>Available under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC-BY-NC-SA 4.0) International License.</tei:p>
+					</tei:licence>
+				</tei:availability>
+				<tei:date>2025</tei:date>
+				<tei:publisher>University of Notre Dame</tei:publisher>
+				<tei:pubPlace>Notre Dame, Indiana, United States of America</tei:pubPlace>
+			</tei:publicationStmt>
+			<tei:sourceDesc>
+				<tei:biblStruct>
+					<tei:monogr>
+						<tei:author>
+							<tei:persName>Ambrosius Mediolanensis</tei:persName>
+						</tei:author>
+						<tei:title xml:lang="lat">Ambrosius: Explanatio symboli, De sacramentis, De mysteriis, De paenitentia, De excessu fratris, De obitu Valentiniani, De obitu Theodosii</tei:title>
+						<tei:editor>Otto Faller</tei:editor>
+						<tei:imprint>
+							<tei:pubPlace>Vindobonae</tei:pubPlace>
+							<tei:publisher>Hoelder-Pichler-Tempsky</tei:publisher>
+							<tei:date>1955</tei:date>
+						</tei:imprint>
+					</tei:monogr>
+					<tei:ref target="https://verlag.oeaw.ac.at/en/product/sancti-ambrosii-opera-pars-septima-explanatio-symboli-de-sacramentis-de-mysteriis-de-paenitentia-de-excessu-fratris-de-obitu-valentiniani-de-obitu-theodosii/601285?name=sancti-ambrosii-opera-pars-septima-explanatio-symboli-de-sacramentis-de-mysteriis-de-paenitentia-de-excessu-fratris-de-obitu-valentiniani-de-obitu-theodosii&amp;product_form=341">Austrian Academy of Sciences Press</tei:ref>
+				</tei:biblStruct>
+			</tei:sourceDesc>
+		</tei:fileDesc>
+		<tei:encodingDesc>
+			<tei:editorialDecl>
+                <tei:correction>
+					<tei:p>Lace v. 0.6.22 copyright 2013-2021, Bruce Robertson, Dept. of Classics, Mount Allison University.</tei:p>
+				</tei:correction>
+			</tei:editorialDecl>
+			<tei:p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE Architecture</tei:p>
+            <tei:refsDecl n="CTS">
+                <tei:cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+                    <tei:p>This pointer pattern extracts books.</tei:p>
+                </tei:cRefPattern>
+            </tei:refsDecl>
+            <tei:refsDecl n="CTS">
+                <tei:cRefPattern n="section" matchPattern="(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+                    <tei:p>This pointer pattern extracts sections.</tei:p>
+                </tei:cRefPattern>
+            </tei:refsDecl>
+		</tei:encodingDesc>
+		<tei:profileDesc>
+			<tei:langUsage>
+				<tei:language ident="lat">Latin</tei:language>
+			</tei:langUsage>
+		</tei:profileDesc>
+		<tei:revisionDesc>
+			<tei:change when="2024-09-27" who="Stephen Bothwell">Initial markup of new file with various textual fixes (e.g., removed section and marginal numbers).</tei:change>
+			<tei:change when="2024-10-15" who="Stephen Bothwell">Additional fixes performed based on results of Latin spellchecker application.</tei:change>
+			<tei:change when="2025-01-10" who="Stephen Bothwell">Changed text identifier from temporary stoa0X1 to stoa050.</tei:change>
+			<tei:change when="2025-02-17" who="Stephen Bothwell">Checked page break locations to ensure correctness. Removed final, empty page break.</tei:change>
+			<tei:change when="2025-03-08" who="Stephen Bothwell">Added or changed attributes and XML structure to be more CTS- and Epidoc-compliant, according to Hook tests.</tei:change>
+			<tei:change when="2025-03-10" who="Stephen Bothwell">Removed full URN on textparts to comply with Hook; retained section numeration.</tei:change>
+			<tei:change when="2025-03-24" who="Stephen Bothwell">Added publication information and removed invalid paragraph element.</tei:change>
+			<tei:change when="2025-03-28" who="Stephen Bothwell">Filled in publicationStmt element.</tei:change>
+			<tei:change when="2025-05-03" who="Stephen Bothwell">Removed extraneous quotation mark in Section 6. Added missing periods in Section 8.</tei:change>
+			<tei:change when="2025-06-17" who="Stephen Bothwell">Finished adding licensing information. Altered project identifier in textparts to be ND-DLC.</tei:change>
+			<tei:change when="2025-06-17" who="Stephen Bothwell">Fixes publisher element mislabeled as date element.</tei:change>
+            <tei:change when="2025-11-24" who="Stephen Bothwell">Tentatively revises textual divisions. Amends descriptions for attributions and adds attribution for Hildegund Müller.</tei:change>
+            <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards.</tei:change>
+		</tei:revisionDesc>
+	</tei:teiHeader>
+	<tei:text>
+		<tei:body>
+			<tei:div type="edition" xml:lang="lat" n="urn:cts:latinLit:stoa0022.stoa050.nd-dlc-lat1">
+				<tei:div type="textpart" subtype="book" n="1">
+					<tei:div type="textpart" subtype="section" n="1">
+						<tei:p><tei:pb facs="csel-73_0146" />Celebrata hactenus mysteria scrutaminum. Inquisitum est, ne inmunditia in corpore alicuius haereret. Per exorcismum non solum corporis, sed etiam animae quaesita et adhibita est sanctificatio. Nunc tempus est et dies, ut symbolum tradamus, quod symbolum est spiritale signaculum, quod symbolum cordis est nostri meditatio et quasi semper praesens custodia, certe thesaurus pectoris nostri.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="2">
+						<tei:p>Primum itaque rationem nominis ipsius debemus accipere. Symbolum Graece dicitur, Latine autem conlatio. Et maxime 'symbolam' negotiatores dicere consuerunt, quando conferunt pecuniam suam, et quasi ex singulorum conlatione in unum constipata integra et inviolabilis conservatur, ut nemo fraudem conlationi facere conetur, nemo negotiationi. Denique inter ipsos negotiatores ista est consuetudo, ut, si quis fraudem fecerit, quasi fraudulentus reiciatur. Sancti ergo apostoli in unum convenientes breviarium fidei fecerunt, ut breviter fidei totius seriem conpraehendamus.<tei:pb facs="csel-73_0147" />Brevitas necessaria est, ut semper memoria et recordatione teneatur. Scio, in partibus maxime orientis quod (ad) ea, quae primo tradita sunt a maioribus nostris, dum quasi fraude alii, alii diligentia, fraude haeretici, diligentia catholici, dum ergo illi fraudulenter conantur inrepere, addiderunt, quod non opus est, dum isti fraudem praecavere contendunt, fines maiorum velut pietate quadam et incuria videntur esse progressi.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="3">
+						<tei:p>Ergo apostoli sancti convenientes fecerunt symbolum breviter. Signate vos! (Quo facto et dicto symbolo:) In hoc symbolo divinitas trinitatis aeternae evidentissime conpraehensa est: unius operationis patrem et filium et spiritum sanctum, hoc est venerabilem trinitatem, et quod fides nostra ita sit, ut pari genere credamus in patrem et filium et spiritum sanctum. Ubi enim nulla discretio maiestatis est, nec fidei debet esse discretio. Deinde frequenter admonui, quia dominus noster Iesus Christus, filius dei, solus carnem istam suscepit cum anima humana rationabili atque perfecta, et suscepit corporis formam. Corporis istius veritate factus est 'ut homo', sed<tei:pb facs="csel-73_0148" />habet singulare privilegium generationis suae. Non enim ex virili natus est semine, sed generatus a spiritu, inquit, sancto ex Maria virgine. Praerogativam auctoris caelestis agnoscis? Factus quidem 'ut homo', ut infirmitates nostras in sua carne susciperet, sed cum privilegio venit maiestatis aeternae. Ergo dicamus symbolum! (Et cum dixisset, hinc conplevit:) Hoc habet scriptura divina. Numquid supra apostolorum fines progredi audaci mente debemus? Numquid nos sumus apostolis cautiores?</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="4">
+						<tei:p>Sed dicis mihi: 'Postea emerserunt haereses! Nam et dicit apostolus: Oportet haereses esse, ut boni probentur.' — Quid ergo? Vide simplicitatem, vide puritatem! Patripassiani cum emersissent, putaverunt etiam catholici in hac parte addendum 'invisibilem' et 'impassibilem', quasi filius dei visi-<tei:pb facs="csel-73_0149" />bilis et passibilis fuit! Si fuit visibilis in carne, caro illa fuit visibilis, non divinitas, fuit passibilis caro, non divinitas. Denique quid dicat, audi: Deus, deus meus, respice me, quare me dereliquisti? In passione hoc dicit dominus noster Iesus Christus. Hoc secundum hominem locutus est, secundum carnem locutus est, quasi caro dicat ad divinitatem: 'Quare me dereliquisti?' Ergo esto, medici fuerint maiores nostri, voluerint addere aegritudini sanitatem medicina. Non quaeritur ergo, si medicina non fuit eo tempore necessaria, quo erat haereticorum quorundam gravis aegritudo animorum. Et si fuit tunc temporis quaerenda, nunc non est. Qua ratione? Fides integra adversus Sabellianos, exclusi sunt Sabelliani, maxime de partibus occidentis. Ex illo 'remedio' Arriani invenerunt sibi genus calumniae, et quoniam symbolum Romanae ecclesiae nos tenemus, ideo invisibilem et inpassibilem patrem omnipotentem illi aestimarent et dicerent: 'Vides, quia symbolum sic habet?' ut visibilem filium et passibilem designarent! Quid ergo? Ubi fides integra est, sufficiunt praecepta apostolorum, cautiones, licet sacerdotum, non requirantur. Quare? Quia tritico inmixta zizania sunt.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="5">
+						<tei:p>Hinc symbolum: CREDO .......... UNICUM, DOMINUM NOSTRUM. Sic dicite: FILIUM EIUS UNICUM! Non<tei:pb facs="csel-73_0150" />'unicus dominus'; unus deus est, unus et dominus. Sed ne calumnientur et dicant, quia unam personam dicamus filium: Et in .... unicum, dominum nostrum. Quia dixi de divinitate patris et filii, venitur ad incarnationem ipsius: QUI NATUS .......... ET SEPULTUS. Habes et passionem ipsius et sepulturam. TERTIA DIE . A MORTUIS. Habes et resurrectionem eius. ASCENDIT .. SEDET AD DEXTERAM PATRIS. Vides ergo, quia caro divinitati inminuere nihil potuit, immo de incarnatione triumphus magnus quaesitus est Christo. Qua ratione enim, ubi de morte ascendit, 'sedet ad dexteram patris'? Quasi qui patri rettulerit 'bonae' fructum 'voluntatis'. Duo habes: 'Resurrexit a morte, sedet ad dexteram patris.' Nihil ergo potuit adferre caro divinitatis gloriae detrimentum. Duo habes: Aut quasi secundum praerogativam divinitatis et substantiae generationis suae dominus noster Iesus Christus 'sedet ad dexteram', a morte surrexit', aut certe quasi triumphator aeternus, qui bonum 'regnum deo patri conparavit', praerogativam sibi suae victoriae vindicavit.<tei:pb facs="csel-73_0151" />SEDET AD DEXTERAM PATRIS ..... ET MORTUOS. Audi, homo! — Debes quidem cito credere. Fides ipsa de caritate promatur. Qui amat, nihil derogat. Amicus, qui amicum amat, nihil derogat. Qui amat dominum, multo magis non debet derogare. Quare dico 'sedet'? (Et) qui amat, habet, quid timeat: 'Unde . . . . et mortuos'. Ipse de nobis indicaturus est. Cave ergo detrahere ei, quem iudicem habiturus es! Quare hoc mysterium? Numquid non unum iudicium est patris et filii et spiritus sancti? Numquid non una voluntas est, numquid non una maiestas? Quare tibi dicitur, quod filius iudicaturus est, nisi ut intellegas nihil filio derogandum? Ergo vide: Credis in patrem, credis et in filium. Et quid tertio? ET IN SPIRITUM SANCTUM. Quaecumque accipies sacramenta, in hac trinitate accipies. Nemo te fallat! Vides ergo unius operationis, unius sanctificationis, unius maiestatis esse venerabilem trinitatem.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="6">
+						<tei:p>Sane accipe rationem, quemadmodum credimus in auctorem, ne forte dicas: 'Sed habet et in ecclesiam, sed habet et in remissionem peccatorum, sed habet et in resurrectionem! '— Quid ergo? Par causa est: Sic credimus in Christum, sic cre-<tei:pb facs="csel-73_0152" />dimus in patrem, quemadmodum credimus et in 'ecclesiam', et in 'remissionem peccatorum' et in 'carnis resurrectionem'. Quae ratio est? Quia, qui credit in auctorem, credit et in opus auctoris. Denique ne hoc ingenii nostri putetis, accipite testimonium: Si mihi non creditis, vel operibus credite! Ergo hoc habes. Nunc fides tua amplius elucebit, si in opus auctoris tui fidem veram et integram putaveris deferendam, in 'ecclesiam sanctam' et in 'remissionem peccatorum'. Crede ergo, ex fide quia omnia tibi peccata remittuntur! Quare legisti in evangelio dicente domino: Fides tua te salvum fecit. — REMISSIONEM .. RESURRECTIONEM. Crede, quia resurget et caro! Quid enim opus fuit, ut Christus carnem susciperet, quid opus fuit, ut Christus crucem ascenderet, quid opus fuit, ut Christus mortem gustaret, sepulturam susciperet et resurgeret, nisi propter tuam resurrectionem? Totum hoc sacramentum tuae est resurrectionis. Si Christus non resurrexit, vana est fides nostra. Sed quia resurrexit, ideo firma est fides nostra.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="7">
+						<tei:p>Ergo dixi apostolos symbolum composuisse. Si ergo mercium istarum negotiatores et conlatores pecuniae hanc habent legem, ut, si quis symbolam suam violaverit, inprobus<tei:pb facs="csel-73_0153" />et intestabilis habeatur, multo magis cavendum est nobis, ne de maiorum symbolo aliquid detrahatur, cum habeas in libro apocalypsis Iohannis — qui libellus canonizatur et maxime ad fidei proficit fundamentum; ibi enim evidenter 'omnipotentem' dominum nostrum Iesum Christum memoravit, licet et in aliis locis tamen — ergo in ipso libello: 'Si quis, inquit, addiderit aut detraxerit, iudicium sibi sumit et poenam.' Si unius apostoli scripturis nihil est detrahendum, nihil addendum, quemadmodum nos symbolum, quod accepimus ab apostolis traditum atque conpositum, conmaculabimus? Nihil debemus detrahere, nihil adiungere. Hoc autem est symbolum, quod Romana ecclesia tenet, ubi primus apostolorum Petrus sedit et communem sententiam eo detulit.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="8">
+						<tei:p>Ergo quemadmodum duodecim apostoli, et duodecim sententiae. Signate vos! (Quo facto:) CREDO ................... VIRGINE:<tei:pb facs="csel-73_0154" />Habes divinitatem patris, divinitatem filii, habes incarnationem filii, quemadmodum dixi. SUB .... SEPULTUS: Habes passionem, mortem et sepulturam. Ecce quattuor istae sententiae! Videamus alias: TERTIA DIE ............... ET MORTUOS. Ecce aliae quattuor sententiae: Hoc est octo sententiae. Videamus adhuc alias quattuor sententias: ET IN SPIRITUM SANCTUM ..... RESURRECTIONEM. Ecce secundum duodecim apostolos et duodecim sententiae conpraehensae sunt.</tei:p>
+					</tei:div>
+					<tei:div type="textpart" subtype="section" n="9">
+						<tei:p>Illud sane monitos vos volo esse, quoniam symbolum non debet scribi, quia reddere illud habetis. Sed nemo scribat! Qua ratione? Sic accepimus, ut non debeat scribi. Sed quid?<tei:pb facs="csel-73_0155" />Teneri. Sed dicis mihi: Quomodo potest teneri, si non scribitur? — Magis potest teneri, si non scribatur. Qua ratione? Accipite! Quod enim scribis, securus quasi relegas, non cottidiana meditatione incipis recensere. Quod autem non scribis, time(n)s, ne amittas, cottidie incipis recensere. Magnum autem tutamentum est: Nascuntur stupores animi et corporis, temptatio adversarii, qui numquam quiescit, tremor aliqui corporis, infirmitas stomachi: Symbolum recense et scrutare intra te ipsum! Maxime recense intra te! Quare? Ne consuetudinem facias, et cum solus fortius recenses, ubi sunt fideles, incipias inter catechumenos vel haereticos recensere.</tei:p>
+					</tei:div>
+				</tei:div>
+			</tei:div>
+			<tei:div type="translation" />
+			<tei:div type="apparatus" />
+			<tei:div type="commentary" />
+		</tei:body>
+	</tei:text>
+</tei:TEI>
