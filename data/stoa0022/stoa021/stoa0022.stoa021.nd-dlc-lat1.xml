@@ -60,18 +60,14 @@
 			</tei:editorialDecl>
 			<tei:p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE Architecture</tei:p>
             <tei:refsDecl n="CTS">
-                <tei:cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-                    <tei:p>This pointer pattern extracts books.</tei:p>
+                <tei:cRefPattern n="subsection" matchPattern="(\w+)(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']//tei:div[@n='$3'])">
+                    <tei:p>This pointer pattern extracts subsections.</tei:p>
                 </tei:cRefPattern>
-            </tei:refsDecl>
-            <tei:refsDecl n="CTS">
                 <tei:cRefPattern n="section" matchPattern="(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                     <tei:p>This pointer pattern extracts sections.</tei:p>
                 </tei:cRefPattern>
-            </tei:refsDecl>
-            <tei:refsDecl n="CTS">
-                <tei:cRefPattern n="subsection" matchPattern="(\w+)(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']//tei:div[@n='$3'])">
-                    <tei:p>This pointer pattern extracts subsections.</tei:p>
+                <tei:cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+                    <tei:p>This pointer pattern extracts books.</tei:p>
                 </tei:cRefPattern>
             </tei:refsDecl>
 		</tei:encodingDesc>
@@ -92,7 +88,7 @@
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Finished adding licensing information. Altered project identifier in textparts to be ND-DLC.</tei:change>
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Fixes publisher element mislabeled as date element.</tei:change>
             <tei:change when="2025-11-24" who="Stephen Bothwell">Tentatively revises textual divisions. Amends descriptions for attributions and adds attribution for Hildegund Müller.</tei:change>
-            <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards.</tei:change>
+            <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards. Swaps ordering of CTS references to be from most to least granular. Fixes element ID repetition in Section 2.6.</tei:change>
 		</tei:revisionDesc>
 	</tei:teiHeader>
 	<tei:text>
@@ -336,13 +332,9 @@
 						<tei:div type="textpart" subtype="subsection" n="20">
 							<tei:p>Si autem offeres sacrificium de primitiuis ouibus, frixum in igne, frixum pingue, offeres sacrificium primitiuorum, sicut scriptum est, quod significat fidem tuam uelut igni probatam esse debere et sancto feruentem spiritu. denique coxit lentem Iacob et fratri primatus benedictionis eripuit, quos utique solida consequeretur fides. hic ergo robustus et uiuidus augebatur, ille autem qui cibum suum coquere nesciebat fatigatus atque deficiens defluebat. uratur igitur uerbo domini sicut igne uirtus animae tuae. uide ustum Ioseph, sicut scriptum est: eloquium domini ussit eum. torreatur fides tua sicut spicae messium; tunc enim maturitatem fructuum praeferunt, cum eas primo solis processu tempora aestiua torruerint. sermo igitur plurimus scripturarum animam confirmat et quodam spiritalis gratiae colorat uapore, rationabilia quoque inuenta conroborat dissoluitque omnem uim inrationabilium passionum. ideoque Esau laxatis uirtutis suae nexibus dissolutus est, illi autem qui succincti lumbos non crudum neque coctum in aqua, sed assatum in igni caput agni edere iubebantur, sicut habes in Exodo, forti ac fideli animo pede-<tei:pb facs="csel-32-1_0487" />stri itinere maria transfretarunt. in euangelio quoque assos pisces dominus Iesus manducabat, sicut scriptum est, in quo plenitudo sancti spiritus redundabat. et fortasse ideo deficiebat Esau, quia coctum in aqua desiderabat cibum, quem Iacob quasi inhabilem sibi donauit infirmo.</tei:p>
 						</tei:div>
-					</tei:div>
-					<tei:div type="textpart" subtype="section" n="16">
 						<tei:div type="textpart" subtype="subsection" n="21">
 							<tei:p>oblationem autem atque orationem oportet non confusam esse, sed conpetenti diuisione distinctam. in omni enim confusione melior distinctio, multo magis in oratione atque oblatione, quae nisi certas diuisiones habeat, fit obscurior. ideoque hostiae plerumque membra lex diuidi iubet et holocausta offerri, ut sine admixtione et operimento atque nudum sacrificium sit, eo quod nuda atque omnibus exuta inuolucris debeat fides nostra feruere, ne uagis et fallacibus opinionibus induatur, sed pura atque sincera simplicitas mentis appareat. deinde in partes diuidatur congruas. uirtus enim genus est, quae diuiditur in plurimae species; sed principales quattuor sunt, prudentia temperantia fortitudo iustitia. redoleat igitur oratio tua prudentiam erga cognitionem dei et ueritatem fidei, redoleat temperantiam, quam etiam a coniugibus exigendam putauit apostolus dicens: nolite fraudare inuicem, nisi forte ex consensu ad tempus, ut uacetis orationi, et lex castificatos ante hesternum et nudiustertianum diem ad sacrificium accedere iubet. fortitudinem teneat oratio, ut nullo interpoletur metu, nulla lassitudine deficiat; tunc enim debet esse intentio ad precandum robustior, cum urguemur aduersis. iustitiam custodiat precatio, quam si tenuisset Iudas, non in<tei:pb facs="csel-32-1_0488" />peccatum facta esset eius oratio. quando enim magis ab iniustis operibus ac studiis abstinere debemus quam tunc quando dei iustitiam precamur? et ideo dominus, ut cordi nobis esset iustitia, beati inquit qui persecutionem patiuntur propter iustitiam; ipsorum est regnum caelorum. haec defuit Iudae; nam si adfuisset, non tradidisset dominum, non prodidisset magistrum. defuit sacrificio etiam Cain istius, qui si tenuisset iustitiam, domino debuit primitiua munera, non posteriora deferre. defuit itaque ei diuisio, ideoque responsum ait: si recte offeras, non recte autem diuidas, peccasti; quiesce. uides quantum sit uitii. ubi deest diuisio, ibi totum sacrificium refutatur.</tei:p>
 						</tei:div>
-					</tei:div>
-					<tei:div type="textpart" subtype="section" n="6">
 						<tei:div type="textpart" subtype="subsection" n="22">
 							<tei:p>Superest ut de continua et iugi oratione dicamus, quod inmorari nos et uacare orationi oportet. pernoctabat dominus in oratione, non ut sibi prodesset, sed ut nos doceret. frequens enim oratio quandam operatur disciplinam orandi, quia ipse usus docibiles dei facit, indocibiles neglegentia. bona igitur exercitatio. denique corporis uirtus exercitatione augetur frequenti, at inexercitata minuitur et labitur; plurimi enim exercitii dissuetudine etiam naturalem dissoluere uirtutem. similiter animae fortitudo exercitationis adsiduitate solidatur, ut labor ipse disciplinae sit non oneri futurus, sed usui. hunc cibum menti nostrae deferamus, qui multa adtritus meditatione ac politus cor hominis sicut illud caeleste manna<tei:pb facs="csel-32-1_0489" />confirmet. quod non otiose tritum ac politum accepimus, eo quod caelestium scripturarum alloquia diu terere ac polire debemus toto animo et corde uersantes, ut sucus ille spiritalis cibi in omnes. se uenas animae diffundat. ergo si tamquam pubescens adolescat fides, quae defectum senescentis deuotionis ableget et spiritu ferueat et congrua distinctione teneatur mensura legitimae diuisionis, et assiduitas conmendet gratiam, tunc fit illud pingue et tamquam adipale precationis genus, de quo dicit propheta: inpinguasti in oleo caput meum. sicut enim agni multo lacte pinguescunt et sicut oues bene pastae adipe nitent, ita apostolico suco pasta fidelium pinguescit oratio.</tei:p>
 						</tei:div>

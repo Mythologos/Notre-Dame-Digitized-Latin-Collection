@@ -60,18 +60,14 @@
 			</tei:editorialDecl>
 			<tei:p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE Architecture</tei:p>
             <tei:refsDecl n="CTS">
-                <tei:cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-                    <tei:p>This pointer pattern extracts books.</tei:p>
+                <tei:cRefPattern n="subsection" matchPattern="(\w+)(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']//tei:div[@n='$3'])">
+                    <tei:p>This pointer pattern extracts subsections.</tei:p>
                 </tei:cRefPattern>
-            </tei:refsDecl>
-            <tei:refsDecl n="CTS">
                 <tei:cRefPattern n="section" matchPattern="(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                     <tei:p>This pointer pattern extracts sections.</tei:p>
                 </tei:cRefPattern>
-            </tei:refsDecl>
-            <tei:refsDecl n="CTS">
-                <tei:cRefPattern n="subsection" matchPattern="(\w+)(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']//tei:div[@n='$3'])">
-                    <tei:p>This pointer pattern extracts subsections.</tei:p>
+                <tei:cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+                    <tei:p>This pointer pattern extracts books.</tei:p>
                 </tei:cRefPattern>
             </tei:refsDecl>
 		</tei:encodingDesc>
@@ -94,7 +90,7 @@
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Finished adding licensing information. Altered project identifier in textparts to be ND-DLC.</tei:change>
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Fixes publisher element mislabeled as date element.</tei:change>
             <tei:change when="2025-11-24" who="Stephen Bothwell">Tentatively revises textual divisions. Amends descriptions for attributions and adds attribution for Hildegund Müller.</tei:change>
-            <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards.</tei:change>
+            <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards. Swaps ordering of CTS references to be from most to least granular. Fixes element ID repetition in Sections 1.6 and 1.7.</tei:change>
 		</tei:revisionDesc>
 	</tei:teiHeader>
 	<tei:text>
@@ -166,7 +162,7 @@
 						<tei:div type="textpart" subtype="subsection" n="20">
 							<tei:p>Sed si Abrahae sententia ad corrigendum minus proficit, accipe oraculum dei huiusmodi condemnantis hereditatem. non erit inquit heres tuus hic, sed alter qui exierit de<tei:pb facs="csel-32-1_0607" />te, ille erit heres tuus. quem dicit alterum? peperit enim et Agar filium Ismahel, sed non ipsum dicit, sed dicit sanctum Isaac. et ideo addidit: qui exierit ex te; ille enim uere exiuit ex Abraham, qui legitimo coniugio procreatus est. sed per Isaac legitimum filium illum uerum legitimum possumus intellegere dominum Iesum, quem in principio euangelii secundum Matthaeum Abrahae filium legimus, qui uerum se Abrahae gessit heredem, auctoris inluminans successionem, per quem Abraham respexit in caelum et splendorem suae posteritatis agnouit non minus inlustrem quam stellarum caelestium fulget claritas. sicut stella enim a stella differt in claritate, ita et resurrectio mortuorum apostolus dixit, eo quod resurrectionis suae donans consortia homines, quos mors solebat terris abscondere, regni caelestis fecit esse participes.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="4" n="21">
+						<tei:div type="textpart" subtype="subsection" n="21">
 							<tei:p>quomodo autem Abrahae propago diffusa est nisi per fide hereditatem, per quam caelo conparamur, conferimur angelis, aequamur stellis? ideo ait: sic erit semen tuum. et credidit inquit Abraham deo. quid credidit? Christum sibi per susceptionem corporis heredem futurum. ut scias quia hoc credidit, dominus ait: Abraham diem meum uidit et gauisus est. ideo reputatum est illi ad iustitiam, quia rationem non quaesiuit, sed<tei:pb facs="csel-32-1_0608" />promptissima fide credidit. bonum est ut rationem praeueniat fides, ne tamquam ab homine ita a domino deo nostro rationem uideamur exigere. etenim quam indignum ut humanis testimoniis de alio credamus, dei oraculis de se non credamus! imitemur ergo Abraham, ut heredes simus terrae per iustitiam fidei, per quam ille mundi heres factus est,</tei:p>
 						</tei:div>
 					</tei:div>
@@ -248,11 +244,10 @@
 							<tei:p>non celabo inquit Abraham puerum meum quae ego faciam. senilis aetatis utique Abraham in superioribus scriptura significauit, quia nonaginta et nouem processisset annos: quomodo hunc puerum dicit? sed cum inmemorem senectutis, exploratorem indefessum, cursu inpigrum, standi patientissimum, deducendi studiosissimum expresserit, nonne conuenire nomen pueri uidetur officiis? merito puer dicitur qui senile nesciebat fastidium, pueritiae innocentiam et obsequium deferebat. datur itaque iusto benedictionis gratia et posteritatis hereditas, offensa autem peccatorum exponitur.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="46">
-							<tei:p>clamor inquit Sodomorum et Gomorrae inpletus est. magna domini patientia, ut non statim peccatorem puniat, sed diu differat expectans correctionem, nec commoueatur ad ulciscendum, nisi peccator mensuram excedat. unde et dominus Iesus in euangelio ad Iudaeos ait: inplete mensuram patruum uestrorum.<tei:pb facs="csel-32-1_0626" />
-							</tei:p>
+							<tei:p>clamor inquit Sodomorum et Gomorrae inpletus est. magna domini patientia, ut non statim peccatorem puniat, sed diu differat expectans correctionem, nec commoueatur ad ulciscendum, nisi peccator mensuram excedat. unde et dominus Iesus in euangelio ad Iudaeos ait: inplete mensuram patruum uestrorum.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="47">
-							<tei:p>Descendam itaque, ut uideam secundum clamorem illorum uenientem ad me, si consummabuntur: sin autem, ut sciam. non ignorabat dominus peccata Sodomorum, sed propter te instruendum uerba huiusmodi loquebatur, ut tu propius scruteris eorum commissa, in quos uindicandum arbitraris. descendam inquit ut uideam, hoc est: etiam tu descendere cura, descende indaginis studio, ne quid sit quod fallat aut lateat absentem, ut oculis facinus deprehendas. eminus positi multa nescire possunt. quem clamorem autem ait nisi forte quia ei quem nihil latet clamant omnia, clamare uidentur singulorum crimina? denique ad Cain dicitur: sanguis fratris tui ad me clamat, hoc est non latet, sed clamat parricidium tuum. itaque uelut excitatur deus flagitiorum nostrorum clamoribus, ut aliquando uindicet qui libenter ignoscit.</tei:p>
+							<tei:p><tei:pb facs="csel-32-1_0626" />Descendam itaque, ut uideam secundum clamorem illorum uenientem ad me, si consummabuntur: sin autem, ut sciam. non ignorabat dominus peccata Sodomorum, sed propter te instruendum uerba huiusmodi loquebatur, ut tu propius scruteris eorum commissa, in quos uindicandum arbitraris. descendam inquit ut uideam, hoc est: etiam tu descendere cura, descende indaginis studio, ne quid sit quod fallat aut lateat absentem, ut oculis facinus deprehendas. eminus positi multa nescire possunt. quem clamorem autem ait nisi forte quia ei quem nihil latet clamant omnia, clamare uidentur singulorum crimina? denique ad Cain dicitur: sanguis fratris tui ad me clamat, hoc est non latet, sed clamat parricidium tuum. itaque uelut excitatur deus flagitiorum nostrorum clamoribus, ut aliquando uindicet qui libenter ignoscit.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="48">
 							<tei:p>Denique petenti Abrahae, ne simul perderet iustos tamquam iniquos, et interroganti: si fuerint quinquaginta iusti in ciuitate, perdes illos? respondit: non perdam inquit ciuitatem, si fuerint in illa quinquaginta iusti, et totum locum seruabo. et sic per ordinem interrogationum et responsionum uicem, etiamsi decem iustos inuenerit in ciuitate, tamen propter paucorum iustitiam inpunitatem toti populo promittit. unde discimus quantus murus sit patriae uir iustus, quemadmodum non debeamus inuidere uiris sanctis nec temere derogare; illorum etenim nos fides seruat, illorum iustitia ab excidio defendit. Sodoma quoque<tei:pb facs="csel-32-1_0627" />si habuisset uiros decem iustos, potuit non perire.</tei:p>
@@ -292,16 +287,12 @@
 						<tei:div type="textpart" subtype="subsection" n="59">
 							<tei:p>Denique iterum Sarrae temptatur pudicitia, ut exigatur omnium. nam et Abimelech in uxorem sibi eam sumpserat et dixit ei in nocte deus: ecce tu morieris propter mulierem. aduertimus adulterium diuino iudicio morte puniri, ideoque addidit: haec autem commoratur cum uiro. habet quidem omnis uiri mulierisque concubitus nulla legitimi matrimonii sorte celebratus suam culpam. discite enim qui ad gratiam baptismatis tenditis uelut quidam fidei candidati continentiae disciplinam sobriam. nulli licet scire mulierem praeter uxorem. ideoque coniugii tibi ius datum est, ne in laqueum incidas et cum aliena muliere delinquas.<tei:pb facs="csel-32-1_0632" />uinctus es uxori, noli quaerere solutionem, quia non licet tibi uxore uiuente uxorem ducere. nam et aliam quaerere, cum habeas tuam, crimen est adulterii hoc grauius, quod putas peccato tuo auctoritatem lege quaerendam. tolerabilior est, si lateat, culpa quam si culpae usurpetur auctoritas, nec hoc solum est adulterium cum aliena peccare coniuge, sed omne quod non habet potestatem coniugii, tamen locus iste docet grauius crimen esse, ubi celebrati coniugii iura temerantur et uxorius pudor soluitur. ideoque cum praetenderet Abimelech quod uxorem alienam esse ignorauerit, quam sororem esse uir ipse suam dixerit, respondit ei deus: et ego cognoui quia puro corde fecisti hoc et peperci tibi, ut non peccares in me. propter hoc non sum passus te tangere eam. cognoscimus uelut praesulem custodemque esse coniugii deum, qui non patiatur alienum torum pollui, et si qui fecerit, peccare eum in deum, cuius legem uiolet, gratiam soluat. et ideo quia in deum peccat, sacramenti caelestis amittit consortium.</tei:p>
 						</tei:div>
-					</tei:div>
-					<tei:div type="textpart" subtype="section" n="6">
 						<tei:div type="textpart" subtype="subsection" n="60">
 							<tei:p>Fortasse te moueat qua ratione Pharao quaestionibus ab omnipotenti deo grauiter adflictus sit, ut supra legimus, cum et ipse ignorauerit uxorem esse Abrahae Sarram, quam sororem audierat, Abimelech autem nullam poenam exceperit. uerum Aegypti regem noris ducem fuisse uitiorum, qui quo<tei:pb facs="csel-32-1_0633" />plus habuerit licentiae eo plus flagitii commiserit, Abimelech autem eo fidelis aestimatus est deo, ut meruerit audire: et ego cognoui quia puro corde fecisti hoc, rex non adflictionis, ut Aegyptius, sed munitionis, quod Gerarum, quibus praeerat, docet interpretatio. non est ergo dubium ceteris operibus eius indignationem domini esse reuocatam, qui uere interioris est arbiter conscientiae et animi ac mentis interpres. denique non ut Pharao ille conuentus a Moyse recusauit et spreuit mandatum dei nec obsequium distulit, sed statim uocauit Abraham, uxorem suam ei reddidit, pretio se ipse multauit, quod uidisset alienam, dotem pudoris exsoluit.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="61">
 							<tei:p>hinc quoque colligi potest Abimelech regem clementiora meruisse, quod Abraham pro eo rogauit et inpetrauit. peperit enim uxor eius et ancilla illius, quas ante concluserat dominus propter Sarram uxorem Abrahae. quod aeque ad oeconomiam pertinet, ut Sarrae partus dei donatus promissione etiam hoc fulciretur testimonio, cum aduertas dei offensione et fecundas steriliscere et rursus domini uoluntate steriles fecundari iuxta quod scriptum est: nonne sterilem et parientem ego feci?<tei:pb facs="csel-32-1_0634" />dicit dominus. quamuis ad synagogae illud et ecclesiae mysterium dictum accipiatur, quia et synagoga partus habere desiit, quae successionis fraudata est posteritate, et congregatio nationum, quae sterilis erat, cum deum ignoraret, partus coeperit aeternos habere. unde et lectum est: laetare, sterilis quae non paris, erumpe et exclama quae non parturis, quoniam plures filii desertae magis quam eius quae habet uirum.</tei:p>
 						</tei:div>
-					</tei:div>
-					<tei:div type="textpart" subtype="section" n="7">
 						<tei:div type="textpart" subtype="subsection" n="62">
 							<tei:p>Genitus est autem Abrahae filius Isaac, cum esset annorum centum. et tu si perfectus fueris, habebis posteritatem laetitiae et exultationis hereditatem. dixit et Sarra: risum mihi fecit dominus; quicumque autem audierit congratulabitur mihi. non utique hoc de hac generatione intellegitur, quae casibus plerisque obnoxia est, ut interdum melius fuerit non generasse, sed de generatione, qua unusquisque peccator agens paenitentiam, cum redimitur a morte, angelis solet exhibere laetitiam.</tei:p>
 						</tei:div>

@@ -60,18 +60,14 @@
 			</tei:editorialDecl>
 			<tei:p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE Architecture</tei:p>
             <tei:refsDecl n="CTS">
-                <tei:cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-                    <tei:p>This pointer pattern extracts books.</tei:p>
+                <tei:cRefPattern n="subsection" matchPattern="(\w+)(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']//tei:div[@n='$3'])">
+                    <tei:p>This pointer pattern extracts subsections.</tei:p>
                 </tei:cRefPattern>
-            </tei:refsDecl>
-            <tei:refsDecl n="CTS">
                 <tei:cRefPattern n="section" matchPattern="(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                     <tei:p>This pointer pattern extracts sections.</tei:p>
                 </tei:cRefPattern>
-            </tei:refsDecl>
-            <tei:refsDecl n="CTS">
-                <tei:cRefPattern n="subsection" matchPattern="(\w+)(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']//tei:div[@n='$3'])">
-                    <tei:p>This pointer pattern extracts subsections.</tei:p>
+                <tei:cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+                    <tei:p>This pointer pattern extracts books.</tei:p>
                 </tei:cRefPattern>
             </tei:refsDecl>
 		</tei:encodingDesc>
@@ -91,7 +87,7 @@
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Finished adding licensing information. Altered project identifier in textparts to be ND-DLC.</tei:change>
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Fixes publisher element mislabeled as date element.</tei:change>
             <tei:change when="2025-11-24" who="Stephen Bothwell">Tentatively revises textual divisions. Amends descriptions for attributions and adds attribution for Hildegund Müller.</tei:change>
-            <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards.</tei:change>
+            <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards. Swaps ordering of CTS references to be from most to least granular. Fixes element ID replication in Sections 1.28 and 1.29.</tei:change>
 		</tei:revisionDesc>
 	</tei:teiHeader>
 	<tei:text>
@@ -465,12 +461,10 @@
 							<tei:p>ergo uideamus ne, quia arcus, quo sagittae iaciuntur, nunc tenditur, nunc resoluitur, quandam extensionem et remissionem uideatur scriptura significare, per quam neque penitus per nimiam extensionem uniuersa rumpantur, sed sit quaedam mensura et quoddam diuinae uirtutis examen. est ergo uirtus inuisibilis dei, quae et specie istius arcus extendendi et remittendi moderatur pro diuina uoluntate misericordia potestate, quae neque omnia confundi nimia solutione neque disrumpi nimia inruptione patiatur. quam ideo in nubibus dicit poni, quia tunc maxime opus est diuinae auxilio prouidentiae, quando agmina nubium in procellas tempestatesque coguntur. ideoque dicit: arcum meum ponam in nube, non 'sagittam ponam'.<tei:pb facs="csel-32-1_0576" />arcus enim instrumentum iaculandae sagittae est; itaque non ipse arcus uulnerat, sed sagitta. et ideo dominus in nubibus arcum magis quam sagittam ponit, id est non illud quod uulneret, sed quod habeat terroris indicium, uulneris effectum habere non soleat.</tei:p>
 						</tei:div>
 					</tei:div>
-					<tei:div type="textpart" subtype="section" n="29">
+					<tei:div type="textpart" subtype="section" n="28">
 						<tei:div type="textpart" subtype="subsection" n="105">
 							<tei:p>Qua ratione autem cum supra tres filios Noe conputauerit, Sem Cham Iaphet, hoc loco unius conprehenderit medii filii generationem — hoc est quod ait: Cham autem erat pater Chanaan; isti erant tres filii Noe — et maxime cum illi duo iusti, iste iniustus medius? iniusti ergo prius generatio quam iustorum conprehenditur. neque enim possumus negare quod scriptum est, sed ad coaceruandum delictum ipsius addita eius est generatio, quod, cum haberet filium et pater esset, solus ipse patrem non cognouit, qui magis cognoscere debuisset. et ideo meruit improbum habere filium, quia improbus fuerat patri. simul significat ex illo Chanaan Chananaeos fuisse, qui post multas generationes oppressi a populo iusto cesserunt in eius possessionem. auctorem ergo Chananaeorum Chanaan fuisse manifestum est, qui fuit filius huius Cham, qui impius in patrem extitit.</tei:p>
 						</tei:div>
-					</tei:div>
-					<tei:div type="textpart" subtype="section" n="28">
 						<tei:div type="textpart" subtype="subsection" n="106">
 							<tei:p>altior autem sensus nominum interpretatione signatur. Cham enim 'calor' est, Chanaan 'turbatio eorum'. qui enim calet continuo mouetur et perturbatur, ideoque euidentissime declaratur non tam hominem patrem hominum fuisse, sed passionem malam improbae passionis generatricem, quae esset a patris moribus, hoc est ab usu uirtutis aliena.</tei:p>
 						</tei:div>

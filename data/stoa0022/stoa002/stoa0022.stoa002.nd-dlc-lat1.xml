@@ -60,19 +60,17 @@
 				</tei:correction>
 			</tei:editorialDecl>
 			<tei:p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE Architecture</tei:p>
-            <tei:refsDecl n="CTS">
-                <tei:cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-                    <tei:p>This pointer pattern extracts books.</tei:p>
+            <tei:refsDecl>
+                <tei:cRefPattern n="subsection" matchPattern="(\w+)(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']//tei:div[@n='$3'])">
+                    <tei:p>This pointer pattern extracts subsections.</tei:p>
                 </tei:cRefPattern>
             </tei:refsDecl>
             <tei:refsDecl n="CTS">
                 <tei:cRefPattern n="section" matchPattern="(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                     <tei:p>This pointer pattern extracts sections.</tei:p>
                 </tei:cRefPattern>
-            </tei:refsDecl>
-            <tei:refsDecl>
-                <tei:cRefPattern n="subsection" matchPattern="(\w+)(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']//tei:div[@n='$3'])">
-                    <tei:p>This pointer pattern extracts subsections.</tei:p>
+                <tei:cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+                    <tei:p>This pointer pattern extracts books.</tei:p>
                 </tei:cRefPattern>
             </tei:refsDecl>
 		</tei:encodingDesc>
@@ -93,7 +91,7 @@
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Finished adding licensing information. Altered project identifier in textparts to be ND-DLC.</tei:change>
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Fixes publisher element mislabeled as date element.</tei:change>
             <tei:change when="2025-11-24" who="Stephen Bothwell">Tentatively revises textual divisions. Amends descriptions for attributions and adds attribution for Hildegund Müller. Fixes misplaced page break in 5.10 and incorrect sectioning for 5.11 and 5.12.</tei:change>
-            <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards.</tei:change>
+            <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards. Swaps ordering of CTS references to be from most to least granular. Fixes placement of page breaks for Pages 214, 220, and 315. Fixes element ID repetition in 3.12, 3.13, 5.1, 5.2, 5.6, and 5.8.</tei:change>
 		</tei:revisionDesc>
 	</tei:teiHeader>
 	<tei:text>
@@ -1311,14 +1309,13 @@
 							<tei:p>Postremo ipse apostolus ad Philippenses ait quia in similitudine hominis factus et specie inventus ut homo humiliavit semet ipsum factus oboediens usque ad mortem. Vide ubi factus sit! In similitudine, inquit, hominis, non in potestate dei, et factus oboediens usque ad mortem, ut oboedientiam quidem hominis habuerit, regnum divinitatis.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="82">
-							<tei:p>Quantis igitur adhuc utemur exemplis ad incarna- tionem vel ad aliquid referendum esse, quod 'factus est'? Quod autem factum est, idem est et creatum. Dixit enim et facta sunt, mandavit et creata sunt. 'Creatum' quoque supra ostendimus in libro primo de incarnatione dictum videri.</tei:p>
+							<tei:p>Quantis igitur adhuc utemur exemplis ad incarna-<tei:pb facs="csel-78_0214" />tionem vel ad aliquid referendum esse, quod 'factus est'? Quod autem factum est, idem est et creatum. Dixit enim et facta sunt, mandavit et creata sunt. 'Creatum' quoque supra ostendimus in libro primo de incarnatione dictum videri.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="83">
 							<tei:p>Ipse etiam apostolus adserendo 'serviendum non esse creaturae' significavit ex deo filium non creatum esse, sed genitum. Tamen etiam alibi, ut manifestaret, quomodo in Solomone sit lectum: Dominus creavit me, quid in Christo creatum esset ostendit.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="84">
-							<tei:p>Itaque totius seriem capitis recenseamus. Sic enim habes: Ergo quia filii participes sunt sanguinis et carnis, et ipse similiter particeps factus est eorundem, ut per mortem destrueret hunc, qui imperium habebat mortis. Quis ergo est, qui nos participes suae voluit esse carnis et sanguinis? Utique dei filius. Quomodo nisi per carnem particeps factus est noster aut per quam nisi per corporis mortem vincla dissolvit? Morti enim mors facta est susceptio mortis in Christo. Ergo de incarnatione proposuit.<tei:pb facs="csel-78_0214" />
-							</tei:p>
+							<tei:p>Itaque totius seriem capitis recenseamus. Sic enim habes: Ergo quia filii participes sunt sanguinis et carnis, et ipse similiter particeps factus est eorundem, ut per mortem destrueret hunc, qui imperium habebat mortis. Quis ergo est, qui nos participes suae voluit esse carnis et sanguinis? Utique dei filius. Quomodo nisi per carnem particeps factus est noster aut per quam nisi per corporis mortem vincla dissolvit? Morti enim mors facta est susceptio mortis in Christo. Ergo de incarnatione proposuit.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="85">
 							<tei:p>Videamus sequentia!<tei:pb facs="csel-78_0215" />Nec enim statim angelos, inquit, adsumpsit, sed semen Abrahae. Unde habuit per omnia fratribus similari, ut misericors fieret et fidelis princeps sacerdos a deo, ut expiaret peccata populi. In quo enim passus est, ipse temptatus, potest et temptatos iuvare. Propter quod, fratres sanctissimi, vocationis caelestis participes intuemini apostolum et principem sacerdotum confessionis nostrae Iesum fidelem esse creatori suo, sicut et Moyses in domo eius; haec nempe verba sunt apostoli.</tei:p>
@@ -1368,11 +1365,10 @@
 							<tei:p>Accipe nunc, quia ubi regnum dei dicit, nec patris nec fili separat potestatem, quia et paternum et fili regnum uno dei nomine conpraehendit, sicut habes: Cum videritis Abraham et Isaac et Iacob et omnes prophetas in regno dei. An negamus in regno fili prophetas esse, cum et latroni dicenti memento mei, cum veneris in regnum tuum responderit dominus: Amen dico tibi, hodie mecum eris in paradiso? Aut quid est esse in dei regno nisi aeternam nescire mortem? Qui autem nesciunt mortem aeternam, 'vident filium hominis venientem in regnum suum'.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="100">
-							<tei:p>Quomodo ergo potest non in potestate habere, quod donat dicens: Tibi dabo claves regni caelorum? Et videto distantiam: servus aperit, dominus largitur, iste per se, ille per Christum. Famulus claves accipit, dominus ordinat potestates: aliud ius donantis, aliud dispensantis obsequium est.<tei:pb facs="csel-78_0220" />
-							</tei:p>
+							<tei:p>Quomodo ergo potest non in potestate habere, quod donat dicens: Tibi dabo claves regni caelorum? Et videto distantiam: servus aperit, dominus largitur, iste per se, ille per Christum. Famulus claves accipit, dominus ordinat potestates: aliud ius donantis, aliud dispensantis obsequium est.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="101">
-							<tei:p>Accipe adhuc unum regnum, unum imperium esse patris et fili. Habes ad Timotheum: Paulus, apostolus Iesu Christi secundum imperium dei salvatoris nostri et Iesu Christi, spei nostrae. Unum igitur patris et fili regnum evidenter est declaratum, sicut et apostolus Paulus adseruit dicens: Hoc enim scitote quod omnis inpudicus aut avarus aut inmundus, quod est idolatria, non habet hereditatem in regno Christi et dei. Ergo unum regnum et una divinitas.</tei:p>
+							<tei:p><tei:pb facs="csel-78_0220" />Accipe adhuc unum regnum, unum imperium esse patris et fili. Habes ad Timotheum: Paulus, apostolus Iesu Christi secundum imperium dei salvatoris nostri et Iesu Christi, spei nostrae. Unum igitur patris et fili regnum evidenter est declaratum, sicut et apostolus Paulus adseruit dicens: Hoc enim scitote quod omnis inpudicus aut avarus aut inmundus, quod est idolatria, non habet hereditatem in regno Christi et dei. Ergo unum regnum et una divinitas.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="102">
 							<tei:p>Unam divinitatem lex probavit, quae dicit unum deum, probavit et apostolus dicendo de Christo: In quo habitat omnis plenitudo divinitatis corporaliter. Si enim iuxta apostolum omnis corporaliter plenitudo divinitatis in Christo est, aut unius divinitatis patrem et filium fatebuntur aut, si patris et fili divinitatem cupiunt separare, cum omnem plenitudinem divinitatis corporaliter filius habeat, quid est, quod patri existimant amplius reservandum, cum amplius nihil sit plenitudine et plenitudo perfectio sit? Ergo una divinitas.</tei:p>
@@ -1382,8 +1378,6 @@
 						<tei:div type="textpart" subtype="subsection" n="103">
 							<tei:p>Imaginem autem unam et similitudinem unam supra diximus. Superest, ut unius quoque maiestatis patrem filiumque doceamus. Nec longe aberit. Cum enim ipse dixerit de se filius: Cum autem venerit filius hominis in maiestate sua et omnes angeli cum eo, tunc sedebit super sedem maiestatis suae, ecce fili expressa maiestas est. Quid ei deest, cuius increatam maiestatem negare non possunt? Est ergo fili maiestas.</tei:p>
 						</tei:div>
-					</tei:div>
-					<tei:div type="textpart" subtype="section" n="12">
 						<tei:div type="textpart" subtype="subsection" n="104">
 							<tei:p>Accipiant nunc, unde dubitare non possint, quod patris et fili una maiestas sit. Ipse enim dominus dixit: Nam qui me erubuerit et meos sermones, hunc filius hominis erubescet, cum venerit in maiestate sua et patris et sanctorum angelorum. Quid est et sanctorum angelorum, nisi quia honorantur et servi domini dignitate?</tei:p>
 						</tei:div>
@@ -1393,8 +1387,6 @@
 						<tei:div type="textpart" subtype="subsection" n="106">
 							<tei:p>Denique ipsa se explanant<tei:pb facs="csel-78_0221" />verba divina, ut intellegas illam gloriam patris et fili cum angelis non esse communem. Sic enim habes: Cum autem venerit filius hominis in maiestate sua et omnes<tei:pb facs="csel-78_0222" />angeli cum eo; et ut doceret unam maiestatem et unam gloriam esse patris et suam, ipse in alio libro ait: Et filius hominis confundetur eum, cum venerit in gloria patris sui cum angelis sanctis. Illi in obsequio, hic in gloria, illi in comitatu, iste in suggestu, illi stant, hic sedet. Ut verbo tamen usus utamur humani, hic iudicat, hi ministrant.</tei:p>
 						</tei:div>
-					</tei:div>
-					<tei:div type="textpart" subtype="section" n="13">
 						<tei:div type="textpart" subtype="subsection" n="107">
 							<tei:p>Divine autem non praemisit maiestatem patris et subdidit suam et angelorum, ne de superioribus ad inferiora fecisse gradum quendam et ordinem videretur. Sed quia pater inferior videri non poterat, praemisit 'maiestatem suam' et addidit patris et angelorum, ne se medium inter patrem et angelos nominando aut ab angelis ad patrem per sui quoque incrementa fecisse quendam videretur ascensum, aut a patre rursus ad angelos per ordinem cum sui etiam deminutione crederetur fecisse descensum. Namque nos, qui unam divinitatem patris et fili confitemur, diversum ut Arriani ordinem non putamus.</tei:p>
 						</tei:div>
@@ -2156,16 +2148,12 @@
 						<tei:div type="textpart" subtype="subsection" n="29">
 							<tei:p>Si dicunt quia 'verus solus deus' pater est, negare non possunt quia et filius 'solus deus veritas' est, quia et Christus veritas est. Numquid veritas vero minor est, cum secundum adpellationem nominum verus plerumque a veritate dicatur, sapiens a sapientia, iustus a iustitia?<tei:pb facs="csel-78_0303" />Hoc nos non sentimus inter patrem et filium, quia et patri nihil deest, quia pater est veritatis, et filius, quia veritas est, aequalis est vero.</tei:p>
 						</tei:div>
-					</tei:div>
-					<tei:div type="textpart" subtype="section" n="1">
 						<tei:div type="textpart" subtype="subsection" n="30">
 							<tei:p>Ut sciant autem, cum solum legunt, nequaquam esse a patre filium separandum, meminerint in prophetis a deo dictum: Ego extendi caelum solus. Et utique non extendit sine filio pater; ipse enim filius, quia 'sapientia dei' est, dicit: Quando parabat caelum, cum ipso aderam, et Paulus de 'filio' dictum esse confirmat: Initio terram tu fundasti, domine, et opera manuum tuarum sunt caeli. Sive ergo filius caelum fecit, sicut et apostolus voluit intellegi, et ipse utique non sine patre 'caelum solus extendit', sive, ut in Proverbiis habes, deus in sapientia fundavit terram, paravit autem caelos in intellectu, ostenditur quia nec pater solus sine filio caelos fecit nec sine patre filius. Et tamen qui 'caelos extendit', solus dicitur.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="31">
 							<tei:p>Quam vero id de filio aperte intellegendum sit, quod 'solus' adpelletur, etsi numquam inscio patre aliquid fecisse credatur, etiam alibi habes, ubi scriptum est: Extendens caelum<tei:pb facs="csel-78_0304" />solus et ambulans quasi in pavimento super mare. Namque evangelium domini docuit nos quod in mari non pater, sed filius ambulavit, quando Petrus eum rogavit dicens: Domine, iube me venire ad te. Sed etiam prophetia ipsa documento est; sanctus enim Iob adventum domini prophetabat, de quo vere dixit quia magnum cetum erat debellaturus. Et factum est; nam feralem illum cetum, diabolum scilicet, ultimis temporibus venerabili corporis sui passione prostratum perculit et adflixit.</tei:p>
 						</tei:div>
-					</tei:div>
-					<tei:div type="textpart" subtype="section" n="2">
 						<tei:div type="textpart" subtype="subsection" n="32">
 							<tei:p>Est ergo 'solus et verus deus' filius; haec enim et filio praerogativa defertur. De nullo enim, qui creatus est, proprie dici potest quia 'solus' est. Nam cui inest communitas creaturae, quemadmodum quasi solus potest a ceteris separari? Itaque homo rationabilis videtur inter omnia terrena animantia, sed tamen non est solus rationabilis; scimus enim rationabilia esse et caelestia opera dei, angelos et archangelos rationabiles confitemur. Si ergo angeli rationabiles, non utique solus rationabilis homo dicitur.</tei:p>
 						</tei:div>
@@ -2245,14 +2233,13 @@
 							<tei:p>'Quomodo' inquiunt 'filius dei solus verus deus potest esse similis patri, cum ipse dixerit filiis Zebedei: Calicem quidem meum bibetis, sedere autem ad dexteram meam vel ad sinistram non est meum dare vobis, sed quibus paratum est a patre meo?' Hoc igitur vestrum divinae, ut vultis, inaequalitatis est argumentum, cum in eo magis venerari domini clementiam, adorare gratiam deberetis, si tamen 'virtutis atque sapientiae dei' profunda secreta possitis advertere. atque sapientiae</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="56">
-							<tei:p>Considerate enim quae cum filiis et pro filiis petat. Mater est utique, cui pro filiorum honore sollicitae inmoderatior quidem, sed tamen ignoscenda mensura votorum est, atque mater aetate longaeva, studio religiosa, solacio destituta, quae tunc temporis, quando vel iuvanda vel alenda foret validae prolis auxilio, abesse sibi liberos patiebatur et voluptati suae mercedem sequentium Christum praetulerat filiorum. Qui prima voce vocati a domino, ut legimus, relictis retibus et patre secuti sunt eum.</tei:p>
+							<tei:p>Considerate enim quae cum filiis et pro filiis petat. Mater est utique, cui pro filiorum honore sollicitae inmoderatior quidem, sed tamen ignoscenda mensura votorum est, atque mater aetate longaeva, studio religiosa, solacio destituta, quae tunc temporis, quando vel iuvanda vel alenda foret validae prolis auxilio, abesse sibi liberos patiebatur et voluptati suae mercedem sequentium Christum praetulerat filiorum. Qui prima voce<tei:pb facs="csel-78_0315" />vocati a domino, ut legimus, relictis retibus et patre secuti sunt eum.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="57">
 							<tei:p>Haec igitur studio maternae sedulitatis indulgentior obsecrabat salvatorem dicens: Dic ut sedeant hi duo filii mei unus ad dexteram tuam et alter ad sinistram in regno tuo. Etsi error, pietatis tamen error est; nesciunt enim viscera materna patientiam. Etsi voti avara, tamen veniabilis cupiditas, quae non pecuniae est avida, sed gratiae. Nec inverecunda petitio, quae non sibi, sed liberis consulebat. Matrem considerate, matrem cogitate!</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="58">
-							<tei:p>Sed nihil mirum, si vilis vobis videtur circa filios adfectus parentum, qui etiam omnipotentis patris vilem putatis esse circa unigenitum filium caritatem. Dominus caeli atque terrarum verecundabatur — ut secundum adsumptionem carnis et virtutes animae loquar —, verecundabatur, inquam, et ut ipsius verbo utar, confundebatur matri pro filiis postulanti etiam suae sedis consortium denegare. Vos aeterni dei filium proprium interdum pro ministerio stare contenditis, interdum famulatorium, hoc est non ex maiestatis unitate, sed ex patris praeceptione vultis eius esse consessum, et negatis hoc deo vero dei filio, quod ille hominibus aperte noluit denegare.<tei:pb facs="csel-78_0315" />
-							</tei:p>
+							<tei:p>Sed nihil mirum, si vilis vobis videtur circa filios adfectus parentum, qui etiam omnipotentis patris vilem putatis esse circa unigenitum filium caritatem. Dominus caeli atque terrarum verecundabatur — ut secundum adsumptionem carnis et virtutes animae loquar —, verecundabatur, inquam, et ut ipsius verbo utar, confundebatur matri pro filiis postulanti etiam suae sedis consortium denegare. Vos aeterni dei filium proprium interdum pro ministerio stare contenditis, interdum famulatorium, hoc est non ex maiestatis unitate, sed ex patris praeceptione vultis eius esse consessum, et negatis hoc deo vero dei filio, quod ille hominibus aperte noluit denegare.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="59">
 							<tei:p>Considerabat enim matris dilectionem, quae filiorum mercede grandaevam solabatur senectam et<tei:pb facs="csel-78_0316" />desideriis licet fessa maternis carissimorum pignorum tolerabat absentiam.</tei:p>
@@ -2393,13 +2380,9 @@
 						<tei:div type="textpart" subtype="subsection" n="102">
 							<tei:p>Et bene dominus suum quidem patrem, caeli autem et terrae dominum praedicavit, ut tu, cum legis et 'patrem' et 'dominum', intellegas patrem fili et dominum creaturae. In alio praerogativa naturae est, in alio auctoritas potestatis. Formam enim servi accipiens eo utique dominum vocat, quo servitutem suscepit, aequalis in dei forma, servus in corporis; servitus enim carnis, dominatus autem divinitatis est. Unde et apostolus ait: Deus domini nostri Iesu Christi, pater gloriae, hoc est 'deum' adsumptionis humanae adserens, 'patrem' autem gloriae. Non enim duos filios habuit deus, Christum et gloriam, minime. Ergo si unus dei filius Christus, utique Christus est gloria. Quid autem ei derogas, qui patris gloria est?</tei:p>
 						</tei:div>
-					</tei:div>
-					<tei:div type="textpart" subtype="section" n="6">
 						<tei:div type="textpart" subtype="subsection" n="103">
 							<tei:p>Si ergo et filius gloria<tei:pb facs="csel-78_0329" />est et pater gloria, quia pater gloriae non potest aliud esse quam gloria, non divisio gloriarum, sed una est gloria. Itaque ad proprietatem naturae gloria refertur, dominatus ad<tei:pb facs="csel-78_0330" />suscepti corporis servitutem. Si enim caro etiam animae iusti subdita est, sicut scriptum est: Castigo corpus meum et servituti redigo, quanto magis subiecta est divinitati, de qua dicitur: Quoniam universa serviunt tibi!</tei:p>
 						</tei:div>
-					</tei:div>
-					<tei:div type="textpart" subtype="section" n="8">
 						<tei:div type="textpart" subtype="subsection" n="104">
 							<tei:p>Una autem quaestione et Sabellianos et Fotinianos et Arrianos dominus exclusit. Nam cum 'dominum' cum 'domino' dicit, Sabellianus excluditur, qui eundem patrem vult esse quem filium. Excluditur Fotinus, qui 'secundum carnem iudicat', quia 'dominus' David regis non poterat esse, nisi qui deus est. Scriptum est enim: Dominum deum tuum adorabis et ipsi soli servies. Numquid contra legem propheta sentiret, qui sub lege regnaret? Excluditur Arrius, quia filium sedere audit ad dexteram patris, ut, si ex usu argumentetur humano, ipse se perimat et venenum sacrilegae disputationis suae in se refundat, ut dum inaequalitatem patris et fili ex consuetudine hominum interpraetatur, in utroque a vero devius, eum praeferat, cui derogat, confessurus priorem, quem audit ad dexteram. Excluditur etiam Manichaeus. Non enim negat esse se 'David filium secundum carnem', utpote qui clamantibus caecis Iesu, fili David, miserere nobis et delectatus est fide<tei:pb facs="csel-78_0331" />et stetit et curavit eos. Sed negat hoc suae esse aeternitatis, si David solius filius a perfidis nominetur.</tei:p>
 						</tei:div>

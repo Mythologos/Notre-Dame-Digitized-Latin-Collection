@@ -61,18 +61,14 @@
 			</tei:editorialDecl>
 			<tei:p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE Architecture</tei:p>
             <tei:refsDecl n="CTS">
-                <tei:cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
-                    <tei:p>This pointer pattern extracts books.</tei:p>
+                <tei:cRefPattern n="subsection" matchPattern="(\w+)(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']//tei:div[@n='$3'])">
+                    <tei:p>This pointer pattern extracts subsections.</tei:p>
                 </tei:cRefPattern>
-            </tei:refsDecl>
-            <tei:refsDecl n="CTS">
                 <tei:cRefPattern n="section" matchPattern="(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
                     <tei:p>This pointer pattern extracts sections.</tei:p>
                 </tei:cRefPattern>
-            </tei:refsDecl>
-            <tei:refsDecl n="CTS">
-                <tei:cRefPattern n="subsection" matchPattern="(\w+)(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']//tei:div[@n='$3'])">
-                    <tei:p>This pointer pattern extracts subsections.</tei:p>
+                <tei:cRefPattern n="book" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+                    <tei:p>This pointer pattern extracts books.</tei:p>
                 </tei:cRefPattern>
             </tei:refsDecl>
 		</tei:encodingDesc>
@@ -92,6 +88,7 @@
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Finished adding licensing information. Altered project identifier in textparts to be ND-DLC.</tei:change>
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Fixes publisher element mislabeled as date element.</tei:change>
             <tei:change when="2025-11-24" who="Stephen Bothwell">Tentatively revises textual divisions. Amends descriptions for attributions and adds attribution for Hildegund Müller.</tei:change>
+            <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards. Swaps ordering of CTS references to be from most to least granular.</tei:change>
 		</tei:revisionDesc>
 	</tei:teiHeader>
 	<tei:text>
