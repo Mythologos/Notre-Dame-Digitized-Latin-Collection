@@ -79,6 +79,8 @@
 			<tei:change when="2025-06-17" who="Stephen Bothwell">Fixes publisher element mislabeled as date element.</tei:change>
             <tei:change when="2025-11-24" who="Stephen Bothwell">Tentatively revises textual divisions. Amends descriptions for attributions and adds attribution for Hildegund Müller.</tei:change>
             <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards. Swaps ordering of CTS references to be from most to least granular.</tei:change>
+            <tei:change when="2025-12-10" who="Stephen Bothwell">Adds missing line breaks to poem. Normalizes u/v distinction in titles to convention of text. Fixes minor character encoding issue.</tei:change>
+            <tei:change when="2025-12-13" who="Stephen Bothwell">Automatically adds page numbers corresponding to text in attribute `n`. Includes minor XML formatting adjustments due to rewrite of XML file.</tei:change>
 		</tei:revisionDesc>
 	</tei:teiHeader>
 	<tei:text>
@@ -87,100 +89,103 @@
 				<tei:div type="textpart" subtype="section" n="0">
 					<tei:head>AD PASIPHILUM VIRUM DOCTISSIMUM.</tei:head>
 					<tei:div type="textpart" subtype="subsection" n="1">
-						<tei:p><tei:pb facs="opus-agriculturae_0280" />Habes aliud indultae fiduciae testimonium. pro usura temporis hoc opus de arte insitionis adieci. sed quod uolumina haec ruris colendi serius, quam iusseras, scripta sunt, librarii manus segnior effecit, cuius ego tarditatem numquam maligne aestimo. existimo enim, quo frequenter inclinet argutia seruorum. malo operam eius expectare potius quam timere.</tei:p>
+						<tei:p><tei:pb facs="opus-agriculturae_0280" n="261"/>Habes aliud indultae fiduciae testimonium. pro usura temporis hoc opus de arte insitionis adieci. sed quod uolumina haec ruris colendi serius, quam iusseras, scripta sunt, librarii manus segnior effecit, cuius ego tarditatem numquam maligne aestimo. existimo enim, quo frequenter inclinet argutia seruorum. malo operam eius expectare potius quam timere.</tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="2">
-						<tei:p>nescio, utrum commune sit dominis: mihi difficile contingit in seruilibus ingeniis inuenire temperiem. ita saepissime natura haec uitiat commodum, si quod est, et miscet optanda contrariis. uelocitas procurrit in facinus: segnities figuram benignitatis imitatur et tantum recedit ab agilitate, quantum recessit a sce-<tei:pb facs="opus-agriculturae_0281" />lere. diu tamen apud te pudorem meum distuli, sed hoc quasi bonus famulus feci. uerum nescio, si tuum ad has modo minutias inclinetur ingenium.</tei:p>
+						<tei:p>nescio, utrum commune sit dominis: mihi difficile contingit in seruilibus ingeniis inuenire temperiem. ita saepissime natura haec uitiat commodum, si quod est, et miscet optanda contrariis. uelocitas procurrit in facinus: segnities figuram benignitatis imitatur et tantum recedit ab agilitate, quantum recessit a sce-<tei:pb facs="opus-agriculturae_0281" n="262"/>lere. diu tamen apud te pudorem meum distuli, sed hoc quasi bonus famulus feci. uerum nescio, si tuum ad has modo minutias inclinetur ingenium.</tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="3">
-						<tei:p>grande erit et par desiderio suo, quod studii tui quaeret adfectio. et licet de his nugis fauorabiliter sentias, ego meas opes existimare non differo. non est magni loci assibus intuendis oculos duxisse per puluerem, quia nescio quomodo notae sunt quaedam maximarum personarum minuta conpendia.<tei:lb /></tei:p>
+						<tei:p>grande erit et par desiderio suo, quod studii tui quaeret adfectio. et licet de his nugis fauorabiliter sentias, ego meas opes existimare non differo. non est magni loci assibus intuendis oculos duxisse per puluerem, quia nescio quomodo notae sunt quaedam maximarum personarum minuta conpendia.<tei:lb/></tei:p>
 					</tei:div>
 				</tei:div>
 				<tei:div type="textpart" subtype="section" n="1">
 					<tei:div type="textpart" subtype="subsection" n="1">
-						<tei:p>Pasiphile, ornatus fidei, cui iure fatemur,<tei:lb />si quid in arcano pectoris umbra tegit,<tei:lb />bis septem paruos, opus agricolare, libellos,<tei:lb />quos manus haec scripsit parte silente pedum,<tei:lb />nec strictos numeris nec Apollinis amne fluentes<tei:lb />sed pura tantum rusticitate rudes<tei:lb />commendas, dignaris, amas et uilia dicta<tei:lb />adfectu socii sollicitante colis.<tei:lb />nunc ideo modicum crescens fiducia carmen<tei:lb />obtulit arbitrio laetificanda tuo.<tei:lb />et nostrae studium non condemnabile Musae<tei:lb />urbanum fari rusticitatis opus:<tei:lb />sub thalami specie felices iungere siluas,<tei:lb />ut suboli mixtus crescat utrimque decor,<tei:lb />connexumque nemus uestire adfinibus umbris<tei:lb />et gemina partum nobilitare coma,<tei:lb />foederibus blandis dulces confundere sucos<tei:lb />et laetum duplici fruge saporis ali:<tei:lb /><tei:pb facs="opus-agriculturae_0282" />quae quibus hospitium praestent uirgulta, docebo,<tei:lb />quae sit adoptiuis arbor onusta comis. ipse poli rector, quo lucida sidera currunt,<tei:lb />quo fixa est tellus, quo fluit unda maris,<tei:lb />cum posset mixtos ramis inducere flores<tei:lb />et uaria grauidum pingere fronde nemus,<tei:lb />dignatus nostros hoc insignire labores, naturam fieri sanxit ab arte nouam.<tei:lb />non segne officium nostrae reor esse camenae<tei:lb />aut operis parui gratia fiet inops.<tei:lb />si uelocis equae pigro miscetur asello<tei:lb />ardor, ut in sterilem res cadat acta gradum fecundumque genus productus deleat heres<tei:lb />et sibi defectum copia prolis agat:<tei:lb />cur non arbor inops pinguescat ab hospite gemma<tei:lb />et decus externi floris adepta micet?<tei:lb />incipiam, quicquid ueteres scripsere coloni, sacraque priscorum uerba labore sequar.<tei:lb />principio multas species industria sollers<tei:lb />protulit et doctam iussit inire manum.<tei:lb />nam quaecumque uirens alienis frondibus arbos<tei:lb />comitur, his discit credita ferre modis. aut noua discreto figuntur germina libro<tei:lb />aut aliud sumunt robora fissa caput<tei:lb />aut uirides oculos externi gemma tumoris<tei:lb />accipit et lento stringitur uda sinu.</tei:p>
+						<tei:p>Pasiphile, ornatus fidei, cui iure fatemur,<tei:lb/>si quid in arcano pectoris umbra tegit,<tei:lb/>bis septem paruos, opus agricolare, libellos,<tei:lb/>quos manus haec scripsit parte silente pedum,<tei:lb/>nec strictos numeris nec Apollinis amne fluentes<tei:lb/>sed pura tantum rusticitate rudes<tei:lb/>commendas, dignaris, amas et uilia dicta<tei:lb/>adfectu socii sollicitante colis.<tei:lb/>nunc ideo modicum crescens fiducia carmen<tei:lb/>obtulit arbitrio laetificanda tuo.<tei:lb/>et nostrae studium non condemnabile Musae<tei:lb/>urbanum fari rusticitatis opus:<tei:lb/>sub thalami specie felices iungere siluas,<tei:lb/>ut suboli mixtus crescat utrimque decor,<tei:lb/>connexumque nemus uestire adfinibus umbris<tei:lb/>et gemina partum nobilitare coma,<tei:lb/>foederibus blandis dulces confundere sucos<tei:lb/>et laetum duplici fruge saporis ali:<tei:lb/><tei:pb facs="opus-agriculturae_0282" n="263"/>quae quibus hospitium praestent uirgulta, docebo,<tei:lb/>quae sit adoptiuis arbor onusta comis.<tei:lb/>ipse poli rector, quo lucida sidera currunt,<tei:lb/>quo fixa est tellus, quo fluit unda maris,<tei:lb/>cum posset mixtos ramis inducere flores<tei:lb/>et uaria grauidum pingere fronde nemus,<tei:lb/>dignatus nostros hoc insignire labores,<tei:lb/>naturam fieri sanxit ab arte nouam.<tei:lb/>non segne officium nostrae reor esse camenae<tei:lb/>aut operis parui gratia fiet inops.<tei:lb/>si uelocis equae pigro miscetur asello<tei:lb/>ardor, ut in sterilem res cadat acta gradum<tei:lb/>fecundumque genus productus deleat heres<tei:lb/>et sibi defectum copia prolis agat:<tei:lb/>cur non arbor inops pinguescat ab hospite gemma<tei:lb/>et decus externi floris adepta micet?<tei:lb/>incipiam, quicquid ueteres scripsere coloni,<tei:lb/>sacraque priscorum uerba labore sequar.<tei:lb/>principio multas species industria sollers<tei:lb/>protulit et doctam iussit inire manum.<tei:lb/>nam quaecumque uirens alienis frondibus arbos<tei:lb/>comitur, his discit credita ferre modis.<tei:lb/>aut noua discreto figuntur germina libro<tei:lb/>aut aliud sumunt robora fissa caput<tei:lb/>aut uirides oculos externi gemma tumoris<tei:lb/>accipit et lento stringitur uda sinu.</tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="2">
 						<tei:head>DE VITE.</tei:head>
-						<tei:p>Primus echionii palmes se iungere Bacchi nouit et externo tenditur uua mero.<tei:lb />nexilibus gemmis fecundos inplicat artus<tei:lb /><tei:pb facs="opus-agriculturae_0283" />uitis et amplexum pascit adulta genus<tei:lb />degenerisque comae uestigia mitis inumbrat<tei:lb />pampinus et pingui curuat onusta deo.<tei:lb /></tei:p>
+						<tei:p>Primus echionii palmes se iungere Bacchi<tei:lb/>nouit et externo tenditur uua mero.<tei:lb/>nexilibus gemmis fecundos inplicat artus<tei:lb/><tei:pb facs="opus-agriculturae_0283" n="264"/>uitis et amplexum pascit adulta genus<tei:lb/>degenerisque comae uestigia mitis inumbrat<tei:lb/>pampinus et pingui curuat onusta deo.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="3">
 						<tei:head>DE OLIVA.</tei:head>
-						<tei:p>Robora Palladii decorant siluestria rami,<tei:lb />nobilitat partus baca superba feros,<tei:lb />fecundat sterilis pingues oleaster oliuas<tei:lb />et quae non nouit munera, ferre docet.<tei:lb /></tei:p>
+						<tei:p>Robora Palladii decorant siluestria rami,<tei:lb/>nobilitat partus baca superba feros,<tei:lb/>fecundat sterilis pingues oleaster oliuas<tei:lb/>et quae non nouit munera, ferre docet.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="4">
 						<tei:head>DE PIRO.</tei:head>
-						<tei:p>Germine cana prius niueos haud inuida flores<tei:lb />commodat et uarium nectit amore nemus.<tei:lb />nunc rapit hirsutis horrenda sororibus arma<tei:lb />et docet indomitas ponere tela piros.<tei:lb />nunc teretem pingui producit acumine malum<tei:lb />fraxineasque nouo flectit honore manus.<tei:lb />phyllida quin etiam grandi mitescere fructu<tei:lb />instituens, durae dat sua membra cuti.<tei:lb />et steriles spinos et inertem fetibus ornum<tei:lb />dotat et ignotum cogit amare decus.<tei:lb />huius et inmissi uertere cydonea rami<tei:lb />pomaque confusus blanda creauit odor.<tei:lb />castaneae septos aspro uelamine fetus<tei:lb />exuit et placido pondere mutat onus<tei:lb />mespilaque exarmat pugnacibus horrida membris<tei:lb />et mala tranquillo cortice uota premit.<tei:lb />creditur in libycis sua germina nectere ramis<tei:lb />laetaque puniceo posse decore frui.<tei:lb /></tei:p>
+						<tei:p>Germine cana prius niueos haud inuida flores<tei:lb/>commodat et uarium nectit amore nemus.<tei:lb/>nunc rapit hirsutis horrenda sororibus arma<tei:lb/>et docet indomitas ponere tela piros.<tei:lb/>nunc teretem pingui producit acumine malum<tei:lb/>fraxineasque nouo flectit honore manus.<tei:lb/>phyllida quin etiam grandi mitescere fructu<tei:lb/>instituens, durae dat sua membra cuti.<tei:lb/>et steriles spinos et inertem fetibus ornum<tei:lb/>dotat et ignotum cogit amare decus.<tei:lb/>huius et inmissi uertere cydonea rami<tei:lb/>pomaque confusus blanda creauit odor.<tei:lb/>castaneae septos aspro uelamine fetus<tei:lb/>exuit et placido pondere mutat onus<tei:lb/>mespilaque exarmat pugnacibus horrida membris<tei:lb/>et mala tranquillo cortice uota premit.<tei:lb/>creditur in libycis sua germina nectere ramis<tei:lb/>laetaque puniceo posse decore frui.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="5">
-						<tei:head><tei:pb facs="opus-agriculturae_0284" />DE MALO PUNICO.</tei:head>
-						<tei:p>Punica non alios umquam dignata sapores<tei:lb />mala nec externis adsociata comis,<tei:lb />ipsa suas augent mutato semine gemmas et sibi cognato picta rubore placent.<tei:lb /></tei:p>
+						<tei:head><tei:pb facs="opus-agriculturae_0284" n="265"/>DE MALO PVNICO.</tei:head>
+						<tei:p>Punica non alios umquam dignata sapores<tei:lb/>mala nec externis adsociata comis,<tei:lb/>ipsa suas augent mutato semine gemmas et sibi cognato picta rubore placent.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="6">
 						<tei:head>DE POMO.</tei:head>
-						<tei:p>Insita proceris pergit concrescere ramis<tei:lb />et sociam mutat malus amica pirum<tei:lb />seque feros siluis hortatur linquere mores<tei:lb />et partu gaudet nobiliore frui. spiniferas prunos armataque robora sentes<tei:lb />leuigat et pulchris uestit adulta comis.<tei:lb />exiguam sorbum dulci distendere suco<tei:lb />nouit et ad cupidas flectere poma manus.<tei:lb />stipitibus gaudet nomen mutare salignis et gratum Nymphis spargere flore nemus.<tei:lb />robora thyrsigero platani concordia Baccho<tei:lb />fetibus instituit plena rubere nouis.<tei:lb />illius insolitas miratur persicus umbras<tei:lb />populeaeque ferunt candida dona comae. mespilus huic paret lapidosaque uiscera mutans<tei:lb />tenditur et niueo plena liquore rubet.<tei:lb />pro sudibus fetis et pro praegnantibus armis<tei:lb />castaneae fuluum dant noua mala decus.<tei:lb /></tei:p>
+						<tei:p>Insita proceris pergit concrescere ramis<tei:lb/>et sociam mutat malus amica pirum<tei:lb/>seque feros siluis hortatur linquere mores<tei:lb/>et partu gaudet nobiliore frui.<tei:lb/>spiniferas prunos armataque robora sentes<tei:lb/>leuigat et pulchris uestit adulta comis.<tei:lb/>exiguam sorbum dulci distendere suco<tei:lb/>nouit et ad cupidas flectere poma manus.<tei:lb/>stipitibus gaudet nomen mutare salignis<tei:lb/>et gratum Nymphis spargere flore nemus.<tei:lb/>robora thyrsigero platani concordia Baccho<tei:lb/>fetibus instituit plena rubere nouis.<tei:lb/>illius insolitas miratur persicus umbras<tei:lb/>populeaeque ferunt candida dona comae.<tei:lb/>mespilus huic paret lapidosaque uiscera mutans<tei:lb/>tenditur et niueo plena liquore rubet.<tei:lb/>pro sudibus fetis et pro praegnantibus armis<tei:lb/>castaneae fuluum dant noua mala decus.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="7">
 						<tei:head>DE PERSICO.</tei:head>
-						<tei:p>Ipsa suos onerat meliori germine ramos<tei:lb />persicus et pruno scit sociare genus<tei:lb /><tei:pb facs="opus-agriculturae_0285" />imponitque leues in stipite phyllidis umbras<tei:lb />et tali discit fortior esse gradu.<tei:lb /></tei:p>
+						<tei:p>Ipsa suos onerat meliori germine ramos<tei:lb/>persicus et pruno scit sociare genus<tei:lb/><tei:pb facs="opus-agriculturae_0285" n="266"/>imponitque leues in stipite phyllidis umbras<tei:lb/>et tali discit fortior esse gradu.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="8">
 						<tei:head>DE MALO CYDONEO.</tei:head>
-						<tei:p>Cum praestet cunctis se fulua cydonea pomis,<tei:lb />alterius nullo creditur hospitio.<tei:lb />roboris externi librum aspernata superbit,<tei:lb />scit tantum nullo crescere posse decus.<tei:lb />sed propriis pandens cognata cubilia ramis<tei:lb />stat contenta suum nobilitare bonum.<tei:lb /></tei:p>
+						<tei:p>Cum praestet cunctis se fulua cydonea pomis,<tei:lb/>alterius nullo creditur hospitio.<tei:lb/>roboris externi librum aspernata superbit,<tei:lb/>scit tantum nullo crescere posse decus.<tei:lb/>sed propriis pandens cognata cubilia ramis<tei:lb/>stat contenta suum nobilitare bonum.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="9">
 						<tei:head>DE MESPILO.</tei:head>
-						<tei:p>Aemula dura piri despecti mala saporis<tei:lb />mespilus admisso germine tuta subit<tei:lb />et geminis sese uiolentior inserit armis<tei:lb />atque auidas terrent robora saeua manus.<tei:lb /></tei:p>
+						<tei:p>Aemula dura piri despecti mala saporis<tei:lb/>mespilus admisso germine tuta subit<tei:lb/>et geminis sese uiolentior inserit armis<tei:lb/>atque auidas terrent robora saeua manus.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="10">
 						<tei:head>DE CITRO.</tei:head>
-						<tei:p>Nec non et citrei patiuntur mutua rami<tei:lb />pignora, quae grauido cortice morus alit,<tei:lb />pomaque pasturi blando redolentia suco<tei:lb />armatis mutant spicula nota piris.<tei:lb /></tei:p>
+						<tei:p>Nec non et citrei patiuntur mutua rami<tei:lb/>pignora, quae grauido cortice morus alit,<tei:lb/>pomaque pasturi blando redolentia suco<tei:lb/>armatis mutant spicula nota piris.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="11">
-						<tei:head>DE PRUNO.</tei:head>
-						<tei:p>Pruna suis addunt felicia germina membris<tei:lb />donaque cognato corpore laeta ferunt.<tei:lb /><tei:pb facs="opus-agriculturae_0286" />exarmat fetus, sed brachia roboris armat castaneae prunus iussa tenere larem.<tei:lb /></tei:p>
+						<tei:head>DE PRVNO.</tei:head>
+						<tei:p>Pruna suis addunt felicia germina membris<tei:lb/>donaque cognato corpore laeta ferunt.<tei:lb/><tei:pb facs="opus-agriculturae_0286" n="267"/>exarmat fetus, sed brachia roboris armat<tei:lb/>castaneae prunus iussa tenere larem.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="12">
-						<tei:head>DE SILIQUA.</tei:head>
-						<tei:p>Adsuescunt siliquae uiridi mollescere suco<tei:lb />et gremio pascunt cerea poma suo.<tei:lb /></tei:p>
+						<tei:head>DE SILIQVA.</tei:head>
+						<tei:p>Adsuescunt siliquae uiridi mollescere suco<tei:lb/>et gremio pascunt cerea poma suo.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="13">
-						<tei:head>DE FICU.</tei:head>
-						<tei:p>Persuadet moris tetrum uariare colorem<tei:lb />ficus et inuasis dat sua iura comis. se quoque miratur pingui grandescere suco<tei:lb />et solitum gaudet uincere poma modum.<tei:lb />insignes foliis platanos, felicia mensis<tei:lb />brachia, gaudentes uitis honore comas,<tei:lb />ingrediens pingui se cortice maxima ficus seruat et optatos inplet adepta sinus.<tei:lb /></tei:p>
+						<tei:head>DE FICV.</tei:head>
+						<tei:p>Persuadet moris tetrum uariare colorem<tei:lb/>ficus et inuasis dat sua iura comis.<tei:lb/>se quoque miratur pingui grandescere suco<tei:lb/>et solitum gaudet uincere poma modum.<tei:lb/>insignes foliis platanos, felicia mensis<tei:lb/>brachia, gaudentes uitis honore comas,<tei:lb/>ingrediens pingui se cortice maxima ficus<tei:lb/>seruat et optatos inplet adepta sinus.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="14">
 						<tei:head>DE MORO.</tei:head>
-						<tei:p>Mutua quin etiam moris commercia ficus<tei:lb />praestat et oblatum robore germen alit.<tei:lb />fraxinus huic auidae confert sua membra sodali<tei:lb />et metuit fetus sparsa cruore nouos. proceras fagos et poma hirsuta uirentis<tei:lb />castaneae duris aspera mala comis<tei:lb />inficiens monstrat piceo nigrescere partu,<tei:lb />et suco pascit turgida poma nouo.<tei:lb />obsequitur moris blando terebinthus odore et geminis ueniunt munera mixta bonis.<tei:lb /></tei:p>
+						<tei:p>Mutua quin etiam moris commercia ficus<tei:lb/>praestat et oblatum robore germen alit.<tei:lb/>fraxinus huic auidae confert sua membra sodali<tei:lb/>et metuit fetus sparsa cruore nouos.<tei:lb/>proceras fagos et poma hirsuta uirentis<tei:lb/>castaneae duris aspera mala comis<tei:lb/>inficiens monstrat piceo nigrescere partu,<tei:lb/>et suco pascit turgida poma nouo.<tei:lb/>obsequitur moris blando terebinthus odore<tei:lb/>et geminis ueniunt munera mixta bonis.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="15">
-						<tei:head><tei:pb facs="opus-agriculturae_0287" />DE SORBIS.</tei:head>
-						<tei:p>Sorba suos partus merito maioris honestant<tei:lb />seminis et pulchro curua labore nitent.<tei:lb />haec arbos spinae duros mucronibus artus exuit ac libris mitibus arma tegit aureaque adnexo miscere cydonea fetu<tei:lb />gaudet et externi dona coloris amat.<tei:lb /></tei:p>
+						<tei:head><tei:pb facs="opus-agriculturae_0287" n="268"/>DE SORBIS.</tei:head>
+						<tei:p>Sorba suos partus merito maioris honestant<tei:lb/>seminis et pulchro curua labore nitent.<tei:lb/>haec arbos spinae duros mucronibus artus<tei:lb/>exuit ac libris mitibus arma tegit aureaque adnexo miscere cydonea fetu<tei:lb/>gaudet et externi dona coloris amat.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="16">
 						<tei:head>DE CERASO.</tei:head>
-						<tei:p>Inseritur lauro cerasus partuque coacto<tei:lb />tingit adoptiuus uirginis ora pudor. umbrantes platanos et iniquam robore prunum conpellit gemmis pingere membra suis populeasque nouo distinguit munere frondes,<tei:lb />sic blandus spargit brachia cana rubor.<tei:lb /></tei:p>
+						<tei:p>Inseritur lauro cerasus partuque coacto<tei:lb/>tingit adoptiuus uirginis ora pudor.<tei:lb/>umbrantes platanos et iniquam robore prunum<tei:lb/>conpellit gemmis pingere membra suis<tei:lb/>populeasque nouo distinguit munere frondes,<tei:lb/>sic blandus spargit brachia cana rubor.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="17">
 						<tei:head>DE AMYGDALO.</tei:head>
-						<tei:p>Phyllis odoratos primaeuis floribus artus<tei:lb />discisso pruni cortice fixa tegit pomaque permutat uelamine persica mixto<tei:lb />duritiemque docet tegminis esse loco. in modicam tornat siliqua tendente figuram et frondes pulchro ditat odore feras<tei:lb />castaneamque trucem depulsis cogit, echinis<tei:lb />mirari fructus leuia poma sui.</tei:p>
+						<tei:p>Phyllis odoratos primaeuis floribus artus<tei:lb/>discisso pruni cortice fixa tegit<tei:lb/>pomaque permutat uelamine persica mixto<tei:lb/>duritiemque docet tegminis esse loco.<tei:lb/>in modicam tornat siliqua tendente figuram<tei:lb/>et frondes pulchro ditat odore feras<tei:lb/>castaneamque trucem depulsis cogit, echinis<tei:lb/>mirari fructus leuia poma sui.</tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="18">
-						<tei:head><tei:pb facs="opus-agriculturae_0288" />DE PISTACIIS.</tei:head>
-						<tei:p>Quin et amygdaleos subeunt pistacia ramos<tei:lb />et meritum maius de breuitate petunt.<tei:lb />haec et cognato cingens terebinthus amictu<tei:lb />nutrit adoptiuis nobilitanda comis.<tei:lb /></tei:p>
+						<tei:head><tei:pb facs="opus-agriculturae_0288" n="269"/>DE PISTACIIS.</tei:head>
+						<tei:p>Quin et amygdaleos subeunt pistacia ramos<tei:lb/>et meritum maius de breuitate petunt.<tei:lb/>haec et cognato cingens terebinthus amictu<tei:lb/>nutrit adoptiuis nobilitanda comis.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="19">
 						<tei:head>DE CASTANEA.</tei:head>
-						<tei:p>Flumineam salicem fecundant ardua membra<tei:lb />castaneae et multo pasta liquore uigent.<tei:lb /></tei:p>
+						<tei:p>Flumineam salicem fecundant ardua membra<tei:lb/>castaneae et multo pasta liquore uigent.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="20">
-						<tei:head>DE NUCE.</tei:head>
-						<tei:p>Arbuteas frondes uastae nucis occupat umbra<tei:lb />pomaque sub duplici cortice tuta refert.<tei:lb />Cetera, quae sollers processu temporis usus<tei:lb />exprimet exemplis instituere nouis.<tei:lb />haec sat erit tenuem uersu memorasse po&#235;tam,<tei:lb />quem iuuat effossi terga mouere soli.<tei:lb />carmina tu duros inter formata bidentes<tei:lb />aspera sed miti rusticitate lege.<tei:lb /></tei:p>
+						<tei:head>DE NVCE.</tei:head>
+						<tei:p>Arbuteas frondes uastae nucis occupat umbra<tei:lb/>pomaque sub duplici cortice tuta refert.<tei:lb/></tei:p>
 					</tei:div>
+                    <tei:div type="textpart" subtype="subsection" n="21">
+                        <tei:p>Cetera, quae sollers processu temporis usus<tei:lb/>exprimet exemplis instituere nouis.<tei:lb/>haec sat erit tenuem uersu memorasse poëtam,<tei:lb/>quem iuuat effossi terga mouere soli.<tei:lb/>carmina tu duros inter formata bidentes<tei:lb/>aspera sed miti rusticitate lege.<tei:lb/></tei:p>
+                    </tei:div>
 				</tei:div>
 			</tei:div>
-			<tei:div type="translation" />
-			<tei:div type="apparatus" />
-			<tei:div type="commentary" />
+			<tei:div type="translation"/>
+			<tei:div type="apparatus"/>
+			<tei:div type="commentary"/>
 		</tei:body>
 	</tei:text>
 </tei:TEI>
