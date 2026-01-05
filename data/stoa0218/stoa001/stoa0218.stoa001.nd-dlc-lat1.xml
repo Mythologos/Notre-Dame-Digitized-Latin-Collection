@@ -81,6 +81,7 @@
             <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards. Swaps ordering of CTS references to be from most to least granular.</tei:change>
             <tei:change when="2025-12-10" who="Stephen Bothwell">Adds missing line breaks to poem. Normalizes u/v distinction in titles to convention of text. Fixes minor character encoding issue.</tei:change>
             <tei:change when="2025-12-13" who="Stephen Bothwell">Automatically adds page numbers corresponding to text in attribute `n`. Includes minor XML formatting adjustments due to rewrite of XML file.</tei:change>
+            <tei:change when="2026-01-05" who="Stephen Bothwell">Adds missing line break in "De Malo Punico" and "De Sorbis" sections.</tei:change>
 		</tei:revisionDesc>
 	</tei:teiHeader>
 	<tei:text>
@@ -116,7 +117,7 @@
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="5">
 						<tei:head><tei:pb facs="opus-agriculturae_0284" n="265"/>DE MALO PVNICO.</tei:head>
-						<tei:p>Punica non alios umquam dignata sapores<tei:lb/>mala nec externis adsociata comis,<tei:lb/>ipsa suas augent mutato semine gemmas et sibi cognato picta rubore placent.<tei:lb/></tei:p>
+						<tei:p>Punica non alios umquam dignata sapores<tei:lb/>mala nec externis adsociata comis,<tei:lb/>ipsa suas augent mutato semine gemmas<tei:lb/>et sibi cognato picta rubore placent.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="6">
 						<tei:head>DE POMO.</tei:head>
@@ -156,7 +157,7 @@
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="15">
 						<tei:head><tei:pb facs="opus-agriculturae_0287" n="268"/>DE SORBIS.</tei:head>
-						<tei:p>Sorba suos partus merito maioris honestant<tei:lb/>seminis et pulchro curua labore nitent.<tei:lb/>haec arbos spinae duros mucronibus artus<tei:lb/>exuit ac libris mitibus arma tegit aureaque adnexo miscere cydonea fetu<tei:lb/>gaudet et externi dona coloris amat.<tei:lb/></tei:p>
+						<tei:p>Sorba suos partus merito maioris honestant<tei:lb/>seminis et pulchro curua labore nitent.<tei:lb/>haec arbos spinae duros mucronibus artus<tei:lb/>exuit ac libris mitibus arma tegit<tei:lb/>aureaque adnexo miscere cydonea fetu<tei:lb/>gaudet et externi dona coloris amat.<tei:lb/></tei:p>
 					</tei:div>
 					<tei:div type="textpart" subtype="subsection" n="16">
 						<tei:head>DE CERASO.</tei:head>

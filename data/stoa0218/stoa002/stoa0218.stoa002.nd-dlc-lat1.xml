@@ -55,9 +55,6 @@
 			</tei:editorialDecl>
 			<tei:p>The following text is encoded in accordance with EpiDoc standards and with the CTS/CITE Architecture</tei:p>
             <tei:refsDecl n="CTS">
-                <tei:cRefPattern n="subdivision" matchPattern="(\w+)(\w+)(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3']/tei:div[@n='$4'])">
-                    <tei:p>This pointer pattern extracts subdivisions.</tei:p>
-                </tei:cRefPattern>
                 <tei:cRefPattern n="subsection" matchPattern="(\w+)(\w+)(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])">
                     <tei:p>This pointer pattern extracts subsections.</tei:p>
                 </tei:cRefPattern>
@@ -85,6 +82,7 @@
             <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards. Swaps ordering of CTS references to be from most to least granular.</tei:change>
             <tei:change when="2025-12-10" who="Stephen Bothwell">Fixes minor character encoding issue.</tei:change>
             <tei:change when="2025-12-13" who="Stephen Bothwell">Automatically adds page numbers corresponding to text in attribute `n`. Includes minor XML formatting adjustments due to rewrite of XML file.</tei:change>
+            <tei:change when="2026-01-05" who="Stephen Bothwell">Splits 2.19 into two segments (2.19a and 2.19b) to fix issues involving the use of the head element in the middle of the section. Removes subdivision textpart.</tei:change>
 		</tei:revisionDesc>
 	</tei:teiHeader>
 	<tei:text>
@@ -849,16 +847,14 @@
 						<tei:div type="textpart" subtype="subsection" n="18">
 							<tei:p>si dura nux est uel nodosa, cortex circumcidendus erit, ut uitium mali deducat umoris. alii radicum summa praecidunt, alii terebratae radici palum de buxo inprimunt uel cuprinum clauum uel ferreum. si terentinam facere uolueris, solam nucis carnem lana propter formicas obuolutam in seminario debebis obruere. si ferentem iam in hoc genus uelis<tei:pb facs="opus-agriculturae_0085" n="66"/>mutare, lexiuo per annum continuum ter rigabis in mense. cortex in nuce dimissus maturitatis indicium est, qualis debet et poni.</tei:p>
 						</tei:div>
-						<tei:div type="textpart" subtype="subsection" n="19">
-							<!-- Division added to permit use of internal heading. -->
-							<tei:div type="textpart" subtype="subdivision" n="1">
-								<tei:p>nuces seruantur uel paleis obrutae uel harena uel foliis suis aridis uel arca ex ligno suo facta inclusae uel cepis mixtae, quibus hanc uicissitudinem reddunt, ut eis acredinem tollant. Martialis expertum se ait uirides nuces tantum liberatas putaminibus suis melle demergi et post annum uirides esse et ipsum mel ita medicabile fieri, ut ex eo facta potio arterias curet et fauces. inseritur, ut plerique, mense februario in arbuto, sed melius in trunco, ut aliqui, et in pruno uel in se.</tei:p>
-							</tei:div>
-							<tei:div type="textpart" subtype="subdivision" n="2">
-								<tei:head>DE ALIIS POMIS, QVAE MAXIME PER ALIOS MENSES SERVNTVR.</tei:head>
-								<tei:p>Hoc mense tuberes inseruntur cydoneo.</tei:p>
-							</tei:div>
+						<tei:div type="textpart" subtype="subsection" n="19a">
+                            <!-- Subsection 19 separated into 19a and 19b to permit use of internal heading. -->
+                            <tei:p>nuces seruantur uel paleis obrutae uel harena uel foliis suis aridis uel arca ex ligno suo facta inclusae uel cepis mixtae, quibus hanc uicissitudinem reddunt, ut eis acredinem tollant. Martialis expertum se ait uirides nuces tantum liberatas putaminibus suis melle demergi et post annum uirides esse et ipsum mel ita medicabile fieri, ut ex eo facta potio arterias curet et fauces. inseritur, ut plerique, mense februario in arbuto, sed melius in trunco, ut aliqui, et in pruno uel in se.</tei:p>
 						</tei:div>
+                        <tei:div type="textpart" subtype="subsection" n="19b">
+                            <tei:head>DE ALIIS POMIS, QVAE MAXIME PER ALIOS MENSES SERVNTVR.</tei:head>
+                            <tei:p>Hoc mense tuberes inseruntur cydoneo.</tei:p>
+                        </tei:div>
 						<tei:div type="textpart" subtype="subsection" n="20">
 							<tei:p>nunc locis temperatis persicorum ossa ponuntur. et inseritur eadem persicus in se, in amygdalo, in pruno: sed pruno armenia inseremus et praecoqua. nunc etiam prunus inserenda est, antequam gumminet, in se et persico. et cerasus obportune inseretur agrestis.</tei:p>
 						</tei:div>
