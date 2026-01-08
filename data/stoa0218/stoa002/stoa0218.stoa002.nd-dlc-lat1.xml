@@ -82,7 +82,8 @@
             <tei:change when="2025-12-01" who="Stephen Bothwell">Tweaks filename and URN to fit Perseus standards. Swaps ordering of CTS references to be from most to least granular.</tei:change>
             <tei:change when="2025-12-10" who="Stephen Bothwell">Fixes minor character encoding issue.</tei:change>
             <tei:change when="2025-12-13" who="Stephen Bothwell">Automatically adds page numbers corresponding to text in attribute `n`. Includes minor XML formatting adjustments due to rewrite of XML file.</tei:change>
-            <tei:change when="2026-01-05" who="Stephen Bothwell">Splits 2.19 into two segments (2.19a and 2.19b) to fix issues involving the use of the head element in the middle of the section. Removes subdivision textpart.</tei:change>
+            <tei:change when="2026-01-05" who="Stephen Bothwell">Splits 2.15.19 into two segments (2.15.19a and 2.15.19b) to fix issues involving the use of the head element in the middle of the section. Removes subdivision textpart.</tei:change>
+            <tei:change when="2026-01-07" who="Stephen Bothwell">Bumps misplaced word from end of 1.7.3 to start of 1.7.4.</tei:change>
 		</tei:revisionDesc>
 	</tei:teiHeader>
 	<tei:text>
@@ -215,10 +216,10 @@
 							<tei:p>in seminibus ergo frumentorum praesens emendatio potest<tei:pb facs="opus-agriculturae_0032" n="13"/>esse. in uinetis maxime considerandum atque uitandum est, quod plerique fecerunt studendo famae tantum et latitudini pastinorum semina uitium statuentes uel sterilia uel saporis indigni: quod grandi tibi labore constabit, ut corrigas si agrum conpares uitiis talibus occupatum.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="3">
-							<tei:p>positio ipsius agri, qui eligendus est, ea sit. in frigidis prouinciis orienti aut meridiano lateri ager esse debet obpositus, ne alicuius magni montis obiectu his duabus partibus exclusis algore rigescat aut per partem septemtrionis remoto aut per occidentis in uesperam sole dilato. in calidis uero prouinciis pars potius septemtrionis optanda est, quae et utilitati et uoluptati et saluti aequa bonitate respondeat. si</tei:p>
+							<tei:p>positio ipsius agri, qui eligendus est, ea sit. in frigidis prouinciis orienti aut meridiano lateri ager esse debet obpositus, ne alicuius magni montis obiectu his duabus partibus exclusis algore rigescat aut per partem septemtrionis remoto aut per occidentis in uesperam sole dilato. in calidis uero prouinciis pars potius septemtrionis optanda est, quae et utilitati et uoluptati et saluti aequa bonitate respondeat.</tei:p>
 						</tei:div>
 						<tei:div type="textpart" subtype="subsection" n="4">
-							<tei:p>uicinus est fluuius, ubi statuimus fabricae sedem parare, eius debemus explorare naturam, quia plerumque, quod exhalat, inimicum est, a quo, si talis sit, conueniet refugere conditorem. palus tamen omni modo uitanda est, praecipue quae ab austro est uel occidente et siccari consueuit aestate, propter pestilentiam uel animalia inimica, quae generat.</tei:p>
+							<tei:p>si uicinus est fluuius, ubi statuimus fabricae sedem parare, eius debemus explorare naturam, quia plerumque, quod exhalat, inimicum est, a quo, si talis sit, conueniet refugere conditorem. palus tamen omni modo uitanda est, praecipue quae ab austro est uel occidente et siccari consueuit aestate, propter pestilentiam uel animalia inimica, quae generat.</tei:p>
 						</tei:div>
 					</tei:div>
 					<tei:div type="textpart" subtype="section" n="8">
